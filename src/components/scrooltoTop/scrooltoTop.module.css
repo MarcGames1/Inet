@@ -1,0 +1,40 @@
+
+.scrollTop {
+  bottom: 50px;
+  cursor: pointer;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  text-align: center;
+  width: 50px;
+  z-index: 9999;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  /* background-color: var(--primary-color); */
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+
+.scrollTop svg {
+  position:relative;
+  /* bottom:-25%; */
+  line-height: 5px;
+  color:var(--primary-color);
+  font-size: 25px;
+}
+
+.scrollTop:hover {
+  color: var(--primary-color-hover);
+  
+}
+.scrollTop:hover svg {
+  transition:all .5s;
+  
+  bottom:0;
+}
+.scrollTop svg:hover {
+    bottom:1%;
+    transition:all 1s
+}

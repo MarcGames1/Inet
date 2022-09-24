@@ -1,0 +1,11 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/700.css";
+
+:root{
+   --primary-color: rgb(79,70,229);
+   --primary-color-hover: rgb(99,102,241);
+}
+html{
+    scroll-behavior: smooth;
+}
