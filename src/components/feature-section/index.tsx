@@ -8,7 +8,7 @@ const FeatureSection = () => (
         <div className={tw(`mb-16 text-center`)}>
           <h4 className={tw(`text-base text-indigo-600 font-semibold tracking-wide uppercase`)}>Features</h4>
           <p className={tw(`mt-2 text-5xl lg:text-7xl font-bold tracking-tight text-gray-900`)}>
-            How we change the game
+            Cum vom colabora? 
           </p>
         </div>
         <div className={tw(`flex flex-wrap my-12`)}>

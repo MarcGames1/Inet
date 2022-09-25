@@ -19,5 +19,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/calendly/index.jsx", "src/components/logo.jsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/calendly/index.jsx", "src/components/logo.jsx", "src/components/list-section/index.tsx"]
 }

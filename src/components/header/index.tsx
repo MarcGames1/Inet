@@ -38,7 +38,9 @@ const Header = () => (
       <div className={tw(`mt-10 flex justify-center items-center w-full mx-auto`)}>
         <Button primary><a href='#list'>Afla mai multe</a></Button>
         <span className={tw(`mx-2`)}>sau</span>
-        <Button><a href='https://wa.me/+40750472447'><FontAwesomeIcon icon={['fab', 'whatsapp']} /> Contacteaza-ne (whatsapp)<i className="fab-brands fab-whatsapp"></i> </a></Button>
+        <Button><a className={tw('flex items-center ')} href='https://wa.me/+40750472447'>
+          <span><Whatsapp width={16} height={16}/></span>
+          <span className={tw('pl-2 ')}> Contacteaza-ne</span></a></Button>
       </div>
     </div>
     
