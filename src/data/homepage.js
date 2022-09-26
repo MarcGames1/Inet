@@ -60,5 +60,58 @@ export const homepage = {
       },
     ],
   },
+  s4: {
+    titlu: 'O parte din afacerile pe care le-am ajutat',
+    indemn: '',
+    logoParteneri: [
+      {
+        url: '/logoClienti/avocatdorubotea.webp',
+        width: 161,
+        height: 128,
+      },
+
+      {
+        url: '/logoClienti/casamoise.webp',
+        width: 160,
+        height: 160,
+      },
+      {
+        url: '/logoClienti/celmic.webp',
+        width: 400,
+        height: 100,
+      },
+      {
+        url: '/logoClienti/drool.webp',
+        width: 384,
+        height: 144,
+      },
+      {
+        url: '/logoClienti/jadflamande.jpg',
+        width: 300,
+        height: 192,
+      },
+      {
+        url: '/logoClienti/logo-vrom.png',
+        width: 184,
+        height: 87,
+      },
+      {
+        url: '/logoClienti/patulmeu.webp',
+        width: 229,
+        height: 160,
+      },
+      {
+        url: '/logoClienti/supermercato.webp',
+        width: 300,
+        height: 39,
+      },
+    ],
+  },
 };
     
+
+
+
+
+export const parteneri={
+} 

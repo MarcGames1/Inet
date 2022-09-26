@@ -1,8 +1,10 @@
 import { tw } from 'twind';
 import { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import Button from '@/components/button';
 import Logo from '../logo';
 import Image from 'next/image'
+import Link from 'next/link';
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
   showMenu: boolean;
@@ -15,8 +17,8 @@ type Link = {
 
 const links = [
   {
-    label: `Featuaares`,
-    href: `/`,
+    label: `Servicii SEO`,
+    href: `/servicii-seo`,
   },
   {
     label: `Testimonials`,
@@ -42,7 +44,7 @@ const secondaryLinks = [
     href: `/`,
   },
   {
-    label: `Get Started`,
+    label: `Solicita acum o oferta`,
     href: `/`,
   },
 ];
@@ -121,7 +123,12 @@ const Navigation = () => {
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
+              <Link href={'/'}>
+              <a>
               <Image className={tw(`h-12 w-12`)} src="/logo.svg" alt="Inet-logo" width={150} height={150} />
+              </a>
+
+              </Link>
             </div>
             <div className={tw(`hidden md:block`)}>
               <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
@@ -139,9 +146,9 @@ const Navigation = () => {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <Button modifier="border-0 mr-2">Contact sales</Button>
+              <a className={tw(`border-0`)} mr-2>Contact</a>
               <Button modifier="border-0 mr-2">Log in</Button>
-              <Button primary>Get started</Button>
+              <Button primary>Analiza Gratuita</Button>
             </div>
           </div>
           <div className={tw(`-mr-2 flex md:hidden`)}>

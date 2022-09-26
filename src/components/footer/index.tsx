@@ -25,7 +25,7 @@ const Footer = () => (
         <Image className={tw(`h-12 w-12 mr-4`)} src="/logo.svg" alt="logo" width={150} height={150} />
         {/* <p className={tw(`text-4xl text-indigo-500 font-bold`)}>STARTD</p> */}
       </div>
-      <div className={tw(`w-full lg:w-1/2`)}>
+      {/* <div className={tw(`w-full lg:w-1/2`)}>
         <ul className={tw(`text-lg font-light flex flex-wrap w-full`)}>
           <li className={tw(`w-1/2 md:w-1/3 lg:w-1/3`)}>
             <div>
@@ -78,7 +78,7 @@ const Footer = () => (
             <Button>Subscribe</Button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   </footer>
 );

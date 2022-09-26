@@ -1,28 +1,19 @@
 import { tw, css } from 'twind/css';
 import Button from '@/components/button';
 import dynamic from 'next/dynamic';
-import Coramarc from '@/constants/svg/coramarc.svg';
-import Image from 'next/image';
+
+
 const headerStyle = css`
   background-color: #ffffff;
   min-height: calc(100vh - 6rem);
 `;
-// import avocatdorubotea from '/logoClienti'
+
 const FontAwesomeIcon = dynamic(
   async () => (await import('@fortawesome/react-fontawesome')).FontAwesomeIcon
 );
 
 
 
-const avocatdorubotea = '/logoClienti/avocatdorubotea.webp'
-const casamoise = '/logoClienti/casamoise.webp'
-const celmic = '/logoClienti/celmic.webp'
-const drool = '/logoClienti/drool.webp'
-const jadflamande = '/logoClienti/jadflamande.jpg'
-const KosmomsKids = '/logoClienti/KosmomsKids.avif'
-const vrom = '/logoClienti/logo-vrom.png'
-const patulmeu = '/logoClienti/patulmeu.webp'
-const supermercato = '/logoClienti/supermercato.webp'
 import {Whatsapp} from '../svg'
 const Header = () => (
   <header className={tw(headerStyle)}>
@@ -37,7 +28,7 @@ const Header = () => (
       </div>
       <div className={tw(`mt-10 flex justify-center items-center w-full mx-auto`)}>
         <Button primary><a href='#list'>Afla mai multe</a></Button>
-        <span className={tw(`mx-2`)}>sau</span>
+        <span className={tw(`mx-2`)}></span>
         <Button><a className={tw('flex items-center ')} href='https://wa.me/+40750472447'>
           <span><Whatsapp width={16} height={16}/></span>
           <span className={tw('pl-2 ')}> Contacteaza-ne</span></a></Button>
