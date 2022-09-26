@@ -9,16 +9,25 @@ import CasesSection from '@/components/cases-section';
 import SocialProof from '@/components/social-proof';
 import PricingTable from '@/components/pricing-table';
 import Footer from '@/components/footer';
-import Calendly from '../components/calendly/';
+const Calendly = dynamic(()=> import ('../components/calendly/'), {
+  suspense: true,
+}) ;
 import {homepage} from '../data/homepage'
+import React, { useEffect, Suspense } from 'react'
+import dynamic from 'next/dynamic'
+
+
+
 export default function Home() {
   return (
+    <Suspense fallback={`Loading...`}>
+
     <Page>
       <NextSeo
         title="Agentie SEO •
- Marketing Online cu rezultate • Inet.ro"
+        Marketing Online cu rezultate • Inet.ro"
         description=" "
-      />
+        />
       <Header />
       <main>
         <Calendly />
@@ -41,9 +50,10 @@ export default function Home() {
         {/* <FeatureSection />
         <CasesSection />
         <SocialProof />
-        <PricingTable /> */}
+      <PricingTable /> */}
       </main>
       
     </Page>
+      </Suspense>
   );
 }
