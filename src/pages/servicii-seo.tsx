@@ -4,7 +4,7 @@ import Header from '@/components/header';
 import ListSection from '@/components/list-section';
 import ListWithPic from '@/components/list-pictures-section';
 import Head from 'next/head';
-
+import Script from 'next/script';
 // Importuri dinamice pentru FCP
 
 const Calendly = dynamic(() => import('../components/calendly/'), {
@@ -28,14 +28,9 @@ const ServiciiSeo = () => {
         description="Servicii Seo care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ IwebAgency.ro."
       />
       <Suspense fallback={`Loading...`}>
-        <Head>
-          <script
-            type="text/javascript"
-            src="https://assets.calendly.com/assets/external/widget.js"
-            defer
-            async
-          ></script>
-        </Head>
+        
+
+        
         <Header h1={serviciiSeo.s1.h1} subtitlu={serviciiSeo.s1.subtitlu} variant={serviciiSeo.s1.cta} />
         <Calendly />
       </Suspense>

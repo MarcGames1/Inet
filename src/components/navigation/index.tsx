@@ -108,10 +108,9 @@ const Navigation = () => {
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
               <Link href={'/'}>
-              <a>
-              <Image className={tw(`h-12 w-12`)} src="/logo.svg" alt="Inet-logo" width={150} height={150} />
-              </a>
-
+                <a>
+                  <Image className={tw(`h-12 w-12`)} src="/logo.svg" alt="Inet-logo" width={150} height={150} />
+                </a>
               </Link>
             </div>
             <div className={tw(`hidden md:block`)}>
@@ -130,8 +129,8 @@ const Navigation = () => {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <a className={tw(`border-0 m-3`)} mr-2>Contact</a>
-              
+              <a className={tw(`border-0 m-3 mr-2`)}>Contact</a>
+
               {/* <Button primary>Analiza Gratuita</Button> */}
             </div>
           </div>
