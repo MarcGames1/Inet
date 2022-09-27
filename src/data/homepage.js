@@ -125,13 +125,33 @@ export const serviciiSeo = {
     h2: 'Serviciile SEO care te vor propusa pe prima pagina din Google',
     indemn: 'Iti aducem site-ul pe prima pagina in Google',
     listaServicii: [
-      { h3: 'test', p: 'lorem ipsum pl,'
-    
-    },
-      { h3: '', p: '' },
-      { h3: '', p: '' },
-      { h3: '', p: '' },
-      { h3: '', p: '' },
+      {
+         h3: 'Keyword Research',
+          p: 'Vom face cercetare de cuvinte cheie atat pentru paginile existente si vom indentifica noi oportunitati' 
+      
+      
+      },
+      { 
+        h3: 'SEO ON PAGE',
+        p: 'Ne vom folosi de cuvintele cheie gasite pentru a le insera in pagina, vom imbunatati continutul pe baza cuvintelor cheie gasite si vom da si alte recomandari ce tin de optimizare SEO on Page'
+      },
+         
+      { 
+        h3: 'SEO TEHNIC', 
+        p: 'Vom identifica eventualele probleme pe care le are site-ul: pagini 404, canibalizare, continutul duplicat, erori de redirectionare, erori de server sau de client etc.'
+       },
+      {
+         h3: 'SEO Off Page', 
+         p: 'Vom face o strategie de link building, Vom alege site-urile de publicare si vom elimina backlinkurile toxice' 
+        },
+      { 
+        h3: 'SEO Local', 
+        p: "Google My business si SEO local la nivel de site." 
+      },
+      { 
+        h3: 'UX', 
+        p: 'Design / Redesign Website, recomandari pentru cresterea ratei de conversie' 
+      },
     ],
   },
 };
