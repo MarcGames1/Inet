@@ -1,10 +1,17 @@
 import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
 import FeaturesElement from './featureElement'
+
 interface checklist {
   h2: string;
   indemn: string;
-  list: { h3: string; p: string; href: string | undefined }[];
+  list: any[];
+}
+
+interface list {
+  h3:string;
+  p:string;
+  href:any| undefined;
 }
 
 const FeatureSection = ({ h2, indemn, list }: checklist) => (
