@@ -28,6 +28,7 @@ const ServiciiSeo = () => {
         title="Servicii SEO •
           Marketing Online cu rezultate ⭐ IwebAgency.ro"
         description="Servicii Seo care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ IwebAgency.ro."
+        canonical="https://iwebagency.ro/"
       />
 
       <Header h1={serviciiSeo.s1.h1} subtitlu={serviciiSeo.s1.subtitlu} variant={serviciiSeo.s1.cta} />

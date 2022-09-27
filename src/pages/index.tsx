@@ -21,13 +21,13 @@ import { Parteneri } from '@/components/parteneri';
 
 export default function Home() {
   return (
-      <Suspense fallback={`Loading...`}>
-    <Page>
-       
+    <Suspense fallback={`Loading...`}>
+      <Page>
         <NextSeo
           title="Agentie SEO •
           Marketing Online cu rezultate • IwebAgency.ro"
           description=" "
+          canonical="https://iwebagency.ro/"
         />
         <Header h1={homepage.s1.h1} subtitlu={homepage.s1.subtitlu} variant={homepage.s1.cta} />
         <main>
