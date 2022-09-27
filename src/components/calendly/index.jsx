@@ -1,19 +1,26 @@
 import React, {  } from 'react'
-
-import { InlineWidget } from "react-calendly";
-import { tw } from 'twind';  
+import Head from 'next/head'
 
 const Calendly = () => {
 
-  return (
-    <div id="calendly-container" className={tw('overflow-hidden	')}>
-      < InlineWidget styles={{
-        height: '700px'
-      }} url="https://calendly.com/alexandru-marcu/consultanta-gratuita-seo" />
-    </div>
-  )
-}
+  return (<>
+    <Head>
+      <script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        defer
+        async
+      />
+    </Head>
+    <div className="calendly-inline-widget" data-url="https://calendly.com/alexandru-marcu/consultanta-gratuita-seo?primary_color=4f46e5" />
+  </>
+    )
+  }
+  export default Calendly
 
-export default Calendly
+
+      
+
+
 
 

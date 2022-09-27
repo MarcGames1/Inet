@@ -20,32 +20,15 @@ const links = [
     label: `Servicii SEO`,
     href: `/servicii-seo`,
   },
-  {
-    label: `Testimonials`,
-    href: `/`,
-  },
-  {
-    label: `Pricing`,
-    href: `/`,
-  },
-  {
-    label: `Blog`,
-    href: `/`,
-  },
+  
 ];
 
 const secondaryLinks = [
+  
+  
   {
-    label: `Contactd sales`,
-    href: `/`,
-  },
-  {
-    label: `Log in`,
-    href: `/`,
-  },
-  {
-    label: `Solicita acum o oferta`,
-    href: `/`,
+    label: `contact`,
+    href: `/contact`,
   },
 ];
 
@@ -108,6 +91,7 @@ const MobileMenu = () => (
             {link.label}
           </a>
         ))}
+       
       </div>
     </div>
   </div>
@@ -146,9 +130,9 @@ const Navigation = () => {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <a className={tw(`border-0`)} mr-2>Contact</a>
-              <Button modifier="border-0 mr-2">Log in</Button>
-              <Button primary>Analiza Gratuita</Button>
+              <a className={tw(`border-0 m-3`)} mr-2>Contact</a>
+              
+              {/* <Button primary>Analiza Gratuita</Button> */}
             </div>
           </div>
           <div className={tw(`-mr-2 flex md:hidden`)}>

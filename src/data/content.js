@@ -114,10 +114,5 @@ export const homepage = {
 
 
 
-export const serviciiSeo = {
-  s1: {
-    h1: 'Servicii Seo ',
-    subtitlu: 'Te aducem mai aproape de clientii care iti cauta produsele sau serviciile in Google',
-    cta: 'whatsapp',
-  },
-};
+export const parteneri={
+} 
