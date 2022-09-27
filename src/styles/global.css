@@ -12,10 +12,11 @@ html{
 
 
 .calendly-inline-widget {
-
+display:block;
+ min-height: 150vh;
  height: 150vh;
  max-height: 200vh;
-
+ overflow:overlay; 
 }
 
 

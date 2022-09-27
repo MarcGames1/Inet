@@ -120,4 +120,18 @@ export const serviciiSeo = {
     subtitlu: 'Te aducem mai aproape de clientii care iti cauta produsele sau serviciile in Google',
     cta: 'whatsapp',
   },
+
+  s2: {
+    h2: 'Serviciile SEO care te vor propusa pe prima pagina din Google',
+    indemn: 'Iti aducem site-ul pe prima pagina in Google',
+    listaServicii: [
+      { h3: 'test', p: 'lorem ipsum pl,'
+    
+    },
+      { h3: '', p: '' },
+      { h3: '', p: '' },
+      { h3: '', p: '' },
+      { h3: '', p: '' },
+    ],
+  },
 };
