@@ -12,7 +12,7 @@ const variants = {
 
     return (
       <div className={tw(`mt-10 flex justify-center items-center w-full`)}>
-        <Button modifier="py-2 px-" primary>
+        <Button modifier="py-2 px-3" primary>
           <a href="#list">Vezi mai mult</a>
         </Button>
         <span className={tw(`mx-2`)}></span>
