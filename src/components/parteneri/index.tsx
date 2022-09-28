@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 
 
-export const Parteneri = ({titlu, indemn, logoParteneri}:{titlu:string, indemn:string, logoParteneri:any}) => {
+ const Parteneri = ({titlu, indemn, logoParteneri}:{titlu:string, indemn:string, logoParteneri:any}) => {
   return (
     <section id="list" className={tw(`lg:py-28 pt-28 overflow-hidden`)}>
       <div className={tw(`mb-16 text-center`)}>
@@ -28,3 +28,5 @@ export const Parteneri = ({titlu, indemn, logoParteneri}:{titlu:string, indemn:s
     </section>
   );
 };
+
+export default Parteneri

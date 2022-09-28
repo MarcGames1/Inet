@@ -1,9 +1,16 @@
-import { NextSeo } from 'next-seo';
-import Page from '@/components/page';
-import Header from '@/components/header';
-import ListSection from '@/components/list-section';
-import ListWithPic from '@/components/list-pictures-section';
+import React, { Suspense } from 'react'
+import dynamic from 'next/dynamic'
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
+import {homepage} from '../data/homepage'
+
+
+
+// import Parteneri  from '@/components/parteneri';
+// import Page from '@/components/page';
+// import Header from '@/components/header';
+// import ListSection from '@/components/list-section';
+// import ListWithPic from '@/components/list-pictures-section';
 
 // Importuri dinamice pentru FCP
 
@@ -12,11 +19,21 @@ const Calendly = dynamic(() => import('../components/calendly/'), {
 });
 
 
-import {homepage} from '../data/homepage'
-import React, { Suspense } from 'react'
-import dynamic from 'next/dynamic'
-import { Parteneri } from '@/components/parteneri';
-
+const Page = dynamic(() => import('../components/page'),{
+  loading: () => <div>Loading...</div>
+});
+const Header = dynamic(() => import('../components/header'), {
+  loading: () => <div>Loading...</div>,
+});
+const ListSection = dynamic(() => import('../components/list-section'), {
+  loading: () => <div>Loading...</div>,
+});
+const ListWithPic = dynamic(() => import('../components/list-pictures-section'), {
+  loading: () => <div>Loading...</div>,
+});
+const Parteneri = dynamic(() => import('../components/parteneri'), {
+  loading: () => <div>Loading...</div>,
+});
 
 
 export default function Home() {
