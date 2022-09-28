@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from '@/components/button';
 import Logo from '../logo';
+import WhatsappCta from '@/ux/buttons/whatsappCta';
 import Image from 'next/image'
 import Link from 'next/link';
 interface IMenuButton {
@@ -129,7 +130,7 @@ const Navigation = () => {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <a className={tw(`border-0 m-3 mr-2`)}>Contact</a>
+             <WhatsappCta primary>cere consultanta gratuita</WhatsappCta>
 
               {/* <Button primary>Analiza Gratuita</Button> */}
             </div>
