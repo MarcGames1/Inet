@@ -15,7 +15,7 @@ const Calendly = dynamic(() => import('../components/calendly/'), {
 import { homepage } from '../data/content';
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
-import { Parteneri } from '@/components/parteneri';
+import Parteneri  from '@/components/parteneri';
 import { serviciiSeo } from '@/data/homepage';
 
 

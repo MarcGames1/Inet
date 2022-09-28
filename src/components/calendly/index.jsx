@@ -10,23 +10,33 @@ const InlineWidget  = dynamic(() => import('react-calendly').then((c)=>c.InlineW
 const Calendly = (h2) => {
   
   
+const [ishidden, setIsHidden] = useState(true)
+
+useEffect(() =>{
+
+  if (typeof window !== 'undefined'){
+    window.onload = (e) => {
+      setIsHidden(false)
+    };
+  }
+}, [typeof window])
 
 
- 
-  return (
+
+ return (
   <>
 
-    <InlineWidget
-      url="https://calendly.com/alexandru-marcu/consultanta-gratuita-seo?primary_color=4f46e5"
-      pageSettings={{
-        backgroundColor: 'ffffff',
-        hideEventTypeDetails: false,
-        hideLandingPageDetails: false,
-        primaryColor: '4f46e5',
-        textColor: '1f2927',
-        hideGdprBanner: true,
-      }}
-    />
+     {ishidden ? <InlineWidget
+       url="https://calendly.com/alexandru-marcu/consultanta-gratuita-seo?primary_color=4f46e5"
+       pageSettings={{
+         backgroundColor: 'ffffff',
+         hideEventTypeDetails: false,
+         hideLandingPageDetails: false,
+         primaryColor: '4f46e5',
+         textColor: '1f2927',
+         hideGdprBanner: true,
+       }}
+     /> : null}
      
   </>
     
