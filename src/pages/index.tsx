@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import {homepage} from '../data/homepage'
+import {homepage} from '../../js/content'
 
 
 

@@ -12,11 +12,11 @@ import Script from 'next/script';
 const Calendly = dynamic(() => import('../components/calendly/'), {
   loading: () => <div>Loading...</div>,
 });
-import { homepage } from '../data/content';
+import { homepage } from '../../js/content';
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Parteneri  from '@/components/parteneri';
-import { serviciiSeo } from '@/data/homepage';
+import { serviciiSeo } from '../../js/content';
 
 
 
