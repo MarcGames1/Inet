@@ -5,8 +5,8 @@ import StatisticsSvg from '@/constants/svg/statistics.svg';
 
 const pic1 = '/studiiDeCaz/StudiuCaz1-1006x392.jpg';
 const pic2 = '/studiiDeCaz/StudiuCaz1.2-1068x407.jpg';
-const pic3 = ' '
-
+const pic3 = '/studiiDeCaz/StudiuCaz1.3-927x385.png';
+const pic4 = '/studiiDeCaz/seo tehnic-1600x1183.jpeg';
 export const homepage = {
   s1: {
     h1: 'Agentie SEO si Marketing Online',
@@ -72,41 +72,19 @@ export const homepage = {
         height: 128,
       },
 
-      // {
-      //   url: '/logoClienti/casamoise.webp',
-      //   width: 160,
-      //   height: 160,
-      // },
+    
       {
         url: '/logoClienti/celmic.webp',
         width: 400,
         height: 100,
       },
-      // {
-      //   url: '/logoClienti/drool.webp',
-      //   width: 384,
-      //   height: 144,
-      // },
+   
       {
         url: '/logoClienti/jadflamande.jpg',
         width: 300,
         height: 192,
       },
-      // {
-      //   url: '/logoClienti/logo-vrom.png',
-      //   width: 184,
-      //   height: 87,
-      // },
-      // {
-      //   url: '/logoClienti/patulmeu.webp',
-      //   width: 229,
-      //   height: 160,
-      // },
-      // {
-      //   url: '/logoClienti/supermercato.webp',
-      //   width: 300,
-      //   height: 39,
-      // },
+  
       {
         url: '/logoClienti/afrodytestyle.webp',
         width: 100,
@@ -164,7 +142,7 @@ export const serviciiSeo = {
     titlu: 'Servicii SEO care dau rezultate concrete',
     lista: [
       {
-        title: ``,
+        title: `Rezultatele noastre se vad in Google Search Console`,
         description: ``,
         Image: {
           location: pic1,
@@ -173,7 +151,7 @@ export const serviciiSeo = {
         },
       },
       {
-        title: ``,
+        title: `in Google Analytics`,
         description: ``,
         Image: {
           location: pic2,
@@ -182,12 +160,18 @@ export const serviciiSeo = {
         },
       },
       {
-        title: ``,
+        title: `Recomandarile noastre ce privesc
+        
+        
+        
+        
+        
+           partea de SEO tehnic va vor aduce peste nivelul oricarui competitor`,
         description: ``,
         Image: {
-          location: pic2,
-          width: 1006,
-          height: 392,
+          location: pic4,
+          width: 1600,
+          height: 1183,
         },
       },
     ],

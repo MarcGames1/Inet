@@ -11,7 +11,7 @@ import {homepage} from '../../js/content'
 // import Header from '@/components/header';
 // import ListSection from '@/components/list-section';
 // import ListWithPic from '@/components/list-pictures-section';
-
+ import SocialProof from '@/components/pricing-table';
 // Importuri dinamice pentru FCP
 
 const Calendly = dynamic(() => import('../components/calendly/'), {
@@ -62,8 +62,9 @@ export default function Home() {
           <Parteneri indemn={homepage.s4.indemn} titlu={homepage.s4.titlu} logoParteneri={homepage.s4.logoParteneri} />
 
           {/* <FeatureSection />
+          <SocialProof />
         <CasesSection />
-        <SocialProof />
+       
       <PricingTable /> */}
         </main>
       </Page>
