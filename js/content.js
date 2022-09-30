@@ -3,8 +3,9 @@ import TeamworkSvg from '@/constants/svg/teamwork.svg';
 import SuccessfulTaskCompletionSvg from '@/constants/svg/successfulTaskCompletion.svg';
 import StatisticsSvg from '@/constants/svg/statistics.svg';
 
-
-
+const pic1 = '/studiiDeCaz/StudiuCaz1-1006x392.jpg';
+const pic2 = '/studiiDeCaz/StudiuCaz1.2-1068x407.jpg';
+const pic3 = ' '
 
 export const homepage = {
   s1: {
@@ -155,6 +156,39 @@ export const serviciiSeo = {
       {
         h3: 'UX',
         p: 'Design / Redesign Website, recomandari pentru cresterea ratei de conversie',
+      },
+    ],
+  },
+  s3: {
+    indemn: 'Am ajutat afaceri din diferite nise sa isi atinga obiectivele',
+    titlu: 'Servicii SEO care dau rezultate concrete',
+    lista: [
+      {
+        title: ``,
+        description: ``,
+        Image: {
+          location: pic1,
+          width: 1006,
+          height: 392,
+        },
+      },
+      {
+        title: ``,
+        description: ``,
+        Image: {
+          location: pic2,
+          width: 1068,
+          height: 407,
+        },
+      },
+      {
+        title: ``,
+        description: ``,
+        Image: {
+          location: pic2,
+          width: 1006,
+          height: 392,
+        },
       },
     ],
   },

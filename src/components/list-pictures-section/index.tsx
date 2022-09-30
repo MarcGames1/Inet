@@ -1,13 +1,18 @@
+import Image from 'next/image';
 import { tw } from 'twind';
 
-function getIcon (FeatureSvg:any, index:number) {
-  let Icon = FeatureSvg[index]
-  
-  return( <Icon width="100%" height="100%" />)
-}
 
 
-const ListWithPic = ({ indemn, titlu, listItems }: { indemn: string; titlu: string; listItems: any }) => (
+const ListWithPic = ({
+  indemn,
+  titlu,
+  listItems,
+}: {
+  indemn: string;
+  titlu: string;
+  listItems: any;
+  image?: any | undefined;
+}) => (
   <section id="list" className={tw(`lg:py-28 pt-28 overflow-hidden`)}>
     <div className={tw(`max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 bg-white`)}>
       <div className={tw(`mb-16 text-center`)}>
@@ -35,7 +40,16 @@ const ListWithPic = ({ indemn, titlu, listItems }: { indemn: string; titlu: stri
               </li>
               <div className={tw(`items-center	w-full lg:w-1/2 px-8`)}>
                 <div className={tw(`lg:mb-12 lg:mb-0 pb-12 lg:pb-0 mt-16 lg:mt-0 mx-6 lg:mx-0`)}>
-                  <item.Icon width="100%" height="100%" />
+                  {item?.Icon ? <item.Icon width="100%" height="100%" /> : null}
+                  {item?.Image ? (
+                    <Image
+                      layout="intrinsic"
+                      src={item.Image.location}
+                      alt={`Servicii SEO cu rezultate masurabile iwebAgency ${index}`}
+                      width={item.Image.width}
+                      height={item.Image.height}
+                    />
+                  ) : null}
                 </div>
               </div>
             </div>
