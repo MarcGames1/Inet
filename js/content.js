@@ -58,7 +58,7 @@ export const homepage = {
         title: `Call si prezentare raport lunar`,
         description: `Vom face un call pe zoom lunar in care vom discuta despre evolutia proiectului, 
         ce s-a lucrat in luna precedenta si ce urmeaza sa facem.`,
-        Icon: SuccessfulTaskCompletionSvg,
+        Icon: SuccessfulTaskCompletionSvg ,
       },
     ],
   },
