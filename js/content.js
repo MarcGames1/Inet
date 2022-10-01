@@ -160,6 +160,15 @@ export const serviciiSeo = {
         },
       },
       {
+        title: `Dar si in cresterea numarului de sesiuni`,
+        description: ``,
+        Image: {
+          location: pic3,
+          width: 987,
+          height: 385,
+        },
+      },
+      {
         title: `Recomandarile noastre ce privesc
         
         
