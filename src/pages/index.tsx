@@ -59,13 +59,15 @@ export default function Home() {
           />
 
           <ListWithPic indemn={homepage.s3.indemn} titlu={homepage.s3.titlu} listItems={homepage.s3.lista} />
-          <Parteneri col={3} indemn={homepage.s4.indemn} titlu={homepage.s4.titlu} logoParteneri={homepage.s4.logoParteneri} />
+          <Parteneri col={2} indemn={homepage.s4.indemn} titlu={homepage.s4.titlu} logoParteneri={homepage.s4.logoParteneri} />
 
-          {/* <FeatureSection />
+          {/*
+           <FeatureSection />
           <SocialProof />
         <CasesSection />
        
-      <PricingTable /> */}
+      <PricingTable />
+       */}
         </main>
       </Page>
     </Suspense>

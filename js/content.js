@@ -73,11 +73,11 @@ export const homepage = {
       },
 
     
-      {
-        url: '/logoClienti/celmic.webp',
-        width: 400,
-        height: 100,
-      },
+      // {
+      //   url: '/logoClienti/celmic.webp',
+      //   width: 400,
+      //   height: 100,
+      // },
    
       // {
       //   url: '/logoClienti/jadflamande.jpg',
