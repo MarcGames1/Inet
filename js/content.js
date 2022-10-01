@@ -79,11 +79,11 @@ export const homepage = {
         height: 100,
       },
    
-      {
-        url: '/logoClienti/jadflamande.jpg',
-        width: 300,
-        height: 192,
-      },
+      // {
+      //   url: '/logoClienti/jadflamande.jpg',
+      //   width: 300,
+      //   height: 192,
+      // },
   
       {
         url: '/logoClienti/afrodytestyle.webp',
