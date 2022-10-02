@@ -62,36 +62,37 @@ export const homepage = {
       },
     ],
   },
-  s4: {
-    titlu: 'O parte din afacerile pe care le-am ajutat',
-    indemn: '',
-    logoParteneri: [
-      {
-        url: '/logoClienti/avocatdorubotea.webp',
-        width: 161,
-        height: 128,
-      },
+//   s4: {
+//     titlu: 'O parte din afacerile pe care le-am ajutat',
+//     indemn: '',
+//     logoParteneri: [
+//       {
+//         url: '/logoClienti/avocatdorubotea.webp',
+//         width: 161,
+//         height: 128,
+//       },
 
     
-      // {
-      //   url: '/logoClienti/celmic.webp',
-      //   width: 400,
-      //   height: 100,
-      // },
+//       // {
+//       //   url: '/logoClienti/celmic.webp',
+//       //   width: 400,
+//       //   height: 100,
+//       // },
    
-      // {
-      //   url: '/logoClienti/jadflamande.jpg',
-      //   width: 300,
-      //   height: 192,
-      // },
+//       // {
+//       //   url: '/logoClienti/jadflamande.jpg',
+//       //   width: 300,
+//       //   height: 192,
+//       // },
   
-      {
-        url: '/logoClienti/afrodytestyle.webp',
-        width: 100,
-        height: 100,
-      },
-    ],
-  },
+//       // {
+//       //   url: '/logoClienti/afrodytestyle.webp',
+//       //   width: 100,
+//       //   height: 100,
+//       // },
+//     ],
+//   },
+// 
 };
     
     
