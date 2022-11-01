@@ -2,6 +2,12 @@ import FeatureSvg from '@/constants/svg/features.svg';
 import TeamworkSvg from '@/constants/svg/teamwork.svg';
 import SuccessfulTaskCompletionSvg from '@/constants/svg/successfulTaskCompletion.svg';
 import StatisticsSvg from '@/constants/svg/statistics.svg';
+import HelloSvg from '@/constants/svg/hello.svg';
+
+import WebDevSvg from '@/constants/svg/webdev.svg';
+import SeoSvg from '@/constants/svg/seo.svg';
+import AdsSvg from '@/constants/svg/ads.svg';
+import ContentSvg from '@/constants/svg/content.svg';
 
 const pic1 = '/studiiDeCaz/StudiuCaz1-1006x392.jpg';
 const pic2 = '/studiiDeCaz/StudiuCaz1.2-1068x407.jpg';
@@ -10,89 +16,129 @@ const pic4 = '/studiiDeCaz/seo tehnic-1600x1183.jpeg';
 export const homepage = {
   s1: {
     h1: 'Agentie SEO si Marketing Online',
-    subtitlu: 'Iti aducem site-ul pe prima pagina Google prin serviciile noastre.',
+    subtitlu:
+      'Te ajutăm să-ți crești veniturile și să obții notorietate în mediul online prin optimizarea site-ului pentru motoarele de căutare.',
+    indemn: 'Vrei să-ți crești numărul vizitelor pe site fără să investești bugete enorme în reclame?',
     cta: 'default',
   },
-
-  s2: {
-    indemn: 'creste-ti veniturile!',
-    titlu: 'Te ajutam sa iti transformi site-ul in cel mai bun agent de vanzari 24 / 7',
+  S2: {
+    titlu: 'FII RELEVANT ÎN ONLINE',
+    p1:
+      'Când potențiatul tău client intră pe Google, a decis deja că are nevoie de serviciile pe care tu le oferi. Nu mai trebuie să-l convingi de nimic. Întrebarea este, cine va apărea în rezultatele căutărilor? Tu sau concurența ta?',
+    p2:
+      'Dacă nu ești vizibil în online, vei pierde în continuare timp și bani, în timp ce concurența ta va continua să aibă rezultate. Prin agenția noastră de marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care au nevoie de produsul sau serviciul tău!',
+    p3: 'Nu este suficient să fii doar listat în online atâta timp cât nimeni nu știe că exiști!',
+  },
+  dcNoi: {
+    titlu: 'DE CE SĂ COLABOREZI CU NOI?',
+    items: [
+      {
+        titlu: 'Dezvoltăm parteneriate durabile',
+        p:
+          'Clienții noștri nu sunt simpli clienți ci devin partenerii noștri. Ne implicăm activ în fiecare proiect și dezvoltăm parteneriate bazate pe încredere și rezultate concrete.',
+      },
+      {
+        titlu: 'Suntem transparenți',
+        p:
+          'Nu promitem imposibilul. Analizăm atent oportunitățile de dezvoltare specifice domeniului tău și adaptăm strategiile de marketing în funcție de obiectivele tale de business și de bugete.',
+      },
+      {
+        titlu: 'Comunicare și proactivitate',
+        p:
+          'O relație de business solidă se construiește prin comunicare. Comunicăm cu partenerii noștri ori de câte ori este nevoie pentru a ne asigura că nu pierdem nicio oportunitate de creștere dar și pentru a ține sub control provocările care apar pe parcursul colaborării.',
+      },
+      {
+        titlu: 'Analiză și raportare',
+        p:
+          'Analizăm rezultatele constant și adaptăm obiectivele strategice în funcție de performanțele realizate. Te ținem la curent cu metricii importanți rezultați în urma campaniilor implementate, astfel încât să știi în orice moment unde te afli și care sunt perspectivele de viitor.',
+      },
+    ],
+  },
+  s3: {
+    indemn: 'Vrei să-ți crești vizitele pe site și vânzările? ',
+    titlu: 'Uite cum te putem ajuta să-ți atingi obiectivele:',
     lista: [
       {
         title: `Optimizare SEO`,
-        description: `Crestere Vanzari & Lead-uri - Iti recuperezi Investita in 6 - 8 Luni. Strategii SEO care raspund direct nevoilor tale de business. Rezultate Dovedite.
-    Echipa noastră livrează campanii SEO inovatoare, setând trenduri noi în Online Marketing.`,
+        description: `Îți aducem site-ul pe prima pagină prin strategii complete și personalizate adaptate business-ului tău. Nu te ajutăm doar să-ți crești numărul de vizitatori. Ne asigurăm că site-ul tău este optimizat și pregătit pentru ca o simpla vizită să se transforme într-o conversie.`,
+        href: '/servicii-seo',
+        Icon: SeoSvg,
       },
       {
-        title: `Promovare Online`,
-        description: `Setam campanii de publicitate prin Google Ads, Optimizam costurile si crestem performantele campaniilor in functie de obiectivele dvs.`,
+        title: `GOOGLE ADS`,
+        description: `Îți promovăm și creștem afacerea prin campanii Google ADS optimizate, la costuri minime și în concordanță cu strategia ta de business. Setăm publicul țintă, concepem mesaje de impact și gestionăm bugetele eficient, astfel încât să ne asigurăm că vei avea rezultate măsurabile.`,
+        Icon: AdsSvg,
       },
       {
-        title: `Strategie de continut`,
-        description: `Identificam acele subiecte informationale de blog care aduc cele mai mari conversii si aducem trafic relevant prin continut informational care ulterior va cumpara produsele sau serviciile dvs.`,
+        title: `STRATEGIE DE CONȚINUT`,
+        description: `Realizăm articole de blog optimizate Seo pentru a atrage către site-ul tău trafic relevant ce crește rata de conversie și poziționarea brandului tău în piață. Colaborăm cu creatori de conținut pasionați care au experiență notabilă în domeniu și au capacitatea de a traduce în cuvinte esența business-ului tău.`,
+        Icon: ContentSvg,
       },
       {
-        title: `Creare Site Web`,
-        description: `Colaboram cu cei mai buni programatori si ne folosim de cele mai performante tehnologii pentru dezvoltarea unui website performant si pregatit sa iti aduca clientii mult visati.`,
+        title: `CREARE SITE WEB`,
+        description: `Asigurăm servicii complete de creare site-uri web performante, ușor de administrat, complet funcționale, pregătite să vândă și să te poziționeze drept autoritate în piață. Integrăm misiunea și viziunea afacerii tale într-un design responsive cu ajutorul celor mai noi tehnologii.`,
+        Icon: WebDevSvg,
       },
     ],
     featureSvg: FeatureSvg,
   },
 
-  s3: {
+  s4: {
     indemn: 'Noi suntem partenerii afacerii tale',
     titlu: 'Cum va decurge colaborarea cu noi',
     lista: [
       {
-        title: `Vom seta impreuna obiectivele si strategia`,
-        description: `Pentru ca afacerea ta sa creasca in Google vom trasa impreuna strategia si obiectivele pe termen mediu si lung.`,
+        title: `FACEM CUNOȘTINȚĂ`,
+        description: `Programezi o ședință 1 la 1 - complet gratuită, în care îți vom solicita câteva informații relevante pentru a reuși să identificăm nevoile tale de business. `,
+        Icon: HelloSvg,
+      },
+      {
+        title: `STABILIM OBIECTIVELE ȘI PLANUL DE ACȚIUNE`,
+        description: `Stabilim obiective strategice și măsurabile pe termen scurt, mediu și lung. Identificăm cuvintele cheie pe care putem crește și acțiunile necesare atât din partea noastră cât și a ta.`,
         Icon: TeamworkSvg,
       },
       {
-        title: `Vei putea vedea in orice moment stadiul in care ne aflam in lucrul la proiectul tau`,
-        description: `Vei putea vodea in orice moment care este stadiul proiectului tau dar si 
-        evolutia acestuia pe cuvintele cheie de interes.`,
+        title: `VEZI REZULTATELE ÎN TIMP REAL`,
+        description: `Vei fi în permanență în control și vei putea verifica rezultatele tuturor strategiilor implementate, precum și evoluția poziției site-ului tău în căutările Google, pe cuvintele cheie stabilite.`,
         Icon: StatisticsSvg,
       },
       {
-        title: `Call si prezentare raport lunar`,
-        description: `Vom face un call pe zoom lunar in care vom discuta despre evolutia proiectului, 
-        ce s-a lucrat in luna precedenta si ce urmeaza sa facem.`,
-        Icon: SuccessfulTaskCompletionSvg ,
+        title: `CALL ȘI PREZENTARE RAPORT LUNAR`,
+        description: `La finalul fiecărei luni, îți prezentăm un raport complet de activitate: ce acțiuni am întreprins, care sunt rezultatele și ce urmează să realizăm în luna următoare pentru a atinge obiectivele stabilite.`,
+        Icon: SuccessfulTaskCompletionSvg,
       },
     ],
   },
-//   s4: {
-//     titlu: 'O parte din afacerile pe care le-am ajutat',
-//     indemn: '',
-//     logoParteneri: [
-//       {
-//         url: '/logoClienti/avocatdorubotea.webp',
-//         width: 161,
-//         height: 128,
-//       },
+  //   s4: {
+  //     titlu: 'O parte din afacerile pe care le-am ajutat',
+  //     indemn: '',
+  //     logoParteneri: [
+  //       {
+  //         url: '/logoClienti/avocatdorubotea.webp',
+  //         width: 161,
+  //         height: 128,
+  //       },
 
-    
-//       // {
-//       //   url: '/logoClienti/celmic.webp',
-//       //   width: 400,
-//       //   height: 100,
-//       // },
-   
-//       // {
-//       //   url: '/logoClienti/jadflamande.jpg',
-//       //   width: 300,
-//       //   height: 192,
-//       // },
-  
-//       // {
-//       //   url: '/logoClienti/afrodytestyle.webp',
-//       //   width: 100,
-//       //   height: 100,
-//       // },
-//     ],
-//   },
-// 
+  //       // {
+  //       //   url: '/logoClienti/celmic.webp',
+  //       //   width: 400,
+  //       //   height: 100,
+  //       // },
+
+  //       // {
+  //       //   url: '/logoClienti/jadflamande.jpg',
+  //       //   width: 300,
+  //       //   height: 192,
+  //       // },
+
+  //       // {
+  //       //   url: '/logoClienti/afrodytestyle.webp',
+  //       //   width: 100,
+  //       //   height: 100,
+  //       // },
+  //     ],
+  //   },
+  //
 };
     
     

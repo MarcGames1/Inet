@@ -15,7 +15,7 @@ import Head from 'next/head';
 
 // Importuri dinamice pentru FCP
 
-const Calendly = dynamic(() => import('../components/calendly/'), {
+const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), {
   loading: () => <div>Loading...</div>,
 });
 

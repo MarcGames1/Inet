@@ -19,5 +19,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/calendly/index.jsx", "src/components/logo.jsx", "src/components/list-section/index.tsx", "src/ux/buttons/whatsappCta.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/calendly/InlineCalendly.jsx", "src/components/logo.jsx", "src/components/list-section/index.tsx", "src/ux/buttons/whatsappCta.tsx", "src/components/DcNoi/index.jsx"]
 }
