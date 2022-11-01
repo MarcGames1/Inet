@@ -36,7 +36,7 @@ const FeatureSection = dynamic(() => import('../components/feature-section/'), {
   loading: () => <div>Loading...</div>,
 });
 
-
+import { CalendlyNoPic } from '@/components/CTA';
 
 
 const ServiciiSeo = () => {
@@ -52,7 +52,11 @@ const ServiciiSeo = () => {
 
         <Header h1={serviciiSeo.s1.h1} subtitlu={serviciiSeo.s1.subtitlu} variant={serviciiSeo.s1.cta} />
         <main>
-          <Calendly />
+          <CalendlyNoPic
+            text="Da, știu… majoritatea agențiilor de marketing digital te aduc pe prima pagină doar pentru simplul fapt că îți cer bugete impresionante de marketing. Și de cele mai multe ori, nici nu ai banii ăștia. Când ajungi la fundul sacului și reclamele tale nu mai funcționează… prima pagina va deveni doar o amintire frumoasă. Clienții tăi nu vor mai afla niciodată despre tine. 
+"
+            titlu="Nu asta îți dorești, nu-i așa?"
+          />
           <FeatureSection h2={serviciiSeo.s2.h2} indemn={serviciiSeo.s2.indemn} list={serviciiSeo.s2.listaServicii} />
           <ListWithPic listItems={serviciiSeo.s3.lista} titlu={serviciiSeo.s3.titlu} indemn={serviciiSeo.s3.indemn} />
         </main>

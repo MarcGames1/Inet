@@ -145,9 +145,10 @@ export const homepage = {
 
 export const serviciiSeo = {
   s1: {
-    h1: 'Servicii Seo ',
-    subtitlu: 'Te aducem mai aproape de clientii care iti cauta produsele sau serviciile in Google',
-    cta: 'whatsapp',
+    h1: 'SERVICII OPTIMIZARE SEO ',
+    subtitlu:
+      'Îți aducem site-ul pe prima pagină în Google prin servicii de optimizare SEO și garantăm recupererea investiției în maxim 8 luni.',
+    cta: 'calendlyButton',
   },
 
   s2: {
