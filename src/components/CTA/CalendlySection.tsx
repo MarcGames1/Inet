@@ -11,16 +11,10 @@ const { width, height } = useWindowDimensions();
 const [ismobile, setIsmobile] = useState(true)
     console.log(typeof width)
 useEffect(() => {
-  if (typeof width == 'undefined'  ) {
-    return 
-  } else if (typeof width == 'number'){
-    
-    if(width > 1024){
-      setIsmobile(false);
-    }
-    
-  } else return
 
+  if(typeof width !=='number' && Number.isNaN(width) && Number(width) > 1024){
+    setIsmobile(false);
+  }
   
 }, [width]);
   return (

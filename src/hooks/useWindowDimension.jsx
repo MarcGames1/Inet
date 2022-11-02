@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 
 const useWindowDimension = () => {
     const [windowDimensions, setWindowDimensions] = useState ({
-        width: undefined,
-        height: undefined,
+        width: NaN,
+        height: NaN,
     });
     useEffect(() => {
         function handleResize() {
