@@ -2,6 +2,12 @@ import FeatureSvg from '@/constants/svg/features.svg';
 import TeamworkSvg from '@/constants/svg/teamwork.svg';
 import SuccessfulTaskCompletionSvg from '@/constants/svg/successfulTaskCompletion.svg';
 import StatisticsSvg from '@/constants/svg/statistics.svg';
+import HelloSvg from '@/constants/svg/hello.svg';
+
+import WebDevSvg from '@/constants/svg/webdev.svg';
+import SeoSvg from '@/constants/svg/seo.svg';
+import AdsSvg from '@/constants/svg/ads.svg';
+import ContentSvg from '@/constants/svg/content.svg';
 
 const pic1 = '/studiiDeCaz/StudiuCaz1-1006x392.jpg';
 const pic2 = '/studiiDeCaz/StudiuCaz1.2-1068x407.jpg';
@@ -10,140 +16,216 @@ const pic4 = '/studiiDeCaz/seo tehnic-1600x1183.jpeg';
 export const homepage = {
   s1: {
     h1: 'Agentie SEO si Marketing Online',
-    subtitlu: 'Iti aducem site-ul pe prima pagina Google prin serviciile noastre.',
+    subtitlu:
+      'Te ajutăm să-ți crești veniturile și să obții notorietate în mediul online prin optimizarea site-ului pentru motoarele de căutare.',
+    indemn: 'Vrei să-ți crești numărul vizitelor pe site fără să investești bugete enorme în reclame?',
     cta: 'default',
   },
-
-  s2: {
-    indemn: 'creste-ti veniturile!',
-    titlu: 'Te ajutam sa iti transformi site-ul in cel mai bun agent de vanzari 24 / 7',
+  S2: {
+    titlu: 'FII RELEVANT ÎN ONLINE',
+    paragrafe:[
+      'Când potențiatul tău client intră pe Google, a decis deja că are nevoie de serviciile pe care tu le oferi. Nu mai trebuie să-l convingi de nimic. Întrebarea este, cine va apărea în rezultatele căutărilor? Tu sau concurența ta?',
+      'Dacă nu ești vizibil în online, vei pierde în continuare timp și bani, în timp ce concurența ta va continua să aibă rezultate. Prin agenția noastră de marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care au nevoie de produsul sau serviciul tău!',
+      'Nu este suficient să fii doar listat în online atâta timp cât nimeni nu știe că exiști!',
+    ]
+      
+    
+  },
+  dcNoi: {
+    titlu: 'DE CE SĂ COLABOREZI CU NOI?',
+    items: [
+      {
+        titlu: 'Dezvoltăm parteneriate durabile',
+        p:
+          'Clienții noștri nu sunt simpli clienți ci devin partenerii noștri. Ne implicăm activ în fiecare proiect și dezvoltăm parteneriate bazate pe încredere și rezultate concrete.',
+      },
+      {
+        titlu: 'Suntem transparenți',
+        p:
+          'Nu promitem imposibilul. Analizăm atent oportunitățile de dezvoltare specifice domeniului tău și adaptăm strategiile de marketing în funcție de obiectivele tale de business și de bugete.',
+      },
+      {
+        titlu: 'Comunicare și proactivitate',
+        p:
+          'O relație de business solidă se construiește prin comunicare. Comunicăm cu partenerii noștri ori de câte ori este nevoie pentru a ne asigura că nu pierdem nicio oportunitate de creștere dar și pentru a ține sub control provocările care apar pe parcursul colaborării.',
+      },
+      {
+        titlu: 'Analiză și raportare',
+        p:
+          'Analizăm rezultatele constant și adaptăm obiectivele strategice în funcție de performanțele realizate. Te ținem la curent cu metricii importanți rezultați în urma campaniilor implementate, astfel încât să știi în orice moment unde te afli și care sunt perspectivele de viitor.',
+      },
+    ],
+  },
+  s3: {
+    indemn: 'Vrei să-ți crești vizitele pe site și vânzările? ',
+    titlu: 'Uite cum te putem ajuta să-ți atingi obiectivele:',
     lista: [
       {
         title: `Optimizare SEO`,
-        description: `Crestere Vanzari & Lead-uri - Iti recuperezi Investita in 6 - 8 Luni. Strategii SEO care raspund direct nevoilor tale de business. Rezultate Dovedite.
-    Echipa noastră livrează campanii SEO inovatoare, setând trenduri noi în Online Marketing.`,
+        description: `Îți aducem site-ul pe prima pagină prin strategii complete și personalizate adaptate business-ului tău. Nu te ajutăm doar să-ți crești numărul de vizitatori. Ne asigurăm că site-ul tău este optimizat și pregătit pentru ca o simpla vizită să se transforme într-o conversie.`,
+        href: '/servicii-seo',
+        Icon: SeoSvg,
       },
       {
-        title: `Promovare Online`,
-        description: `Setam campanii de publicitate prin Google Ads, Optimizam costurile si crestem performantele campaniilor in functie de obiectivele dvs.`,
+        title: `GOOGLE ADS`,
+        description: `Îți promovăm și creștem afacerea prin campanii Google ADS optimizate, la costuri minime și în concordanță cu strategia ta de business. Setăm publicul țintă, concepem mesaje de impact și gestionăm bugetele eficient, astfel încât să ne asigurăm că vei avea rezultate măsurabile.`,
+        Icon: AdsSvg,
       },
       {
-        title: `Strategie de continut`,
-        description: `Identificam acele subiecte informationale de blog care aduc cele mai mari conversii si aducem trafic relevant prin continut informational care ulterior va cumpara produsele sau serviciile dvs.`,
+        title: `STRATEGIE DE CONȚINUT`,
+        description: `Realizăm articole de blog optimizate Seo pentru a atrage către site-ul tău trafic relevant ce crește rata de conversie și poziționarea brandului tău în piață. Colaborăm cu creatori de conținut pasionați care au experiență notabilă în domeniu și au capacitatea de a traduce în cuvinte esența business-ului tău.`,
+        Icon: ContentSvg,
       },
       {
-        title: `Creare Site Web`,
-        description: `Colaboram cu cei mai buni programatori si ne folosim de cele mai performante tehnologii pentru dezvoltarea unui website performant si pregatit sa iti aduca clientii mult visati.`,
+        title: `CREARE SITE WEB`,
+        description: `Asigurăm servicii complete de creare site-uri web performante, ușor de administrat, complet funcționale, pregătite să vândă și să te poziționeze drept autoritate în piață. Integrăm misiunea și viziunea afacerii tale într-un design responsive cu ajutorul celor mai noi tehnologii.`,
+        Icon: WebDevSvg,
       },
     ],
     featureSvg: FeatureSvg,
   },
 
-  s3: {
+  s4: {
     indemn: 'Noi suntem partenerii afacerii tale',
     titlu: 'Cum va decurge colaborarea cu noi',
     lista: [
       {
-        title: `Vom seta impreuna obiectivele si strategia`,
-        description: `Pentru ca afacerea ta sa creasca in Google vom trasa impreuna strategia si obiectivele pe termen mediu si lung.`,
+        title: `FACEM CUNOȘTINȚĂ`,
+        description: `Programezi o ședință 1 la 1 - complet gratuită, în care îți vom solicita câteva informații relevante pentru a reuși să identificăm nevoile tale de business. `,
+        Icon: HelloSvg,
+      },
+      {
+        title: `STABILIM OBIECTIVELE ȘI PLANUL DE ACȚIUNE`,
+        description: `Stabilim obiective strategice și măsurabile pe termen scurt, mediu și lung. Identificăm cuvintele cheie pe care putem crește și acțiunile necesare atât din partea noastră cât și a ta.`,
         Icon: TeamworkSvg,
       },
       {
-        title: `Vei putea vedea in orice moment stadiul in care ne aflam in lucrul la proiectul tau`,
-        description: `Vei putea vodea in orice moment care este stadiul proiectului tau dar si 
-        evolutia acestuia pe cuvintele cheie de interes.`,
+        title: `VEZI REZULTATELE ÎN TIMP REAL`,
+        description: `Vei fi în permanență în control și vei putea verifica rezultatele tuturor strategiilor implementate, precum și evoluția poziției site-ului tău în căutările Google, pe cuvintele cheie stabilite.`,
         Icon: StatisticsSvg,
       },
       {
-        title: `Call si prezentare raport lunar`,
-        description: `Vom face un call pe zoom lunar in care vom discuta despre evolutia proiectului, 
-        ce s-a lucrat in luna precedenta si ce urmeaza sa facem.`,
-        Icon: SuccessfulTaskCompletionSvg ,
+        title: `CALL ȘI PREZENTARE RAPORT LUNAR`,
+        description: `La finalul fiecărei luni, îți prezentăm un raport complet de activitate: ce acțiuni am întreprins, care sunt rezultatele și ce urmează să realizăm în luna următoare pentru a atinge obiectivele stabilite.`,
+        Icon: SuccessfulTaskCompletionSvg,
       },
     ],
   },
-//   s4: {
-//     titlu: 'O parte din afacerile pe care le-am ajutat',
-//     indemn: '',
-//     logoParteneri: [
-//       {
-//         url: '/logoClienti/avocatdorubotea.webp',
-//         width: 161,
-//         height: 128,
-//       },
+  //   s4: {
+  //     titlu: 'O parte din afacerile pe care le-am ajutat',
+  //     indemn: '',
+  //     logoParteneri: [
+  //       {
+  //         url: '/logoClienti/avocatdorubotea.webp',
+  //         width: 161,
+  //         height: 128,
+  //       },
 
-    
-//       // {
-//       //   url: '/logoClienti/celmic.webp',
-//       //   width: 400,
-//       //   height: 100,
-//       // },
-   
-//       // {
-//       //   url: '/logoClienti/jadflamande.jpg',
-//       //   width: 300,
-//       //   height: 192,
-//       // },
-  
-//       // {
-//       //   url: '/logoClienti/afrodytestyle.webp',
-//       //   width: 100,
-//       //   height: 100,
-//       // },
-//     ],
-//   },
-// 
+  //       // {
+  //       //   url: '/logoClienti/celmic.webp',
+  //       //   width: 400,
+  //       //   height: 100,
+  //       // },
+
+  //       // {
+  //       //   url: '/logoClienti/jadflamande.jpg',
+  //       //   width: 300,
+  //       //   height: 192,
+  //       // },
+
+  //       // {
+  //       //   url: '/logoClienti/afrodytestyle.webp',
+  //       //   width: 100,
+  //       //   height: 100,
+  //       // },
+  //     ],
+  //   },
+  //
 };
     
     
 
 export const serviciiSeo = {
   s1: {
-    h1: 'Servicii Seo ',
-    subtitlu: 'Te aducem mai aproape de clientii care iti cauta produsele sau serviciile in Google',
-    cta: 'whatsapp',
+    h1: 'SERVICII OPTIMIZARE SEO ',
+    subtitlu:
+      'Îți aducem site-ul pe prima pagină în Google prin servicii de optimizare SEO și garantăm recupererea investiției în maxim 8 luni.',
+    cta: 'calendlyButton',
   },
-
   s2: {
+    primaParte:[
+    'Optimizarea pentru motoarele de căutare este esențială dacă vrei ca publicul tău țintă să afle despre tine și să generezi vânzări mai mari, fără să investești bugete considerabile în reclame.',
+    'Dacă ai un business la început de drum, cu siguranță nu ai bugete impresionante pentru reclame. Știu că e frustrant… investești timp și bani în afacerea ta, nici nu mai știi când ai petrecut un weekend întreg alături de cei dragi și cu toate acestea… nu ai rezultate. ',
+  ],
+  a2aParte:{
+    title:'De ce se întâmplă asta? ',
+    paragrafe:[
+      'Potențialii tăi clienți nu știu cine ești. Și să fim serioși. Concurența este acerbă. În 2021 erau 1,88 miliarde de site-uri web online și numărul lor a tot crescut de atunci. Imaginează-ți că sunt milioane de competitori pe nișa ta, care oferă fix aceleași servicii și se adresează unui public țintă similar cu al tău. Probabil știi deja că pe Google, doar cei care apar pe prima pagină sunt relevanți. De câte ori ai accesat și pagina 2 atunci când ai fost interesat de un serviciu sau produs anume? De mult prea puține ori sau poate chiar niciodată.',
+      'Da, știu… majoritatea agențiilor de marketing digital te aduc pe prima pagină doar pentru simplul fapt că îți cer bugete impresionante de marketing. Și de cele mai multe ori, nici nu ai banii ăștia. Când ajungi la fundul sacului și reclamele tale nu mai funcționează… prima pagina va deveni doar o amintire frumoasă. Clienții tăi nu vor mai afla niciodată despre tine.',
+
+      
+    ],
+  },
+},
+
+listaCuBife:{
+   title : 'Serviciile SEO ar trebui să fie o prioritate în strategia ta de marketing!',
+  paragrafe : [
+  'Ajungi pe prima pagina în căutările google, exiști. Nu ești acolo, nu exiști!',
+  'Dacă site-ul tău este optimizat SEO, vei primi trafic relevant din căutările organice fără să investești vreun ban în reclame deoarece Google este cel mai mare motor de căutare din întreaga lume;',
+  'Vei construi mult mai ușor încrederea și autoritatea în fața clienților tăi, deoarece o parte importantă din strategia SEO presupune ca site-ul tău să aibă conținut relevant și util pentru publicul țintă;',
+  'Clienții tăi potențiali vor veni natural către tine deoarece vei vorbi pe “limba” lor dacă vei înțelege care este comportamentul lor de cumpărare și la ce stimuli reacționează sau nu;',
+  'Un serviciu SEO realizat de o echipă profesionistă, presupune și să îi oferi potențialului tău client o experiență de utilizare (UX) bună pe site-ul tău; acest lucru te va ajuta să-ți crești și vânzările dar și autoritatea brandului tău;',
+  'Site-ul tău va fi optimizat pentru căutările locale (anumite cartiere, orașe, regiuni, state – în funcție de locația/locațiile fizice), ceea ce înseamnă că potențialii tăi clienți te vor găsi mult mai ușor și astfel îți vei creste vânzările;',
+  'Serviciile SEO nu trebuie privite ca un cost ci mai degrabă ca o investiție pe termen lung; investești în SEO pentru câteva luni și rezultatele se păstrează ani de zile;',
+  'Deși ți se poate părea scump la început, te asigur că pe termen lung este mult mai ieftin decât să arunci la nesfârșit bugete în campanii plătite care (uneori) nu aduc nici rezultate.',
+],
+
+},
+
+  servicii: {
     h2: 'Serviciile SEO care te vor propusa pe prima pagina din Google',
-    indemn: 'Iti aducem site-ul pe prima pagina in Google',
+    indemn: 'CUM TE PUTEM AJUTA CONCRET?',
     listaServicii: [
       {
-        h3: 'Keyword Research',
-        p: 'Vom face cercetare de cuvinte cheie atat pentru paginile existente si vom indentifica noi oportunitati',
+        title: 'Keyword Research',
+        description:
+          'Studiem cuvintele cheie relevante pentru afacerea ta și identificăm oportunități neexplorate de către concurență, astfel încât să urci rapid în clasament.',
       },
       {
-        h3: 'SEO ON PAGE',
-        p:
-          'Ne vom folosi de cuvintele cheie gasite pentru a le insera in pagina, vom imbunatati continutul pe baza cuvintelor cheie gasite si vom da si alte recomandari ce tin de optimizare SEO on Page',
+        title: 'SEO ON PAGE',
+        description:
+          'Optimizăm conținutul de pe site-ul tău pe baza cuvintelor cheie identificate și sugerăm îmbunătățiri, astfel încât să fii relevant și să crești rata de conversie. ',
       },
 
       {
-        h3: 'SEO TEHNIC',
-        p:
-          'Vom identifica eventualele probleme pe care le are site-ul: pagini 404, canibalizare, continutul duplicat, erori de redirectionare, erori de server sau de client etc.',
+        title: 'SEO TEHNIC',
+        description:
+          'Identificăm eventualele probleme pe care le are site-ul: pagini 404, canibalizare, conținutul duplicat, erori de redirecționare, erori de server sau de client, etc.',
       },
       {
-        h3: 'SEO Off Page',
-        p:
-          'Vom face o strategie de link building, Vom alege site-urile de publicare si vom elimina backlinkurile toxice',
+        title: 'SEO Off Page',
+        description:
+          'Punem la punct o strategie de link building, alegem site-urile pe care le vom publica și eliminăm backlinkurile toxice. ',
       },
       {
-        h3: 'SEO Local',
-        p: 'Google My business si SEO local la nivel de site.',
+        title: 'SEO Local',
+        description:
+          'Realizam SEO local la nivel de site și optimizăm contul de Google My Business pentru a ne asigura că potențialii tăi clienți te vor găsi ușor.',
       },
       {
-        h3: 'UX',
-        p: 'Design / Redesign Website, recomandari pentru cresterea ratei de conversie',
+        title: 'UX',
+        description:
+          'Îmbunătățim design-ul site-ului sau optăm pentru redesign complet și identificăm alte oportunități prin care putem crește rata de conversie.',
       },
     ],
   },
   s3: {
-    indemn: 'Am ajutat afaceri din diferite nise sa isi atinga obiectivele',
-    titlu: 'Servicii SEO care dau rezultate concrete',
+    indemn: 'OBIECTIVELE TALE – MISIUNEA NOASTRĂ',
+    titlu: 'Uite ce rezultate au cei care au colaborat cu noi:',
     lista: [
       {
-        title: `Rezultatele noastre se vad in Google Search Console`,
+        title: `Google Search Console`,
         description: ``,
         Image: {
           location: pic1,
@@ -152,7 +234,7 @@ export const serviciiSeo = {
         },
       },
       {
-        title: `in Google Analytics`,
+        title: `Google Analytics`,
         description: ``,
         Image: {
           location: pic2,
@@ -161,7 +243,7 @@ export const serviciiSeo = {
         },
       },
       {
-        title: `Dar si in cresterea numarului de sesiuni`,
+        title: `SESIUNI`,
         description: ``,
         Image: {
           location: pic3,
@@ -170,13 +252,7 @@ export const serviciiSeo = {
         },
       },
       {
-        title: `Recomandarile noastre ce privesc
-        
-        
-        
-        
-        
-           partea de SEO tehnic va vor aduce peste nivelul oricarui competitor`,
+        title: `SEO TEHNIC`,
         description: ``,
         Image: {
           location: pic4,

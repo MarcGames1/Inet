@@ -15,7 +15,7 @@ import Head from 'next/head';
 
 // Importuri dinamice pentru FCP
 
-const Calendly = dynamic(() => import('../components/calendly/'), {
+const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), {
   loading: () => <div>Loading...</div>,
 });
 
@@ -35,8 +35,11 @@ const ListWithPic = dynamic(() => import('../components/list-pictures-section/')
 const FeatureSection = dynamic(() => import('../components/feature-section/'), {
   loading: () => <div>Loading...</div>,
 });
-
-
+import SecondSection from '@/components/s2Section';
+import { CalendlyNoPic, CalendlySection } from '@/components/CTA';
+import DcNoi from '@/components/DcNoi';
+import Section2 from '@/components/servicii-seo/section2';
+import ListaCuBife from '@/components/servicii-seo/listaCuBife';
 
 
 const ServiciiSeo = () => {
@@ -50,11 +53,29 @@ const ServiciiSeo = () => {
           canonical="https://iwebagency.ro/"
         />
 
-        <Header h1={serviciiSeo.s1.h1} subtitlu={serviciiSeo.s1.subtitlu} variant={serviciiSeo.s1.cta} />
         <main>
-          <Calendly />
-          <FeatureSection h2={serviciiSeo.s2.h2} indemn={serviciiSeo.s2.indemn} list={serviciiSeo.s2.listaServicii} />
+          <Header
+            h1={serviciiSeo.s1.h1}
+            subtitlu={serviciiSeo.s1.subtitlu}
+            variant={serviciiSeo.s1.cta}
+            indemn={undefined}
+          />
+          <Section2
+            lead={serviciiSeo.s2.primaParte}
+            heading={serviciiSeo.s2.a2aParte.title}
+            paragrafe={serviciiSeo.s2.a2aParte.paragrafe}
+          >
+            <CalendlyNoPic titlu={'Dacă ți-aș spune că se poate și altfel?'} text={''} />
+          </Section2>
+
+          <ListaCuBife {...serviciiSeo.listaCuBife} />
+          <CalendlyNoPic
+            text="SEO nu este doar despre aici și acum ci este mai degrabă despre viitor! Tu unde vrei să fii? Acolo unde sunt clienții tăi sau nicăieri?!"
+            titlu={''}
+          />
+          <FeatureSection h2={serviciiSeo.servicii.h2} indemn={serviciiSeo.servicii.indemn} list={serviciiSeo.servicii.listaServicii} />
           <ListWithPic listItems={serviciiSeo.s3.lista} titlu={serviciiSeo.s3.titlu} indemn={serviciiSeo.s3.indemn} />
+          <CalendlySection titlu="Vrei să fii pe prima pagina în căutările Google?" text={''} />
         </main>
       </Page>
     </Suspense>

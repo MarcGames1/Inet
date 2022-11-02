@@ -1,17 +1,20 @@
 import Image from 'next/image';
 import { tw } from 'twind';
-
-
+import Check from '@/constants/svg/check.svg';
+import Link from 'next/link';
 
 const ListWithPic = ({
   indemn,
   titlu,
   listItems,
+  numbered,
 }: {
   indemn: string;
   titlu: string;
   listItems: any;
   image?: any | undefined;
+  numbered?: boolean | undefined;
+  href?: string | undefined;
 }) => (
   <section id="list" className={tw(`lg:py-28 pt-28 overflow-hidden`)}>
     <div className={tw(`max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 bg-white`)}>
@@ -30,12 +33,17 @@ const ListWithPic = ({
                       justify-center text-2xl font-bold rounded-full
                       bg-blue-50 text-blue-500`)}
                   >
-                    {index + 1}
+                    {numbered ? index + 1 : <Check fill="rgb(99,102,241)" />}
                   </span>
                 </div>
                 <div className={tw(`px-4`)}>
-                  <h3 className={tw(`my-4 text-xl font-semibold`)}>{item.title}</h3>
+                  <h3 className={tw(`my-4 text-xl text-indigo-500 font-semibold`)}>{item.title}</h3>
                   <p className={tw(`text-gray-500 leading-loose`)}>{item.description}</p>
+                  {item.href ? (
+                    <Link href={item.href}>
+                      <a className={tw(`h-6 w-6 text-indigo-500 hover:text-indigo-800`)}>{'Citeste Mai Mult'}</a>
+                    </Link>
+                  ) : null}
                 </div>
               </li>
               <div className={tw(`items-center	w-full lg:w-1/2 px-8`)}>
@@ -45,7 +53,7 @@ const ListWithPic = ({
                     <Image
                       layout="intrinsic"
                       src={item.Image.location}
-                      alt={`Servicii SEO cu rezultate masurabile iwebAgency ${index}`}
+                      alt={`${item.title} iwebAgency`}
                       width={item.Image.width}
                       height={item.Image.height}
                     />

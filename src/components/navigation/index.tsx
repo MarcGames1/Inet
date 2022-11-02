@@ -4,6 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from '@/components/button';
 import Logo from '../logo';
 import WhatsappCta from '@/ux/buttons/whatsappCta';
+import { CalendlyButton } from '../calendly';
 import Image from 'next/image'
 import Link from 'next/link';
 interface IMenuButton {
@@ -130,7 +131,7 @@ const Navigation = () => {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-             <WhatsappCta primary>cere consultanta gratuita</WhatsappCta>
+              <CalendlyButton text={'Programeaza-te la o sedinta gratuita!'} primary modifier={undefined} />
 
               {/* <Button primary>Analiza Gratuita</Button> */}
             </div>
