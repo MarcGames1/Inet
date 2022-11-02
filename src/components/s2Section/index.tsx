@@ -7,9 +7,9 @@ const FirstSection = ({titlu, subtitlu}: {titlu?: string; subtitlu?: string;}) =
  
   return (
     
-      (titlu || subtitlu) ?  <div className={tw(`mb-16 text-center`)}>
-        {titlu ? <p className={tw(`mt-2 pb-4 text-5xl lg:text-7xl font-bold tracking-tight text-gray-50`)}>{titlu}</p> : null}
-       {subtitlu ?  <p className={tw(`text-base text-indigo-50 font-semibold tracking-wide uppercase`)}>{subtitlu}</p> : null}
+      (titlu || subtitlu) ?  <div className={tw(`mt-16 text-center`)}>
+        {titlu ? <p className={tw(`mt-2 pb-4 text-5xl sm:text-2x1 lg:text-7xl font-bold tracking-tight text-gray-50`)}>{titlu}</p> : null}
+       {subtitlu ?  <p className={tw(` text-base text-indigo-50 font-semibold tracking-wide uppercase`)}>{subtitlu}</p> : null}
       </div> : <></>
     
   )
@@ -35,8 +35,8 @@ const SecondSection = ({
       <FirstSection titlu={titlu} subtitlu={subtitlu} />
       {paragrafe?.map((p, idx) => {
         return (
-          <div key={idx} className={`${styles.glass} ${tw('container h-full block w-6/12 m-8 p-8')}`}>
-            <p className={tw('font-extrabold text-justify indent-1.5 text-white')}>{p}</p>
+          <div key={idx} className={`${styles.glass} ${tw('container h-full block w-5/6 lg:w-6/12 m-8 p-8')}`}>
+            <p className={tw('font-extrabold text-justify text-white')}>{p}</p>
           </div>
         );
       })}

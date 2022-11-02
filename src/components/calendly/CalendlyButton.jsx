@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import dynamic from 'next/dynamic'
-const PopupModal = dynamic(() => import('react-calendly').then((c) => c.PopupModal), {
+const PopupModal = dynamic(() => import('react-calendly').then(c => c.PopupModal), {
     loading: () => <div>Loading...</div>,
 })
 import Button from '@/components/button';

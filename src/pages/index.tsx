@@ -11,7 +11,7 @@ import {homepage} from '../../js/content'
 // import Header from '@/components/header';
 // import ListSection from '@/components/list-section';
 // import ListWithPic from '@/components/list-pictures-section';
- import SocialProof from '@/components/social-proof';
+ 
 // Importuri dinamice pentru FCP
 
 const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), {
@@ -22,31 +22,29 @@ const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), 
 const Page = dynamic(() => import('../components/page'),{
   loading: () => <div>Loading...</div>
 });
-const FeatureSection = dynamic(() => import('../components/feature-section'), {
-  loading: () => <div>Loading...</div>,
-});
-const PricingTable = dynamic(() => import('../components/pricing-table'), {
-  loading: () => <div>Loading...</div>,
-});
-const CasesSection = dynamic(() => import('../components/cases-section'), {
-  loading: () => <div>Loading...</div>,
-});
+
+
+const CalendlySection = dynamic(() => import('../components/CTA').then(c => c.CalendlySection), {
+    loading: () => <div>Loading...</div>,
+})
+
+
 const Header = dynamic(() => import('../components/header'), {
   loading: () => <div>Loading...</div>,
 });
-const ListSection = dynamic(() => import('../components/list-section'), {
+const SecondSection = dynamic(() => import('@/components/s2Section'), {
   loading: () => <div>Loading...</div>,
 });
 const ListWithPic = dynamic(() => import('../components/list-pictures-section'), {
   loading: () => <div>Loading...</div>,
 });
-const Parteneri = dynamic(() => import('../components/parteneri'), {
+const DcNoi = dynamic(() => import('@/components/DcNoi/index'), {
   loading: () => <div>Loading...</div>,
 });
 
-import {CalendlyPicSection, CalendlySection} from '../components/CTA'
-import SecondSection from '@/components/s2Section';
-import DcNoi from '@/components/DcNoi/index';
+
+
+
 export default function Home() {
   return (
     <Suspense fallback={`Loading...`}>

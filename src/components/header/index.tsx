@@ -13,7 +13,7 @@ const variants = {
     return (
       <>
         <p className={tw(`mt-10 text-gray-800 text-center text-lg lg:text-2xl`)}> Hai să ne cunoaștem!</p>
-        <div className={tw(` mt-5 grid gap-5 grid-cols-2 content-around`)}>
+        <div className={tw(` mt-5 grid gap-5 sm:grid-flow-row lg:grid-cols-2 content-around`)}>
           <div>
             <CalendlyButton primary modifier={'w-full'} text={undefined} />
           </div>
@@ -62,15 +62,29 @@ let Cta =  (param: string) =>{
     }
     }
 
-const Header = ({ h1, subtitlu, indemn, variant }: { h1: string; subtitlu: string; variant: string, indemn:string | undefined}) => (
+const Header = ({
+  h1,
+  subtitlu,
+  indemn,
+  variant,
+}: {
+  h1: string;
+  subtitlu: string;
+  variant: string;
+  indemn: string | undefined;
+}) => (
   <header className={tw(headerStyle)}>
-    <div className={tw(`max-w-4xl mx-auto py-16 px-14 sm:px-6 lg:px-8`)}>
+    <div className={tw(`max-w-4xl mx-auto p-9 lg:py-16 lg:px-14 `)}>
       <h1 className={tw(`text-center text-indigo-600 font-semibold tracking-wide uppercase`)}>{h1}</h1>
-      <p className={tw(`font-sans font-bold text-2xl md:text-3xl lg:text-4xl text-center leading-snug text-gray-800`)}>
+      <p
+        className={tw(
+          `font-sans font-bold py-6 text-1xl md:text-3xl lg:text-4xl text-center leading-snug text-gray-800`,
+        )}
+      >
         {subtitlu}
       </p>
       <div className={tw(`max-w-xl mx-auto`)}>
-        <p className={tw(`mt-10 text-primary text-center text-xl lg:text-3xl`)}>{indemn}</p>
+        <p className={tw(`mt-10 text-primary text-center text-1xl lg:text-3xl`)}>{indemn}</p>
       </div>
       {Cta(variant)}
     </div>
