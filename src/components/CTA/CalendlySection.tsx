@@ -9,11 +9,19 @@ import  useWindowDimensions  from '@/hooks/useWindowDimension'
 const CalendlySection = (props: JSX.IntrinsicAttributes & { titlu: string; text: string; btntxt?: string | undefined }) => {
 const { width, height } = useWindowDimensions();
 const [ismobile, setIsmobile] = useState(true)
-    
+    console.log(typeof width)
 useEffect(() => {
-  if (width != undefined && width > 1024) {
-    setIsmobile(false);
-  }
+  if (typeof width == 'undefined'  ) {
+    return 
+  } else if (typeof width == 'number'){
+    
+    if(width > 1024){
+      setIsmobile(false);
+    }
+    
+  } else return
+
+  
 }, [width]);
   return (
       
