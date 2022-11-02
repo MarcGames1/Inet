@@ -8,14 +8,10 @@ interface checklist {
   list: any[];
 }
 
-interface list {
-  h3:string;
-  p:string;
-  href:any| undefined;
-}
+
 
 const FeatureSection = ({ h2, indemn, list }: checklist) => (
-  <section className={tw(` pb-6 bg-gray-900`)}>
+  <section className={tw(` pb-6 bg-gray-50`)}>
     <div className={tw(`max-w-7xl mx-auto p-4 sm:p-6 lg:p-8`)}>
       <div className={tw(`container mx-auto px-6 p-6`)}>
         <div className={tw(`mb-16 text-center`)}>

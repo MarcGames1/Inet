@@ -23,11 +23,13 @@ export const homepage = {
   },
   S2: {
     titlu: 'FII RELEVANT ÎN ONLINE',
-    p1:
+    paragrafe:[
       'Când potențiatul tău client intră pe Google, a decis deja că are nevoie de serviciile pe care tu le oferi. Nu mai trebuie să-l convingi de nimic. Întrebarea este, cine va apărea în rezultatele căutărilor? Tu sau concurența ta?',
-    p2:
       'Dacă nu ești vizibil în online, vei pierde în continuare timp și bani, în timp ce concurența ta va continua să aibă rezultate. Prin agenția noastră de marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care au nevoie de produsul sau serviciul tău!',
-    p3: 'Nu este suficient să fii doar listat în online atâta timp cât nimeni nu știe că exiști!',
+      'Nu este suficient să fii doar listat în online atâta timp cât nimeni nu știe că exiști!',
+    ]
+      
+    
   },
   dcNoi: {
     titlu: 'DE CE SĂ COLABOREZI CU NOI?',
@@ -150,47 +152,80 @@ export const serviciiSeo = {
       'Îți aducem site-ul pe prima pagină în Google prin servicii de optimizare SEO și garantăm recupererea investiției în maxim 8 luni.',
     cta: 'calendlyButton',
   },
-
   s2: {
+    primaParte:[
+    'Optimizarea pentru motoarele de căutare este esențială dacă vrei ca publicul tău țintă să afle despre tine și să generezi vânzări mai mari, fără să investești bugete considerabile în reclame.',
+    'Dacă ai un business la început de drum, cu siguranță nu ai bugete impresionante pentru reclame. Știu că e frustrant… investești timp și bani în afacerea ta, nici nu mai știi când ai petrecut un weekend întreg alături de cei dragi și cu toate acestea… nu ai rezultate. ',
+  ],
+  a2aParte:{
+    title:'De ce se întâmplă asta? ',
+    paragrafe:[
+      'Potențialii tăi clienți nu știu cine ești. Și să fim serioși. Concurența este acerbă. În 2021 erau 1,88 miliarde de site-uri web online și numărul lor a tot crescut de atunci. Imaginează-ți că sunt milioane de competitori pe nișa ta, care oferă fix aceleași servicii și se adresează unui public țintă similar cu al tău. Probabil știi deja că pe Google, doar cei care apar pe prima pagină sunt relevanți. De câte ori ai accesat și pagina 2 atunci când ai fost interesat de un serviciu sau produs anume? De mult prea puține ori sau poate chiar niciodată.',
+      'Da, știu… majoritatea agențiilor de marketing digital te aduc pe prima pagină doar pentru simplul fapt că îți cer bugete impresionante de marketing. Și de cele mai multe ori, nici nu ai banii ăștia. Când ajungi la fundul sacului și reclamele tale nu mai funcționează… prima pagina va deveni doar o amintire frumoasă. Clienții tăi nu vor mai afla niciodată despre tine.',
+
+      
+    ],
+  },
+},
+
+listaCuBife:{
+   title : 'Serviciile SEO ar trebui să fie o prioritate în strategia ta de marketing!',
+  paragrafe : [
+  'Ajungi pe prima pagina în căutările google, exiști. Nu ești acolo, nu exiști!',
+  'Dacă site-ul tău este optimizat SEO, vei primi trafic relevant din căutările organice fără să investești vreun ban în reclame deoarece Google este cel mai mare motor de căutare din întreaga lume;',
+  'Vei construi mult mai ușor încrederea și autoritatea în fața clienților tăi, deoarece o parte importantă din strategia SEO presupune ca site-ul tău să aibă conținut relevant și util pentru publicul țintă;',
+  'Clienții tăi potențiali vor veni natural către tine deoarece vei vorbi pe “limba” lor dacă vei înțelege care este comportamentul lor de cumpărare și la ce stimuli reacționează sau nu;',
+  'Un serviciu SEO realizat de o echipă profesionistă, presupune și să îi oferi potențialului tău client o experiență de utilizare (UX) bună pe site-ul tău; acest lucru te va ajuta să-ți crești și vânzările dar și autoritatea brandului tău;',
+  'Site-ul tău va fi optimizat pentru căutările locale (anumite cartiere, orașe, regiuni, state – în funcție de locația/locațiile fizice), ceea ce înseamnă că potențialii tăi clienți te vor găsi mult mai ușor și astfel îți vei creste vânzările;',
+  'Serviciile SEO nu trebuie privite ca un cost ci mai degrabă ca o investiție pe termen lung; investești în SEO pentru câteva luni și rezultatele se păstrează ani de zile;',
+  'Deși ți se poate părea scump la început, te asigur că pe termen lung este mult mai ieftin decât să arunci la nesfârșit bugete în campanii plătite care (uneori) nu aduc nici rezultate.',
+],
+
+},
+
+  servicii: {
     h2: 'Serviciile SEO care te vor propusa pe prima pagina din Google',
-    indemn: 'Iti aducem site-ul pe prima pagina in Google',
+    indemn: 'CUM TE PUTEM AJUTA CONCRET?',
     listaServicii: [
       {
-        h3: 'Keyword Research',
-        p: 'Vom face cercetare de cuvinte cheie atat pentru paginile existente si vom indentifica noi oportunitati',
+        title: 'Keyword Research',
+        description:
+          'Studiem cuvintele cheie relevante pentru afacerea ta și identificăm oportunități neexplorate de către concurență, astfel încât să urci rapid în clasament.',
       },
       {
-        h3: 'SEO ON PAGE',
-        p:
-          'Ne vom folosi de cuvintele cheie gasite pentru a le insera in pagina, vom imbunatati continutul pe baza cuvintelor cheie gasite si vom da si alte recomandari ce tin de optimizare SEO on Page',
+        title: 'SEO ON PAGE',
+        description:
+          'Optimizăm conținutul de pe site-ul tău pe baza cuvintelor cheie identificate și sugerăm îmbunătățiri, astfel încât să fii relevant și să crești rata de conversie. ',
       },
 
       {
-        h3: 'SEO TEHNIC',
-        p:
-          'Vom identifica eventualele probleme pe care le are site-ul: pagini 404, canibalizare, continutul duplicat, erori de redirectionare, erori de server sau de client etc.',
+        title: 'SEO TEHNIC',
+        description:
+          'Identificăm eventualele probleme pe care le are site-ul: pagini 404, canibalizare, conținutul duplicat, erori de redirecționare, erori de server sau de client, etc.',
       },
       {
-        h3: 'SEO Off Page',
-        p:
-          'Vom face o strategie de link building, Vom alege site-urile de publicare si vom elimina backlinkurile toxice',
+        title: 'SEO Off Page',
+        description:
+          'Punem la punct o strategie de link building, alegem site-urile pe care le vom publica și eliminăm backlinkurile toxice. ',
       },
       {
-        h3: 'SEO Local',
-        p: 'Google My business si SEO local la nivel de site.',
+        title: 'SEO Local',
+        description:
+          'Realizam SEO local la nivel de site și optimizăm contul de Google My Business pentru a ne asigura că potențialii tăi clienți te vor găsi ușor.',
       },
       {
-        h3: 'UX',
-        p: 'Design / Redesign Website, recomandari pentru cresterea ratei de conversie',
+        title: 'UX',
+        description:
+          'Îmbunătățim design-ul site-ului sau optăm pentru redesign complet și identificăm alte oportunități prin care putem crește rata de conversie.',
       },
     ],
   },
   s3: {
-    indemn: 'Am ajutat afaceri din diferite nise sa isi atinga obiectivele',
-    titlu: 'Servicii SEO care dau rezultate concrete',
+    indemn: 'OBIECTIVELE TALE – MISIUNEA NOASTRĂ',
+    titlu: 'Uite ce rezultate au cei care au colaborat cu noi:',
     lista: [
       {
-        title: `Rezultatele noastre se vad in Google Search Console`,
+        title: `Google Search Console`,
         description: ``,
         Image: {
           location: pic1,
@@ -199,7 +234,7 @@ export const serviciiSeo = {
         },
       },
       {
-        title: `in Google Analytics`,
+        title: `Google Analytics`,
         description: ``,
         Image: {
           location: pic2,
@@ -208,7 +243,7 @@ export const serviciiSeo = {
         },
       },
       {
-        title: `Dar si in cresterea numarului de sesiuni`,
+        title: `SESIUNI`,
         description: ``,
         Image: {
           location: pic3,
@@ -217,13 +252,7 @@ export const serviciiSeo = {
         },
       },
       {
-        title: `Recomandarile noastre ce privesc
-        
-        
-        
-        
-        
-           partea de SEO tehnic va vor aduce peste nivelul oricarui competitor`,
+        title: `SEO TEHNIC`,
         description: ``,
         Image: {
           location: pic4,

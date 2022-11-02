@@ -35,8 +35,11 @@ const ListWithPic = dynamic(() => import('../components/list-pictures-section/')
 const FeatureSection = dynamic(() => import('../components/feature-section/'), {
   loading: () => <div>Loading...</div>,
 });
-
-import { CalendlyNoPic } from '@/components/CTA';
+import SecondSection from '@/components/s2Section';
+import { CalendlyNoPic, CalendlySection } from '@/components/CTA';
+import DcNoi from '@/components/DcNoi';
+import Section2 from '@/components/servicii-seo/section2';
+import ListaCuBife from '@/components/servicii-seo/listaCuBife';
 
 
 const ServiciiSeo = () => {
@@ -50,15 +53,29 @@ const ServiciiSeo = () => {
           canonical="https://iwebagency.ro/"
         />
 
-        <Header h1={serviciiSeo.s1.h1} subtitlu={serviciiSeo.s1.subtitlu} variant={serviciiSeo.s1.cta} />
         <main>
-          <CalendlyNoPic
-            text="Da, știu… majoritatea agențiilor de marketing digital te aduc pe prima pagină doar pentru simplul fapt că îți cer bugete impresionante de marketing. Și de cele mai multe ori, nici nu ai banii ăștia. Când ajungi la fundul sacului și reclamele tale nu mai funcționează… prima pagina va deveni doar o amintire frumoasă. Clienții tăi nu vor mai afla niciodată despre tine. 
-"
-            titlu="Nu asta îți dorești, nu-i așa?"
+          <Header
+            h1={serviciiSeo.s1.h1}
+            subtitlu={serviciiSeo.s1.subtitlu}
+            variant={serviciiSeo.s1.cta}
+            indemn={undefined}
           />
-          <FeatureSection h2={serviciiSeo.s2.h2} indemn={serviciiSeo.s2.indemn} list={serviciiSeo.s2.listaServicii} />
+          <Section2
+            lead={serviciiSeo.s2.primaParte}
+            heading={serviciiSeo.s2.a2aParte.title}
+            paragrafe={serviciiSeo.s2.a2aParte.paragrafe}
+          >
+            <CalendlyNoPic titlu={'Dacă ți-aș spune că se poate și altfel?'} text={''} />
+          </Section2>
+
+          <ListaCuBife {...serviciiSeo.listaCuBife} />
+          <CalendlyNoPic
+            text="SEO nu este doar despre aici și acum ci este mai degrabă despre viitor! Tu unde vrei să fii? Acolo unde sunt clienții tăi sau nicăieri?!"
+            titlu={''}
+          />
+          <FeatureSection h2={serviciiSeo.servicii.h2} indemn={serviciiSeo.servicii.indemn} list={serviciiSeo.servicii.listaServicii} />
           <ListWithPic listItems={serviciiSeo.s3.lista} titlu={serviciiSeo.s3.titlu} indemn={serviciiSeo.s3.indemn} />
+          <CalendlySection titlu="Vrei să fii pe prima pagina în căutările Google?" text={''} />
         </main>
       </Page>
     </Suspense>

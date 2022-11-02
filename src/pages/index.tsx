@@ -44,7 +44,7 @@ const Parteneri = dynamic(() => import('../components/parteneri'), {
   loading: () => <div>Loading...</div>,
 });
 
-import {CalendlyPicSection} from '../components/CTA'
+import {CalendlyPicSection, CalendlySection} from '../components/CTA'
 import SecondSection from '@/components/s2Section';
 import DcNoi from '@/components/DcNoi/index';
 export default function Home() {
@@ -73,17 +73,18 @@ export default function Home() {
             list={homepage.s2.lista}
             // FeatureSvg={homepage.s2.featureSvg}
           /> */}
-          <SecondSection titlu={homepage.S2.titlu} p1={homepage.S2.p1} p2={homepage.S2.p2} p3={homepage.S2.p3} />
+          <SecondSection titlu={homepage.S2.titlu} paragrafe={homepage.S2.paragrafe} />
           <ListWithPic indemn={homepage.s3.indemn} titlu={homepage.s3.titlu} listItems={homepage.s3.lista} />
-          <DcNoi title={homepage.dcNoi.titlu} items={homepage.dcNoi.items}/>
+          <DcNoi title={homepage.dcNoi.titlu} items={homepage.dcNoi.items} />
           <ListWithPic indemn={homepage.s4.indemn} titlu={homepage.s4.titlu} listItems={homepage.s4.lista} />
-          <CalendlyPicSection
+          <CalendlySection
             titlu={'Hai sa ne cunoastem!'}
             text={
               'Vom stabili impreuna  strategia optima de marketing online de urmat pentru ca business-ul tau sa obtina performantele pe care doresti sa le atingi.'
             }
             btntxt={undefined}
           />
+          
           {/* <Parteneri col={2} indemn={homepage.s4.indemn} titlu={homepage.s4.titlu} logoParteneri={homepage.s4.logoParteneri} /> */}
 
           {/* <SocialProof />

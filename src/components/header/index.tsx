@@ -34,6 +34,14 @@ const variants = {
        </div>
      );
   },
+
+  calendlyBtn:() =>{
+    return (
+    <div className={tw(`mt-10 flex justify-center  items-center w-full`)}>
+      <CalendlyButton primary text={undefined} modifier={undefined} />
+    </div>
+    )
+  }
   
 }
 
@@ -47,6 +55,9 @@ let Cta =  (param: string) =>{
       break;
       case 'whatsapp':
       return <variants.waOnly />
+      break
+      case'calendlyButton':
+      return <variants.calendlyBtn />
       break
     }
     }
