@@ -24,9 +24,7 @@ const Page = dynamic(() => import('../components/page'),{
 });
 
 
-const CalendlySection = dynamic(() => import('../components/CTA').then(c => c.CalendlySection), {
-    loading: () => <div>Loading...</div>,
-})
+import { CalendlySection } from '@/components/CTA';
 
 
 const Header = dynamic(() => import('../components/header'), {
