@@ -44,6 +44,10 @@ export default {
       container: {
         center: true,
       },
+      transitionProperty: {
+        height: 'height',
+        spacing: 'margin, padding',
+      },
     },
   },
 };

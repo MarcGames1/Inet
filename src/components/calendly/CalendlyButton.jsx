@@ -4,7 +4,7 @@ const PopupModal = dynamic(() => import('react-calendly').then(c => c.PopupModal
     loading: () => <div>Loading...</div>,
 })
 import Button from '@/components/button';
-const CalendlyButton = ({primary, text, modifier}) => {
+const CalendlyButton = ({primary, text, modifier, pulse} ) => {
 
     
     const [isOpen, setIsOpen] = useState(false)
@@ -28,6 +28,7 @@ useEffect(()=>{
     return (
         <div>
             <Button
+                pulse={pulse ? pulse : false}
                 primary={!primary ? true : primary}
                 onClick={() => setIsOpen(true)}
                 modifier={modifier}

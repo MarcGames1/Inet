@@ -11,7 +11,7 @@ import {homepage} from '../../js/content'
 // import Header from '@/components/header';
 // import ListSection from '@/components/list-section';
 // import ListWithPic from '@/components/list-pictures-section';
- 
+ import SocialProof from '@/components/social-proof';
 // Importuri dinamice pentru FCP
 
 const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), {
@@ -22,35 +22,38 @@ const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), 
 const Page = dynamic(() => import('../components/page'),{
   loading: () => <div>Loading...</div>
 });
-
-
-import { CalendlySection } from '@/components/CTA';
-
-
+const FeatureSection = dynamic(() => import('../components/feature-section'), {
+  loading: () => <div>Loading...</div>,
+});
+const PricingTable = dynamic(() => import('../components/pricing-table'), {
+  loading: () => <div>Loading...</div>,
+});
+const CasesSection = dynamic(() => import('../components/cases-section'), {
+  loading: () => <div>Loading...</div>,
+});
 const Header = dynamic(() => import('../components/header'), {
   loading: () => <div>Loading...</div>,
 });
-const SecondSection = dynamic(() => import('@/components/s2Section'), {
+const ListSection = dynamic(() => import('../components/list-section'), {
   loading: () => <div>Loading...</div>,
 });
 const ListWithPic = dynamic(() => import('../components/list-pictures-section'), {
   loading: () => <div>Loading...</div>,
 });
-const DcNoi = dynamic(() => import('@/components/DcNoi/index'), {
+const Parteneri = dynamic(() => import('../components/parteneri'), {
   loading: () => <div>Loading...</div>,
 });
 
-
-
-
+import {CalendlySection} from '../components/CTA'
+import SecondSection from '@/components/s2Section';
+import DcNoi from '@/components/DcNoi/index';
 export default function Home() {
   return (
     <Suspense fallback={`Loading...`}>
       <Page>
         <NextSeo
-          title="Agentie SEO •
-          Marketing Online cu rezultate • IwebAgency.ro"
-          description=" "
+          title="Agentie Marketing Online cu rezultate • IwebAgency.ro"
+          description="Agentie Marketing Online care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ IwebAgency.ro."
           canonical="https://iwebagency.ro/"
         />
         <Header
@@ -79,8 +82,9 @@ export default function Home() {
               'Vom stabili impreuna  strategia optima de marketing online de urmat pentru ca business-ul tau sa obtina performantele pe care doresti sa le atingi.'
             }
             btntxt={undefined}
+            wa
           />
-          
+
           {/* <Parteneri col={2} indemn={homepage.s4.indemn} titlu={homepage.s4.titlu} logoParteneri={homepage.s4.logoParteneri} /> */}
 
           {/* <SocialProof />
