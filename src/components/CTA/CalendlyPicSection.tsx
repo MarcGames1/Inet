@@ -20,9 +20,13 @@ const CalendlyPicSection = ({
   wa?: undefined | boolean;
 }) => {
   return (
-    <section id="cta" className={tw(`py-28 h-screen min-h-screen  relative pt-28 overflow-hidden`)}>
+    <section id="cta" className={tw(`py-10 relative  overflow-hidden`)}>
       <div className={tw(`h-full grid row w-full mx-auto p-4 sm:p-6 lg:p-8`)}>
-        <div className={tw('h-full  grid grid-cols-3 w bg-gradient-to-r from-indigo-100 to-indigo-300 ')}>
+        <div
+          className={tw(
+            'h-full  grid grid-cols-3 bg-gradient-to-r from-pink-100 via-indigo-300 to-pink-100',
+          )}
+        >
           <div
             className={tw(
               'text-center my-4 lg:h-auto justify-between items-center pb-10 text-xl col-span-3 lg:col-span-2 flex flex-col text-gray-900',

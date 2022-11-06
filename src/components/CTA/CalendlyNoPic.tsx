@@ -10,12 +10,17 @@ const CalendlyNoPic = ({ titlu, text, btntxt, wa, pulse }: {pulse?:boolean | und
     <section id="cta" className={tw('')}>
       <div className={tw(`h-full w-full mx-auto p-4 sm:p-6 lg:p-8`)}>
         <div
-          className={tw('items-center flex flex-col gap-4 h-full w bg-gradient-to-r from-indigo-100 to-indigo-300 ')}
+          className={tw(
+            'items-center flex flex-col gap-4 h-full w bg-gradient-to-r from-pink-100 via-indigo-300 to-pink-100 ',
+          )}
         >
           <span className={tw(' flex mt-2 text-3xl  lg:text-4xl text-center font-bold tracking-tight ')}>{titlu}</span>
           <p className={tw('mx-16 flex flex-row')}>{text}</p>
-          {wa ? <Wa btntxt={btntxt} /> : <CalendlyButton pulse={pulse? pulse : undefined} text={btntxt} primary={undefined} modifier={undefined} />}{' '}
-          
+          {wa ? (
+            <Wa btntxt={btntxt} />
+          ) : (
+            <CalendlyButton pulse={pulse ? pulse : undefined} text={btntxt} primary={undefined} modifier={undefined} />
+          )}{' '}
         </div>
       </div>
     </section>
