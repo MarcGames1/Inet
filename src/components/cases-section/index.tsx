@@ -1,5 +1,4 @@
 import { tw } from 'twind';
-import Particles from 'react-particles';
 import Arrow from '@/constants/svg/arrow.svg';
 
 
