@@ -1,3 +1,4 @@
+import { tw } from 'twind';
 import FeatureSvg from '@/constants/svg/features.svg';
 import TeamworkSvg from '@/constants/svg/teamwork.svg';
 import SuccessfulTaskCompletionSvg from '@/constants/svg/successfulTaskCompletion.svg';
@@ -13,23 +14,33 @@ const pic1 = '/studiiDeCaz/StudiuCaz1-1006x392.jpg';
 const pic2 = '/studiiDeCaz/StudiuCaz1.2-1068x407.jpg';
 const pic3 = '/studiiDeCaz/StudiuCaz1.3-927x385.png';
 const pic4 = '/studiiDeCaz/seo tehnic-1600x1183.jpeg';
+
+ const important = tw('font-semibold text-indigo-500');
+
 export const homepage = {
   s1: {
     h1: 'Agentie SEO si Marketing Online',
-    subtitlu:
-      'Te ajutăm să-ți crești veniturile și să obții notorietate în mediul online prin optimizarea site-ului pentru motoarele de căutare.',
-    indemn: 'Vrei să-ți crești numărul vizitelor pe site fără să investești bugete enorme în reclame?',
+    subtitlu: (
+      <>
+        Te ajutăm să-ți <span className={important}>crești veniturile</span> și să obții
+        notorietate în mediul online prin optimizarea site-ului pentru motoarele de căutare.
+      </>
+    ),
+    indemn: (
+      <>
+        Vrei să-ți <span className={important}>crești numărul vizitelor pe site </span>fără să
+        investești bugete enorme în reclame?
+      </>
+    ),
     cta: 'default',
   },
   S2: {
     titlu: 'FII RELEVANT ÎN ONLINE',
-    paragrafe:[
+    paragrafe: [
       'Când potențiatul tău client intră pe Google, a decis deja că are nevoie de serviciile pe care tu le oferi. Nu mai trebuie să-l convingi de nimic. Întrebarea este, cine va apărea în rezultatele căutărilor? Tu sau concurența ta?',
       'Dacă nu ești vizibil în online, vei pierde în continuare timp și bani, în timp ce concurența ta va continua să aibă rezultate. Prin agenția noastră de marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care au nevoie de produsul sau serviciul tău!',
       'Nu este suficient să fii doar listat în online atâta timp cât nimeni nu știe că exiști!',
-    ]
-      
-    
+    ],
   },
   dcNoi: {
     titlu: 'DE CE SĂ COLABOREZI CU NOI?',
@@ -143,45 +154,55 @@ export const homepage = {
   //
 };
     
-    
+   
 
 export const serviciiSeo = {
   s1: {
     h1: 'SERVICII OPTIMIZARE SEO ',
-    subtitlu:
-      'Îți aducem site-ul pe prima pagină în Google prin servicii de optimizare SEO și garantăm recupererea investiției în maxim 8 luni.',
+    subtitlu: (
+      <>
+        Îți aducem site-ul pe <span className={important}>prima pagină în Google</span> prin servicii de optimizare SEO
+        și garantăm recupererea investiției în maxim 8 luni.
+      </>
+    ),
     cta: 'calendlyButton',
   },
   s2: {
-    primaParte:[
-    'Optimizarea pentru motoarele de căutare este esențială dacă vrei ca publicul tău țintă să afle despre tine și să generezi vânzări mai mari, fără să investești bugete considerabile în reclame.',
-    'Dacă ai un business la început de drum, cu siguranță nu ai bugete impresionante pentru reclame. Știu că e frustrant… investești timp și bani în afacerea ta, nici nu mai știi când ai petrecut un weekend întreg alături de cei dragi și cu toate acestea… nu ai rezultate. ',
-  ],
-  a2aParte:{
-    title:'De ce se întâmplă asta? ',
-    paragrafe:[
-      'Potențialii tăi clienți nu știu cine ești. Și să fim serioși. Concurența este acerbă. În 2021 erau 1,88 miliarde de site-uri web online și numărul lor a tot crescut de atunci. Imaginează-ți că sunt milioane de competitori pe nișa ta, care oferă fix aceleași servicii și se adresează unui public țintă similar cu al tău. Probabil știi deja că pe Google, doar cei care apar pe prima pagină sunt relevanți. De câte ori ai accesat și pagina 2 atunci când ai fost interesat de un serviciu sau produs anume? De mult prea puține ori sau poate chiar niciodată.',
-      'Da, știu… majoritatea agențiilor de marketing digital te aduc pe prima pagină doar pentru simplul fapt că îți cer bugete impresionante de marketing. Și de cele mai multe ori, nici nu ai banii ăștia. Când ajungi la fundul sacului și reclamele tale nu mai funcționează… prima pagina va deveni doar o amintire frumoasă. Clienții tăi nu vor mai afla niciodată despre tine.',
+    primaParte: [
+      <>
+        <span className={important}>SEO</span> - Optimizarea pentru motoarele de căutare este esențială dacă vrei ca{' '}
+        <span className={important}>publicul tău țintă să afle despre tine</span> și să{' '}
+        <span className={important}>generezi vânzări</span> mai mari, fără să investești bugete considerabile în
+        reclame.
+      </>,
+      <>
+        Dacă ai un business la început de drum, cu siguranță nu ai bugete impresionante pentru reclame. Știu că e
+        frustrant… investești timp și bani în afacerea ta, nici nu mai știi când ai petrecut un weekend întreg alături
+        de cei dragi și cu toate acestea… nu ai rezultate.{' '}
+      </>,
+    ],
+    a2aParte: {
+      title: 'De ce se întâmplă asta? ',
+      paragrafe: [
+        'Potențialii tăi clienți nu știu cine ești. Și să fim serioși. Concurența este acerbă. În 2021 erau 1,88 miliarde de site-uri web online și numărul lor a tot crescut de atunci. Imaginează-ți că sunt milioane de competitori pe nișa ta, care oferă fix aceleași servicii și se adresează unui public țintă similar cu al tău. Probabil știi deja că pe Google, doar cei care apar pe prima pagină sunt relevanți. De câte ori ai accesat și pagina 2 atunci când ai fost interesat de un serviciu sau produs anume? De mult prea puține ori sau poate chiar niciodată.',
+        'Da, știu… majoritatea agențiilor de marketing digital te aduc pe prima pagină doar pentru simplul fapt că îți cer bugete impresionante de marketing. Și de cele mai multe ori, nici nu ai banii ăștia. Când ajungi la fundul sacului și reclamele tale nu mai funcționează… prima pagina va deveni doar o amintire frumoasă. Clienții tăi nu vor mai afla niciodată despre tine.',
+      ],
+    },
+  },
 
-      
+  listaCuBife: {
+    title: 'Serviciile SEO ar trebui să fie o prioritate în strategia ta de marketing!',
+    paragrafe: [
+      'Ajungi pe prima pagina în căutările google, exiști. Nu ești acolo, nu exiști!',
+      'Dacă site-ul tău este optimizat SEO, vei primi trafic relevant din căutările organice fără să investești vreun ban în reclame deoarece Google este cel mai mare motor de căutare din întreaga lume;',
+      'Vei construi mult mai ușor încrederea și autoritatea în fața clienților tăi, deoarece o parte importantă din strategia SEO presupune ca site-ul tău să aibă conținut relevant și util pentru publicul țintă;',
+      'Clienții tăi potențiali vor veni natural către tine deoarece vei vorbi pe “limba” lor dacă vei înțelege care este comportamentul lor de cumpărare și la ce stimuli reacționează sau nu;',
+      'Un serviciu SEO realizat de o echipă profesionistă, presupune și să îi oferi potențialului tău client o experiență de utilizare (UX) bună pe site-ul tău; acest lucru te va ajuta să-ți crești și vânzările dar și autoritatea brandului tău;',
+      'Site-ul tău va fi optimizat pentru căutările locale (anumite cartiere, orașe, regiuni, state – în funcție de locația/locațiile fizice), ceea ce înseamnă că potențialii tăi clienți te vor găsi mult mai ușor și astfel îți vei creste vânzările;',
+      'Serviciile SEO nu trebuie privite ca un cost ci mai degrabă ca o investiție pe termen lung; investești în SEO pentru câteva luni și rezultatele se păstrează ani de zile;',
+      'Deși ți se poate părea scump la început, te asigur că pe termen lung este mult mai ieftin decât să arunci la nesfârșit bugete în campanii plătite care (uneori) nu aduc nici rezultate.',
     ],
   },
-},
-
-listaCuBife:{
-   title : 'Serviciile SEO ar trebui să fie o prioritate în strategia ta de marketing!',
-  paragrafe : [
-  'Ajungi pe prima pagina în căutările google, exiști. Nu ești acolo, nu exiști!',
-  'Dacă site-ul tău este optimizat SEO, vei primi trafic relevant din căutările organice fără să investești vreun ban în reclame deoarece Google este cel mai mare motor de căutare din întreaga lume;',
-  'Vei construi mult mai ușor încrederea și autoritatea în fața clienților tăi, deoarece o parte importantă din strategia SEO presupune ca site-ul tău să aibă conținut relevant și util pentru publicul țintă;',
-  'Clienții tăi potențiali vor veni natural către tine deoarece vei vorbi pe “limba” lor dacă vei înțelege care este comportamentul lor de cumpărare și la ce stimuli reacționează sau nu;',
-  'Un serviciu SEO realizat de o echipă profesionistă, presupune și să îi oferi potențialului tău client o experiență de utilizare (UX) bună pe site-ul tău; acest lucru te va ajuta să-ți crești și vânzările dar și autoritatea brandului tău;',
-  'Site-ul tău va fi optimizat pentru căutările locale (anumite cartiere, orașe, regiuni, state – în funcție de locația/locațiile fizice), ceea ce înseamnă că potențialii tăi clienți te vor găsi mult mai ușor și astfel îți vei creste vânzările;',
-  'Serviciile SEO nu trebuie privite ca un cost ci mai degrabă ca o investiție pe termen lung; investești în SEO pentru câteva luni și rezultatele se păstrează ani de zile;',
-  'Deși ți se poate părea scump la început, te asigur că pe termen lung este mult mai ieftin decât să arunci la nesfârșit bugete în campanii plătite care (uneori) nu aduc nici rezultate.',
-],
-
-},
 
   servicii: {
     h2: 'Serviciile SEO care te vor propusa pe prima pagina din Google',

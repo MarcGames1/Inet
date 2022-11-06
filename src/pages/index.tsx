@@ -44,7 +44,7 @@ const Parteneri = dynamic(() => import('../components/parteneri'), {
   loading: () => <div>Loading...</div>,
 });
 
-import {CalendlyPicSection, CalendlySection} from '../components/CTA'
+import {CalendlySection} from '../components/CTA'
 import SecondSection from '@/components/s2Section';
 import DcNoi from '@/components/DcNoi/index';
 export default function Home() {
@@ -52,9 +52,8 @@ export default function Home() {
     <Suspense fallback={`Loading...`}>
       <Page>
         <NextSeo
-          title="Agentie SEO •
-          Marketing Online cu rezultate • IwebAgency.ro"
-          description=" "
+          title="Agentie Marketing Online cu rezultate • IwebAgency.ro"
+          description="Agentie Marketing Online care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ IwebAgency.ro."
           canonical="https://iwebagency.ro/"
         />
         <Header
@@ -83,8 +82,9 @@ export default function Home() {
               'Vom stabili impreuna  strategia optima de marketing online de urmat pentru ca business-ul tau sa obtina performantele pe care doresti sa le atingi.'
             }
             btntxt={undefined}
+            wa
           />
-          
+
           {/* <Parteneri col={2} indemn={homepage.s4.indemn} titlu={homepage.s4.titlu} logoParteneri={homepage.s4.logoParteneri} /> */}
 
           {/* <SocialProof />
