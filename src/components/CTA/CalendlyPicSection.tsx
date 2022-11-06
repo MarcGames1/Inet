@@ -43,7 +43,7 @@ const CalendlyPicSection = ({
               />
             )}
           </div>
-          <div className={tw('relative flex h-96  ')}>
+          <div className={tw(' relative flex  ')}>
             <Image
               src={meImg}
               alt="Alexandru Marcu Specialist Seo"
