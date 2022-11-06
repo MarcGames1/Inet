@@ -5,7 +5,19 @@ import { CalendlyButton } from '../calendly';
 import WhatsappCta from '../../ux/buttons/whatsappCta';
 const meImg = '/images/alexandru-marcu-specialist-seo.png';
 
-const CalendlyNoPic = ({ titlu, text, btntxt, wa, pulse }: {pulse?:boolean | undefined, wa ?: undefined| boolean; titlu: string; text: string; btntxt?: string | undefined }) => {
+const CalendlyNoPic = ({
+  titlu,
+  text,
+  btntxt,
+  wa,
+  pulse,
+}: {
+  pulse?: boolean | undefined;
+  wa?: undefined | boolean;
+  titlu: string;
+  text: string;
+  btntxt?: string | undefined;
+}) => {
   return (
     <section id="cta" className={tw('')}>
       <div className={tw(`h-full w-full mx-auto p-4 sm:p-6 lg:p-8`)}>
@@ -29,9 +41,7 @@ const CalendlyNoPic = ({ titlu, text, btntxt, wa, pulse }: {pulse?:boolean | und
 
 export default CalendlyNoPic;
 
-
-
-const Wa = ({ btntxt, pulse }: { pulse ?: boolean|undefined, btntxt: string | undefined }) => {
+const Wa = ({ btntxt, pulse }: { pulse?: boolean | undefined; btntxt: string | undefined }) => {
   return (
     <>
       <p className={tw(`mt-10 text-gray-800 text-center text-lg lg:text-2xl`)}>Hai să vorbim despre afacerea ta!</p>

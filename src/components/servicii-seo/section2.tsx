@@ -1,7 +1,6 @@
-import React, { ReactNode } from 'react'
-import { tw } from 'twind'
+import React, { ReactNode } from 'react';
+import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
-
 
 const Section2 = (props: {
   children: ReactNode;
@@ -62,4 +61,4 @@ const Section2 = (props: {
   );
 };
 
-export default Section2
+export default Section2;

@@ -1,7 +1,7 @@
 import { tw } from 'twind';
 import { useState } from 'react';
 import { CalendlyButton } from '../calendly';
-import Image from 'next/image'
+import Image from 'next/image';
 import Link from 'next/link';
 interface IMenuButton {
   toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
@@ -18,12 +18,9 @@ const links = [
     label: `Servicii SEO`,
     href: `/servicii-seo`,
   },
-  
 ];
 
 const secondaryLinks = [
-  
-  
   {
     label: `contact`,
     href: `/contact`,
@@ -89,7 +86,6 @@ const MobileMenu = () => (
             {link.label}
           </a>
         ))}
-       
       </div>
     </div>
   </div>
@@ -127,7 +123,12 @@ const Navigation = () => {
           </div>
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
-              <CalendlyButton text={'Programeaza-te la o sedinta gratuita!'} primary modifier={undefined} pulse={undefined} />
+              <CalendlyButton
+                text={'Programeaza-te la o sedinta gratuita!'}
+                primary
+                modifier={undefined}
+                pulse={undefined}
+              />
 
               {/* <Button primary>Analiza Gratuita</Button> */}
             </div>

@@ -1,4 +1,3 @@
-import Section2 from "./section2";
+import Section2 from './section2';
 
-
-export default {Section2}
+export default { Section2 };

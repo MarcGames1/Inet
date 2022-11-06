@@ -12,7 +12,6 @@ import Head from 'next/head';
 // import CasesSection from '@/components/cases-section';
 // import FeatureSection from '@/components/feature-section';
 
-
 // Importuri dinamice pentru FCP
 
 const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), {
@@ -40,7 +39,6 @@ import { CalendlyNoPic, CalendlySection } from '@/components/CTA';
 import DcNoi from '@/components/DcNoi';
 import Section2 from '@/components/servicii-seo/section2';
 import ListaCuBife from '@/components/servicii-seo/listaCuBife';
-
 
 const ServiciiSeo = () => {
   return (

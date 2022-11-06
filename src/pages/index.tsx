@@ -1,26 +1,23 @@
-import React, { Suspense } from 'react'
-import dynamic from 'next/dynamic'
+import React, { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
-import {homepage} from '../../js/content'
-
-
+import { homepage } from '../../js/content';
 
 // import Parteneri  from '@/components/parteneri';
 // import Page from '@/components/page';
 // import Header from '@/components/header';
 // import ListSection from '@/components/list-section';
 // import ListWithPic from '@/components/list-pictures-section';
- import SocialProof from '@/components/social-proof';
+import SocialProof from '@/components/social-proof';
 // Importuri dinamice pentru FCP
 
 const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), {
   loading: () => <div>Loading...</div>,
 });
 
-
-const Page = dynamic(() => import('../components/page'),{
-  loading: () => <div>Loading...</div>
+const Page = dynamic(() => import('../components/page'), {
+  loading: () => <div>Loading...</div>,
 });
 const FeatureSection = dynamic(() => import('../components/feature-section'), {
   loading: () => <div>Loading...</div>,
@@ -44,7 +41,7 @@ const Parteneri = dynamic(() => import('../components/parteneri'), {
   loading: () => <div>Loading...</div>,
 });
 
-import {CalendlySection} from '../components/CTA'
+import { CalendlySection } from '../components/CTA';
 import SecondSection from '@/components/s2Section';
 import DcNoi from '@/components/DcNoi/index';
 export default function Home() {

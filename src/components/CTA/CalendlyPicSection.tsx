@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { tw } from 'twind';
-import Image from 'next/image'
+import Image from 'next/image';
 import { CalendlyButton } from '../calendly';
 import WhatsappCta from '../../ux/buttons/whatsappCta';
 
-const meImg = '/images/alexandru-marcu-specialist-seo.png'
+const meImg = '/images/alexandru-marcu-specialist-seo.png';
 
 const CalendlyPicSection = ({
   titlu,
@@ -22,11 +22,7 @@ const CalendlyPicSection = ({
   return (
     <section id="cta" className={tw(`py-10 relative  overflow-hidden`)}>
       <div className={tw(`h-full grid row w-full mx-auto p-4 sm:p-6 lg:p-8`)}>
-        <div
-          className={tw(
-            'h-full  grid grid-cols-3 bg-gradient-to-r from-pink-100 via-indigo-300 to-pink-100',
-          )}
-        >
+        <div className={tw('h-full  grid grid-cols-3 bg-gradient-to-r from-pink-100 via-indigo-300 to-pink-100')}>
           <div
             className={tw(
               'text-center my-4 lg:h-auto justify-between items-center pb-10 text-xl col-span-3 lg:col-span-2 flex flex-col text-gray-900',
@@ -64,18 +60,15 @@ const CalendlyPicSection = ({
   );
 };
 
-export default CalendlyPicSection
+export default CalendlyPicSection;
 
-
-
-
-const Wa = ({btntxt, pulse}: {btntxt: string | undefined, pulse?: boolean | undefined}) =>{
+const Wa = ({ btntxt, pulse }: { btntxt: string | undefined; pulse?: boolean | undefined }) => {
   return (
     <>
       <p className={tw(`mt-10 text-gray-800 text-center text-lg lg:text-2xl`)}> Hai să vorbim despre afacerea ta!</p>
       <div className={tw(` mt-5 grid gap-5 md:grid-cols-2 content- `)}>
         <div>
-          <CalendlyButton pulse={pulse ? pulse : undefined}  text={btntxt} primary modifier={'w-full'} />
+          <CalendlyButton pulse={pulse ? pulse : undefined} text={btntxt} primary modifier={'w-full'} />
         </div>
 
         {/* <span className={tw(`mx-2`)}></span> */}
@@ -85,4 +78,4 @@ const Wa = ({btntxt, pulse}: {btntxt: string | undefined, pulse?: boolean | unde
       </div>
     </>
   );
-}
+};

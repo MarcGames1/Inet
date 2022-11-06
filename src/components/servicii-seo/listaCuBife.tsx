@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { tw } from 'twind';
 import styles from './style.module.css';
 import Check from '@/constants/svg/check.svg';
 
-
-
-const ListaCuBife = ({ title, paragrafe  }:{title:string; paragrafe:string[]}) => {
+const ListaCuBife = ({ title, paragrafe }: { title: string; paragrafe: string[] }) => {
   return (
     <section
       className={`${styles.bg} ${tw(`w-full items-center min-h-screen flex flex-col lg:py-28 pt-28 overflow-hidden`)}`}
     >
       <span className={tw('text-center  text-white font-semibold tracking-wide uppercase')}>{title}</span>
-      {paragrafe.map((item: string , index: React.Key | null | undefined) => (
+      {paragrafe.map((item: string, index: React.Key | null | undefined) => (
         <li
           key={index}
           className={`${styles.glass} ${tw(
@@ -37,4 +35,4 @@ const ListaCuBife = ({ title, paragrafe  }:{title:string; paragrafe:string[]}) =
   );
 };
 
-export default ListaCuBife
+export default ListaCuBife;

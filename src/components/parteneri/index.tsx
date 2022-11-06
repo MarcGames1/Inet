@@ -2,18 +2,20 @@ import React from 'react';
 import { tw } from 'twind';
 import Image from 'next/image';
 
+const Parteneri = ({
+  titlu,
+  indemn,
+  logoParteneri,
+  col,
+}: {
+  titlu: string;
+  indemn: string;
+  logoParteneri: any;
+  col?: number;
+}) => {
+  let colsnum = NaN;
 
-
-
-
- const Parteneri = ({titlu, indemn, logoParteneri, col}:{titlu:string, indemn:string, logoParteneri:any, col ?:number}) => {
-   
-  let colsnum = NaN 
-
-  col ? colsnum = col : colsnum = 4
- 
-
-
+  col ? (colsnum = col) : (colsnum = 4);
 
   return (
     <section id="list" className={tw(`lg:py-28 pt-28 overflow-hidden`)}>
@@ -37,4 +39,4 @@ import Image from 'next/image';
   );
 };
 
-export default Parteneri
+export default Parteneri;

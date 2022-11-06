@@ -1,21 +1,21 @@
-import React , { ReactElement } from 'react'; 
-import styles from './style.module.css'
+import React, { ReactElement } from 'react';
+import styles from './style.module.css';
 import { tw } from 'twind';
 
-
-const FirstSection = ({titlu, subtitlu}: {titlu?: string; subtitlu?: string;}) =>{
- 
-  return (
-    
-      (titlu || subtitlu) ?  <div className={tw(`mb-16 text-center`)}>
-        {titlu ? <p className={tw(`mt-2 pb-4 text-5xl lg:text-7xl font-bold tracking-tight text-gray-50`)}>{titlu}</p> : null}
-       {subtitlu ?  <p className={tw(`text-base text-indigo-50 font-semibold tracking-wide uppercase`)}>{subtitlu}</p> : null}
-      </div> : <></>
-    
-  )
-}
-
-
+const FirstSection = ({ titlu, subtitlu }: { titlu?: string; subtitlu?: string }) => {
+  return titlu || subtitlu ? (
+    <div className={tw(`mb-16 text-center`)}>
+      {titlu ? (
+        <p className={tw(`mt-2 pb-4 text-5xl lg:text-7xl font-bold tracking-tight text-gray-50`)}>{titlu}</p>
+      ) : null}
+      {subtitlu ? (
+        <p className={tw(`text-base text-indigo-50 font-semibold tracking-wide uppercase`)}>{subtitlu}</p>
+      ) : null}
+    </div>
+  ) : (
+    <></>
+  );
+};
 
 const SecondSection = ({
   titlu,
@@ -24,7 +24,7 @@ const SecondSection = ({
   children,
 }: {
   titlu?: string | undefined;
-  subtitlu?: any ;
+  subtitlu?: any;
   paragrafe: string[] | ReactElement[];
   children?: JSX.Element | null;
 }) => {
@@ -43,4 +43,4 @@ const SecondSection = ({
   );
 };
 
-export default SecondSection
+export default SecondSection;
