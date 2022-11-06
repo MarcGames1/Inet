@@ -35,7 +35,7 @@ const CalendlyPicSection = ({
             <span className={tw(' flex mt-2 text-3xl  lg:text-4xl text-center font-bold tracking-tight ')}>
               {titlu}
             </span>
-            <p className={tw(' mt-4 flex flex-row')}>{text}</p>
+            <p className={tw(' mb-10 mt-4 flex flex-row')}>{text}</p>
             {wa ? (
               <Wa btntxt={btntxt} />
             ) : (
