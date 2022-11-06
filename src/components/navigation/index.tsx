@@ -1,9 +1,5 @@
 import { tw } from 'twind';
 import { useState } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Button from '@/components/button';
-import Logo from '../logo';
-import WhatsappCta from '@/ux/buttons/whatsappCta';
 import { CalendlyButton } from '../calendly';
 import Image from 'next/image'
 import Link from 'next/link';
