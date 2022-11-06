@@ -1,23 +1,25 @@
 import React, { ReactNode } from 'react'
 import { tw } from 'twind'
 import Check from '@/constants/svg/check.svg';
-import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
-import { Parallax } from 'react-scroll-parallax';
-const img = '/images/7155205.jpg'
 
-const Section2 = (props: { children: ReactNode; lead: string[] | ReactNode[]; heading: string; paragrafe: string[] }) => {
+
+const Section2 = (props: {
+  children: ReactNode;
+  lead: string[] | ReactNode[];
+  heading: string;
+  paragrafe: string[];
+}) => {
   return (
     <>
       <section className={tw(`overflow-hidden`)}>
         <div className={tw('flex flex-col m-14')}>
           <div className={tw('flex flex-row')}>
-
-          <div className={tw('flex flex-col')}>
-            {props.lead.map((p: string | ReactNode) => {
-              return <p className={tw('my-3 text-lg  md:text-xl tracking-wide ext-xl font-semibold')}>{p}</p>;
-            })}
+            <div className={tw('flex flex-col')}>
+              {props.lead.map((p: string | ReactNode) => {
+                return <p className={tw('my-3 text-lg  md:text-xl tracking-wide ext-xl font-semibold')}>{p}</p>;
+              })}
             </div>
-          {/* <div>col</div> */}
+            {/* <div>col</div> */}
           </div>
           <span className={tw('  m-auto center mt-2 pb-4 text-2xl lg:text-3xl font-bold tracking-tight text-gray-900')}>
             {props.heading}

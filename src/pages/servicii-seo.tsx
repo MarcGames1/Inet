@@ -40,7 +40,7 @@ import { CalendlyNoPic, CalendlySection } from '@/components/CTA';
 import DcNoi from '@/components/DcNoi';
 import Section2 from '@/components/servicii-seo/section2';
 import ListaCuBife from '@/components/servicii-seo/listaCuBife';
-import { useParallax } from 'react-scroll-parallax';
+
 
 const ServiciiSeo = () => {
   return (
