@@ -30,7 +30,7 @@ const Wa = ({ btntxt, pulse }: { pulse ?: boolean|undefined, btntxt: string | un
   return (
     <>
       <p className={tw(`mt-10 text-gray-800 text-center text-lg lg:text-2xl`)}> Hai să ne cunoaștem!</p>
-      <div className={tw(` mt-5 grid gap-5 grid-cols-2 content-around`)}>
+      <div className={tw(` mt-5 grid gap-5 md:grid-cols-2 content-around`)}>
         <div>
           <CalendlyButton pulse={pulse ? pulse : undefined} text={btntxt} primary modifier={'w-full'} />
         </div>

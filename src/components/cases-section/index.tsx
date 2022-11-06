@@ -33,7 +33,7 @@ const CasesSection = () => (
           Don’t just take our word for it — see what leaders in digital are saying
         </p>
         <div className={tw(`mx-auto pt-24`)}>
-          <div className={tw(`w-full flex flex-wrap justify-around`)}>
+          <div className={tw(`w-full flex flex-wrap `)}>
             {articles.map((article) => (
               <div
                 key={article.title}

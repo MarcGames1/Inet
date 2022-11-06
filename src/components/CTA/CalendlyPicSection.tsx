@@ -25,13 +25,13 @@ const CalendlyPicSection = ({
         <div className={tw('h-full  grid grid-cols-3 w bg-gradient-to-r from-indigo-100 to-indigo-300 ')}>
           <div
             className={tw(
-              'lg:h-auto justify-around items-center pb-10 text-xl col-span-3 lg:col-span-2 flex flex-col text-gray-900',
+              'text-center my-4 lg:h-auto justify-between items-center pb-10 text-xl col-span-3 lg:col-span-2 flex flex-col text-gray-900',
             )}
           >
             <span className={tw(' flex mt-2 text-3xl  lg:text-4xl text-center font-bold tracking-tight ')}>
               {titlu}
             </span>
-            <p className={tw('mx-16 flex flex-row')}>{text}</p>
+            <p className={tw(' mt-4 flex flex-row')}>{text}</p>
             {wa ? (
               <Wa btntxt={btntxt} />
             ) : (
@@ -68,8 +68,8 @@ export default CalendlyPicSection
 const Wa = ({btntxt, pulse}: {btntxt: string | undefined, pulse?: boolean | undefined}) =>{
   return (
     <>
-      <p className={tw(`mt-10 text-gray-800 text-center text-lg lg:text-2xl`)}> Hai să ne cunoaștem!</p>
-      <div className={tw(` mt-5 grid gap-5 grid-cols-2 content-around`)}>
+      <p className={tw(`mt-10 text-gray-800 text-center text-lg lg:text-2xl`)}> Hai să vorbim despre afacerea ta!</p>
+      <div className={tw(` mt-5 grid gap-5 md:grid-cols-2 content- `)}>
         <div>
           <CalendlyButton pulse={pulse ? pulse : undefined}  text={btntxt} primary modifier={'w-full'} />
         </div>
