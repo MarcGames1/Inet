@@ -16,30 +16,42 @@ const pic3 = '/studiiDeCaz/StudiuCaz1.3-927x385.png';
 const pic4 = '/studiiDeCaz/seo tehnic-1600x1183.jpeg';
 
  const important = tw('font-semibold text-indigo-500');
+ const important2 = tw('font-semibold text-emerald-300');
+ 
 
 export const homepage = {
   s1: {
     h1: 'Agentie SEO si Marketing Online',
     subtitlu: (
       <>
-        Te ajutăm să-ți <span className={important}>crești veniturile</span> și să obții
-        notorietate în mediul online prin optimizarea site-ului pentru motoarele de căutare.
+        Te ajutăm să-ți <span className={important}>crești veniturile</span> și să obții notorietate în mediul online
+        prin optimizarea site-ului pentru motoarele de căutare.
       </>
     ),
     indemn: (
       <>
-        Vrei să-ți <span className={important}>crești numărul vizitelor pe site </span>fără să
-        investești bugete enorme în reclame?
+        Vrei să-ți <span className={important}>crești numărul vizitelor pe site </span>fără să investești bugete enorme
+        în reclame?
       </>
     ),
     cta: 'default',
   },
   S2: {
-    titlu: 'FII RELEVANT ÎN ONLINE',
+    titlu: <>FII RELEVANT ÎN ONLINE</>,
     paragrafe: [
-      'Când potențiatul tău client intră pe Google, a decis deja că are nevoie de serviciile pe care tu le oferi. Nu mai trebuie să-l convingi de nimic. Întrebarea este, cine va apărea în rezultatele căutărilor? Tu sau concurența ta?',
-      'Dacă nu ești vizibil în online, vei pierde în continuare timp și bani, în timp ce concurența ta va continua să aibă rezultate. Prin agenția noastră de marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care au nevoie de produsul sau serviciul tău!',
-      'Nu este suficient să fii doar listat în online atâta timp cât nimeni nu știe că exiști!',
+      <>
+        Când potențiatul tău client intră pe Google, a decis deja că are nevoie de{' '}
+        <span className={important2}>serviciile pe care tu le oferi</span> . Nu mai trebuie să-l convingi de nimic.
+        Întrebarea este, <span className={important2}>cine va apărea în rezultatele căutărilor</span>? Tu sau concurența
+        ta?
+      </>,
+      <>
+        Dacă nu ești vizibil în online ,vei pierde în continuare timp și bani, în
+        timp ce <span className={important2}>concurența ta va continua să aibă rezultate</span>. Prin agenția noastră de
+        marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care
+        au nevoie de produsul sau serviciul tău!
+      </>,
+      <>Nu este suficient să fii doar listat în online atâta timp cât nimeni nu știe că exiști!</>,
     ],
   },
   dcNoi: {

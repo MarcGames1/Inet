@@ -5,12 +5,6 @@ import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import Parteneri from '@/components/parteneri';
 import Head from 'next/head';
-// import Page from '@/components/page';
-// import Header from '@/components/header';
-// import ListSection from '@/components/list-section';
-// import ListWithPic from '@/components/list-pictures-section';
-// import CasesSection from '@/components/cases-section';
-// import FeatureSection from '@/components/feature-section';
 
 // Importuri dinamice pentru FCP
 
