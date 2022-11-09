@@ -102,7 +102,7 @@ const Header = ({
           </div>
         </div>
         <div id="heroimg" className={tw(picContainer, 'h-80 w-80 relative  md:h-72 md:w-4/12')}>
-          <Image src={meImg.url} alt={meImg.alt} width={30} height={10} layout="fill" objectFit="contain" />
+          <Image loading='eager' src={meImg.url} alt={meImg.alt} width={30} height={10} layout="fill" objectFit="contain" />
         </div>
       </div>
       {Cta(variant)}
