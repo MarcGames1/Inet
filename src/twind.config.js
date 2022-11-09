@@ -18,7 +18,7 @@ export default {
         yellow: colors.yellow,
         fuchsia: colors.fuchsia,
         teal: colors.teal,
-        cyan:colors.cyan,
+        cyan: colors.cyan,
         slate: colors.slate,
         gray: colors.gray,
         zinc: colors.zinc,

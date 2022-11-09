@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
 import Link from 'next/link';
+import { ReactElement } from 'react';
 
 const ListWithPic = ({
   indemn,
@@ -9,9 +10,9 @@ const ListWithPic = ({
   listItems,
   numbered,
 }: {
-  indemn: string;
-  titlu: string;
-  listItems: any;
+  indemn: string | ReactElement;
+  titlu: string | ReactElement;
+  listItems: any
   image?: any | undefined;
   numbered?: boolean | undefined;
   href?: string | undefined;

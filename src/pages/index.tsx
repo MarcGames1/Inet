@@ -12,7 +12,7 @@ import { homepage } from '../../js/content';
 import SocialProof from '@/components/social-proof';
 // Importuri dinamice pentru FCP
 
-const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), {
+const DcNoi = dynamic(() => import('@/components/DcNoi/index'), {
   loading: () => <div>Loading...</div>,
 });
 
@@ -22,6 +22,9 @@ const Page = dynamic(() => import('../components/page'), {
 const FeatureSection = dynamic(() => import('../components/feature-section'), {
   loading: () => <div>Loading...</div>,
 });
+// const CalendlySection  = dynamic(() => import('../components/CTA').then(c) => c.CalendlySection), {
+//   loading: () => <div>Loading...</div>,
+// });
 const PricingTable = dynamic(() => import('../components/pricing-table'), {
   loading: () => <div>Loading...</div>,
 });
@@ -43,7 +46,7 @@ const Parteneri = dynamic(() => import('../components/parteneri'), {
 
 import { CalendlySection } from '../components/CTA';
 import SecondSection from '@/components/s2Section';
-import DcNoi from '@/components/DcNoi/index';
+
 export default function Home() {
   return (
     <Suspense fallback={`Loading...`}>

@@ -21,7 +21,7 @@ const pic4 = '/studiiDeCaz/seo tehnic-1600x1183.jpeg';
 
 export const homepage = {
   s1: {
-    h1: 'Agentie SEO si Marketing Online',
+    h1: 'Agentie Marketing Online ',
     subtitlu: (
       <>
         Te ajutăm să-ți <span className={important}>crești veniturile</span> și să obții notorietate în mediul online
@@ -46,8 +46,8 @@ export const homepage = {
         ta?
       </>,
       <>
-        Dacă nu ești vizibil în online ,vei pierde în continuare timp și bani, în
-        timp ce <span className={important2}>concurența ta va continua să aibă rezultate</span>. Prin agenția noastră de
+        Dacă nu ești vizibil în online ,vei pierde în continuare timp și bani, în timp ce{' '}
+        <span className={important2}>concurența ta va continua să aibă rezultate</span>. Prin agenția noastră de
         marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care
         au nevoie de produsul sau serviciul tău!
       </>,
@@ -85,23 +85,50 @@ export const homepage = {
     lista: [
       {
         title: `Optimizare SEO`,
-        description: `Îți aducem site-ul pe prima pagină prin strategii complete și personalizate adaptate business-ului tău. Nu te ajutăm doar să-ți crești numărul de vizitatori. Ne asigurăm că site-ul tău este optimizat și pregătit pentru ca o simpla vizită să se transforme într-o conversie.`,
+        description: (
+          <>
+            Îți aducem site-ul pe <span className={important}> prima pagină</span> prin strategii complete și
+            personalizate adaptate business-ului tău. Nu te ajutăm doar să-ți crești numărul de vizitatori. Ne asigurăm
+            că site-ul tău este optimizat și pregătit pentru ca o simpla vizită să se transforme într-o conversie.
+          </>
+        ),
         href: '/servicii-seo',
         Icon: SeoSvg,
       },
       {
         title: `GOOGLE ADS`,
-        description: `Îți promovăm și creștem afacerea prin campanii Google ADS optimizate, la costuri minime și în concordanță cu strategia ta de business. Setăm publicul țintă, concepem mesaje de impact și gestionăm bugetele eficient, astfel încât să ne asigurăm că vei avea rezultate măsurabile.`,
+        description: (
+          <>
+            Îți promovăm și creștem afacerea prin{' '}
+            <span className={important}>campanii Google ADS optimizate, la costuri minime</span> și în concordanță cu
+            strategia ta de business. Setăm publicul țintă, concepem mesaje de impact și gestionăm bugetele eficient,
+            astfel încât să ne asigurăm că vei avea rezultate măsurabile.
+          </>
+        ),
         Icon: AdsSvg,
       },
       {
         title: `STRATEGIE DE CONȚINUT`,
-        description: `Realizăm articole de blog optimizate Seo pentru a atrage către site-ul tău trafic relevant ce crește rata de conversie și poziționarea brandului tău în piață. Colaborăm cu creatori de conținut pasionați care au experiență notabilă în domeniu și au capacitatea de a traduce în cuvinte esența business-ului tău.`,
+        description: (
+          <>
+            <span className={important}>Realizăm articole de blog optimizate Seo</span> pentru a atrage către site-ul
+            tău trafic relevant ce crește rata de conversie și poziționarea brandului tău în piață. Colaborăm cu
+            creatori de conținut pasionați care au experiență notabilă în domeniu și au capacitatea de a traduce în
+            cuvinte esența business-ului tău.
+          </>
+        ),
         Icon: ContentSvg,
       },
       {
         title: `CREARE SITE WEB`,
-        description: `Asigurăm servicii complete de creare site-uri web performante, ușor de administrat, complet funcționale, pregătite să vândă și să te poziționeze drept autoritate în piață. Integrăm misiunea și viziunea afacerii tale într-un design responsive cu ajutorul celor mai noi tehnologii.`,
+        description: (
+          <>
+            Asigurăm servicii complete de <span className={important}>creare site-uri web performante</span>, ușor de
+            administrat, complet funcționale, <span className={important}>pregătite să vândă</span> și să te poziționeze
+            drept autoritate în piață. Integrăm misiunea și viziunea afacerii tale într-un design responsive cu ajutorul
+            celor mai noi tehnologii.
+          </>
+        ),
         Icon: WebDevSvg,
       },
     ],
@@ -110,26 +137,49 @@ export const homepage = {
 
   s4: {
     indemn: 'Noi suntem partenerii afacerii tale',
-    titlu: 'Cum va decurge colaborarea cu noi',
+    titlu: 'Cum va decurge colaborarea cu agentia de marketing online iwebagency',
     lista: [
       {
         title: `FACEM CUNOȘTINȚĂ`,
-        description: `Programezi o ședință 1 la 1 - complet gratuită, în care îți vom solicita câteva informații relevante pentru a reuși să identificăm nevoile tale de business. `,
+        description: (
+          <>
+            `Programezi o ședință 1 la 1 - <span className={important}>complet gratuită</span>, în care îți vom solicita
+            câteva informații relevante pentru a reuși să identificăm nevoile tale de business.
+          </>
+        ),
         Icon: HelloSvg,
       },
       {
         title: `STABILIM OBIECTIVELE ȘI PLANUL DE ACȚIUNE`,
-        description: `Stabilim obiective strategice și măsurabile pe termen scurt, mediu și lung. Identificăm cuvintele cheie pe care putem crește și acțiunile necesare atât din partea noastră cât și a ta.`,
+        description: (
+          <>
+            <span className={important}>
+              Stabilim obiective strategice și măsurabile pe termen scurt, mediu și lung
+            </span>
+            . Identificăm cuvintele cheie pe care putem crește și acțiunile necesare atât din partea noastră cât și a
+            ta.
+          </>
+        ),
         Icon: TeamworkSvg,
       },
       {
         title: `VEZI REZULTATELE ÎN TIMP REAL`,
-        description: `Vei fi în permanență în control și vei putea verifica rezultatele tuturor strategiilor implementate, precum și evoluția poziției site-ului tău în căutările Google, pe cuvintele cheie stabilite.`,
+        description: (
+          <>
+            Vei fi în permanență în control și vei putea verifica rezultatele tuturor strategiilor implementate, precum
+            și evoluția poziției site-ului tău în căutările Google, pe cuvintele cheie stabilite.
+          </>
+        ),
         Icon: StatisticsSvg,
       },
       {
         title: `CALL ȘI PREZENTARE RAPORT LUNAR`,
-        description: `La finalul fiecărei luni, îți prezentăm un raport complet de activitate: ce acțiuni am întreprins, care sunt rezultatele și ce urmează să realizăm în luna următoare pentru a atinge obiectivele stabilite.`,
+        description: (
+          <>
+            La finalul fiecărei luni, îți prezentăm un raport complet de activitate: ce acțiuni am întreprins, care sunt
+            rezultatele și ce urmează să realizăm în luna următoare pentru a atinge obiectivele stabilite.
+          </>
+        ),
         Icon: SuccessfulTaskCompletionSvg,
       },
     ],

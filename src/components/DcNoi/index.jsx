@@ -2,11 +2,13 @@ import React from 'react'
 import { tw } from 'twind';
 import styles from './style.module.css'
 import Check from '@/constants/svg/check.svg';
+import { SectionHeader } from '../SectionHeader/SectionHeader';
+
 
 const DcNoi = ({title, items}) => {
   return (
     <section className={`${styles.bg} ${tw(`w-full items-center min-h-screen flex flex-col lg:py-28 pt-28 overflow-hidden`) }`}>
-      <span className={tw('text-center  text-white font-semibold tracking-wide uppercase')}>{title}</span>
+     <SectionHeader titlu={title}  style={'text-gray-50'}/>
       {items.map((item, index) => (
         <li key={index} className={`${styles.glass} ${tw('flex items-center lg:flex-row md:flex-col container w-11/12 lg:w-9/12 h-full text-white m-4 p-4 lg:m-8 lg:p-8')}`}>
           <div className={tw(`px-4`)}>
