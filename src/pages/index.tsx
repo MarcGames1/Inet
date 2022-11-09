@@ -3,29 +3,26 @@ import dynamic from 'next/dynamic';
 import { NextSeo } from 'next-seo';
 import { homepage } from '../../js/content';
 
-
+// '../components/CTA'
 // Importuri dinamice pentru FCP
 
 const DcNoi = dynamic(() => import('@/components/DcNoi/index'), {
  
-  loading: () => <div>Loading...</div>,
+  suspense: true,
 });
 
 const Page = dynamic(() => import('../components/page'), {
  
-  loading: () => <div>Loading...</div>,
+  suspense: true,
 });
-const CalendlySection  = dynamic(() => import('../components/CTA').then (c => c.CalendlySection), {
-  
-  loading: () => <div>Loading...</div>,
+const CalendlySection = dynamic(() => import('../components/CTA').then((c) => c.CalendlySection), {
+  suspense: true,
 });
 const Header = dynamic(() => import('../components/header'), {
- 
-  loading: () => <div>Loading...</div>,
+  suspense: true,
 });
 const ListWithPic = dynamic(() => import('../components/list-pictures-section'), {
- 
-  loading: () => <div>Loading...</div>,
+  suspense: true,
 });
 
 // import { CalendlySection } from '../components/CTA';
