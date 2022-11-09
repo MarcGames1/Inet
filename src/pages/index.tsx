@@ -6,15 +6,9 @@ import { homepage } from '../../js/content';
 // '../components/CTA'
 // Importuri dinamice pentru FCP
 
-const DcNoi = dynamic(() => import('@/components/DcNoi/index'), {
- 
-  suspense: true,
-});
+const DcNoi = dynamic(() => import('@/components/DcNoi/index'));
 
-const Page = dynamic(() => import('../components/page'), {
- 
-  suspense: true,
-});
+const Page = dynamic(() => import('../components/page'));
 const CalendlySection: React.ComponentType<
   JSX.IntrinsicAttributes & {
     wa?: boolean | undefined;
@@ -22,15 +16,9 @@ const CalendlySection: React.ComponentType<
     text: string;
     btntxt?: string | undefined;
   }
-> = dynamic(() => import('../components/CTA').then((c) => c.CalendlySection), {
-  suspense: true,
-});
-const Header = dynamic(() => import('../components/header'), {
-  suspense: true,
-});
-const ListWithPic = dynamic(() => import('../components/list-pictures-section'), {
-  suspense: true,
-});
+> = dynamic(() => import('../components/CTA').then((c) => c.CalendlySection));
+const Header = dynamic(() => import('../components/header'));
+const ListWithPic = dynamic(() => import('../components/list-pictures-section'));
 
 // import { CalendlySection } from '../components/CTA';
 import SecondSection from '@/components/s2Section';
