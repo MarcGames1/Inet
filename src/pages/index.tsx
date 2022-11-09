@@ -16,7 +16,7 @@ const Page = dynamic(() => import('../components/page'), {
   loading: () => <div>Loading...</div>,
 });
 const CalendlySection  = dynamic(() => import('../components/CTA').then (c => c.CalendlySection), {
-  ssr:false,
+  
   loading: () => <div>Loading...</div>,
 });
 const Header = dynamic(() => import('../components/header'), {
