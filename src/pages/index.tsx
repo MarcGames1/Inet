@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { ComponentType, Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { NextSeo } from 'next-seo';
 import { homepage } from '../../js/content';
@@ -15,7 +15,14 @@ const Page = dynamic(() => import('../components/page'), {
  
   suspense: true,
 });
-const CalendlySection = dynamic(() => import('../components/CTA').then((c) => c.CalendlySection), {
+const CalendlySection: React.ComponentType<
+  JSX.IntrinsicAttributes & {
+    wa?: boolean | undefined;
+    titlu: string;
+    text: string;
+    btntxt?: string | undefined;
+  }
+> = dynamic(() => import('../components/CTA').then((c) => c.CalendlySection), {
   suspense: true,
 });
 const Header = dynamic(() => import('../components/header'), {
