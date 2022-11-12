@@ -3,11 +3,18 @@ import '@/styles/global.css';
 import '@fontsource/inter';
 import { setup } from 'twind';
 import twindConfig from '../twind.config';
+import { Toaster } from 'react-hot-toast';
+import { AuthProvider } from '@/context/auth';
 
 if (typeof window !== `undefined`) {
   setup(twindConfig);
 }
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+   return(
+    <AuthProvider>
+      <Toaster />
+      <Component {...pageProps} />
+    </AuthProvider>
+   )
 }

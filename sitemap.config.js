@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: 'https://iwebagency.ro',
   sitemapSize: 5000,
-  exclude: ['/termeni-si-conditii', '/admin/*'],
+  exclude: ['/termeni-si-conditii', '/admin/*', '/admin/'],
   robotsTxtOptions: {
     policies: [
       {
