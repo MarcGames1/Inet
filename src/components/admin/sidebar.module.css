@@ -1,0 +1,38 @@
+.wrapper{
+    /* min-width:30vh; */
+    width:100%;
+     background-color:white;
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: space-around;
+    margin:1rem;
+    padding:0.5rem;
+}
+
+.wrapper .collapsed{
+
+}
+
+.item{
+    color:black;
+     margin:auto;
+    padding:0.5rem;
+}
+
+.item:hover{
+    background-color:var(--primary-color-hover);
+    color:white;
+    transitioN:0.5s;
+}
+
+.button{
+    position:fixed;
+    top:90%;
+    margin:1rem;
+    padding:0.5rem;
+    display:flex;
+    flex-direction:column;
+    background-color:var(--primary-color);
+    align-items:center;
+    text:center;
+}
