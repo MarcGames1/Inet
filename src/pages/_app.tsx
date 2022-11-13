@@ -5,7 +5,7 @@ import { setup } from 'twind';
 import twindConfig from '../twind.config';
 import { Toaster } from 'react-hot-toast';
 import { AuthProvider } from '@/context/auth';
-
+import '/node_modules/react-quill/dist/quill.snow.css';
 if (typeof window !== `undefined`) {
   setup(twindConfig);
 }

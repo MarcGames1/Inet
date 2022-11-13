@@ -9,6 +9,7 @@ import { CategoryContext } from '@/context/category';
 import { AuthContext } from '@/context/auth';
 
 import Button from '@/components/button';
+import QuillEditor from '../QuillEditor';
 
 
 const CreateBlog = () => {
@@ -85,6 +86,7 @@ const CreateBlog = () => {
                     id="thumbnail" name="thumbnail"
                     accept="image/png, image/*"/>
                 <Button type='submit' onClick={handler.submit}>Creaza Postare</Button>
+                <QuillEditor />
             </form>
      
 
