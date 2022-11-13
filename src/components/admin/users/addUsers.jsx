@@ -8,49 +8,48 @@ import { tw } from 'twind';
 import { CategoryContext } from '@/context/category';
 import dynamic from 'next/dynamic'
 import { faPray } from '@fortawesome/free-solid-svg-icons';
-// const Editor = dynamic(() => import('../components/ConfiguredQuill/ConfiguredQuill/jsx'), {
-//     ssr: false,
 
-// })
 
+import QuillEditor from '../QuillEditor';
 // import{ ConfiguredQuill as Editor }from '@/components/ConfiguredQuill/ConfiguredQuil'
+import Select from 'react-select';
 
-globalThis.formData = new FormData()
 
 const AddUsers = () => {
 
     const [auth, setAuth] = useContext(AuthContext);
     const [loading, setLoading] = useState(true)
+
+    //inputdata
+    const [nume, setNume] = useState(undefined)
+    const [prenume, setPrenume] = useState(undefined)
+    const [email, setEmail] = useState(undefined)
+    const [functie, setFunctie] = useState(undefined)
+    const [bio, setBio] = useState(undefined)
+    const [socialMedia, setSocialMedia] = useState(undefined)
+    const [image, setImage] = useState(undefined)
     
     const [createObjectURL, setCreateObjectURL] = useState(null);
-    const [inputData, setInputData] = useState({
-        nume: '',
-        prenume: '',
-        email: '',
-        functie: '',
-        bio: '',
-        socialMedia: [],
-        image: ''
-    });
-
-const [edditorData, setEditorData] = useState(null)
+   const [isImageLoaded, setIsImageLoaded] = useState(false)
   
     
-  
-
-  
-        
-        
+    
       
 
     const onFinish = async () => {
         
-      
-
-        try {
-            console.log(formdata)
-        }
-        catch (e) { console.log(e) }
+        const formData = new FormData();
+        
+        formData.append("nume", nume);
+        formData.append('prenume', prenume)
+        formData.append("email", email)
+        formData.append("functie", functie)
+        formData.append("bio", bio)
+        formData.append("socialMedia", socialMedia)
+        formData.append("image", image)
+        
+     
+        
 
 
         
@@ -65,27 +64,26 @@ const [edditorData, setEditorData] = useState(null)
 
         try {
             setLoading(true);
-            console.log('USER => ', auth.user._id);
-            console.log('DATA => ', formData);
+           
 
             const { data } = await axios.post(
                 `/author/create/${auth.user._id}`,formData, headers
             );
-            globalThis.formData = new FormData()
-            console.log('DATA => ', data);
+            
+            
             if (data?.error) {
                 setLoading(false);
-                toast.error(data.error);
+                toast.error("Ceva nu a functionat");
                 console.log(data);
             } else {
-                toast.success(data);
+                toast.success("Autor Salvat");
                 setLoading(false);
                 
             }
 
 
         } catch (err) {
-            toast.error('error => ', err);
+            toast.error('error => ');
             console.log(err);
             setLoading(false);
             //   console.log(data);
@@ -98,15 +96,22 @@ const [edditorData, setEditorData] = useState(null)
 
         nume: (e) =>{
             e.preventDefault();
-            setInputData({ ...inputData, nume: e.target.value })
+            setNume(e.target.value)
+            
+        },
+        prenume: (e) =>{
+            e.preventDefault();
+            setPrenume(e.target.value)
+            
+        },
+        functie: (e) =>{
+            e.preventDefault();
+            setFunctie(e.target.value)
             
         },
         email: (evt) => {
             evt.preventDefault();
-            const value = evt.target.value;
-            setInputData({ ...inputData, email: value })
-            
-            console.log(inputData)
+            setEmail(evt.target.value)
         },
         socialMedia: (e) => { 
             
@@ -119,24 +124,19 @@ const [edditorData, setEditorData] = useState(null)
                }
             })
              const urls = rawurls.filter(url => url !== undefined)
-               
-               
-            setInputData({ ...inputData, socialMedia: urls })
-            console.log('URLS => ', urls)
-        },
-            
-        editor: (event, editor) => {
-     setEditorData(editor.getData())
-     setInputData({ ...inputData, bio: edditorData})
-     
-            
-        },
+               const socialMedia = []
+             urls.map(url =>{
+                 socialMedia.push({
+                     platform: URL(url).hostname,
+                     url
 
-        image: (file) => {
-            appendFormData('image', file)
-
+                 })
+             })
+               
+            setSocialMedia( socialMedia)
+           
         },
-            
+                     
            
                 
 
@@ -147,64 +147,55 @@ const [edditorData, setEditorData] = useState(null)
          submit_form: (e) => {
             e.preventDefault();
             //  console.log(e.target.bio.value)
-             console.log(e.target.nume.value)
-             console.log(e)
-            preSubmitForm(inputData)
-            onFinish(inputData);
+            
+            onFinish();
 
         },
     }
 
   
-function preSubmitForm(inputData){
-    console.log('Presubmit Form => ', inputData)
-    
-    appendFormData('bio', edditorData)
-    appendFormData('email', inputData.email)
-    appendFormData('socialMedia', inputData.socialMedia)
-    appendFormData('nume', inputData.nume)
-    appendFormData('prenume', inputData.prenume)
-    appendFormData('functie', inputData.functie)
 
-    console.log('Data appended in object =>', {...formData})
-}
 
-function appendFormData(key, value){
-    formData.append(`${key}`, `${value}`)
-}
 
 
     const uploadToClient = (event) => {
         if (event.target.files && event.target.files[0]) {
             const i = event.target.files[0];
-
-            
-            formData.append('image', event.target.files[0])
-            console.log(i)
+            setImage(i)
             setCreateObjectURL(URL.createObjectURL(i));
+
         }
+            
+            
+            
     };
 
 
-
+useEffect(()=>{
+    createObjectURL ? setIsImageLoaded(true) : setIsImageLoaded(false)
+}, [createObjectURL])
 
     return (
         <>
             <h3 className={tw('font-sans font-bold text-4xl md:text-3xl lg:text-5xl text-center leading-snug text-gray-800')}>Adauga Utilizator</h3>
             <div className={styles.container}>
                 <form enctype='multipart/form-data' onSubmit={handler.submit_form} className={styles.form}>
-                    <FormGroup name={'nume'} required={true} type='text' handleChange={handler.default} />
-                    <FormGroup name={'prenume'} required={true} type='text' handleChange={handler.default} />
+                    <FormGroup name={'nume'} required={true} type='text' handleChange={handler.nume} />
+                    <FormGroup name={'prenume'} required={true} type='text' handleChange={handler.prenume} />
                     <FormGroup name={'email'}  type='email' handleChange={handler.email} />
-                    <FormGroup name={'functie'}  type='text' handleChange={handler.default} />
-                    <TextArea field={"social media"} handler={handler.socialMedia} />
-                 
+                    <FormGroup name={'functie'}  type='text' handleChange={handler.functie} />
+                    <TextArea field={"socialMedia"} handler={handler.socialMedia} />
                     <ImageInput handler={uploadToClient} />
-
-                    <img src={createObjectURL} />
+                    {isImageLoaded ? <img src={`${createObjectURL}`} /> : null}
+                    <div className={tw('bg-white h-3/4')}>
+                    <QuillEditor setContent={setBio}/>
+                    </div>
+                   
                     <button className={styles.button} type="submit" > Adauga Utilizator</button>
                     <button className={styles.button} type="reset" > Reset</button>
                 </form>
+                 
+
             </div>
         </>
     )
@@ -245,23 +236,6 @@ const FormGroup = ({ name, required, type, handleChange }) => {
     </div>)
 }
 
-
-
-
-// const Bio = ({name, handler, data, setData}) =>{
-
-//     return <>
-//     <h4 className={tw('text-center text-2xl text-white')}>Descriere</h4>
-//                  <Editor
-//                     data={data}
-//                     setData= {setData}
-//                      name={name}
-//                     onChange={handler}
-
-
-//                 />             
-//             </>
-// }
 
 
 

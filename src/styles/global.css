@@ -22,3 +22,8 @@ display:block;
 #heropic{
     /* background-image:url('./images/alexandru-marcu-specialist-seo.png') */
 }
+
+.quill, .ql-editor {
+    height:inherit;
+    min-height:75vh;
+}

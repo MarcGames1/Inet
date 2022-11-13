@@ -2,7 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 import { uploadImage } from '../../../js/imageHandler'
-
+import { tw } from 'twind';
 
 class QuillEditor extends React.Component {
     constructor(props) {
@@ -14,6 +14,7 @@ class QuillEditor extends React.Component {
     handleChange(html) {
         this.setState({ editorHtml: html });
         this.props.setContent(html)
+        
         
     }
 
@@ -54,15 +55,15 @@ class QuillEditor extends React.Component {
 
     render() {
         return (
-            <div className="text-editor">
-                {JSON.stringify(this.state.editorHtml)}
-                <hr />
+            <div className={"text-editor" }>
+                
                 <ReactQuill
                     ref={el => {
                         this.quill = el;
                     }}
                     onChange={this.handleChange}
                     placeholder={this.props.placeholder}
+                    
                     modules={{
                         toolbar: {
                             container: [

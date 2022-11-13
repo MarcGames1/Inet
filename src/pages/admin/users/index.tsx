@@ -12,9 +12,6 @@ const Users = () => {
           Users
         </h1>
         <div>
-          <AddUsers />
-        </div>
-        <div>
           <UsersList />
         </div>
         <div>

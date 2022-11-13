@@ -10,7 +10,7 @@ import { AuthContext } from '@/context/auth';
 
 import Button from '@/components/button';
 import QuillEditor from '../QuillEditor';
-
+import { getAuthorOptions } from "../../../../js/helper"
 
 const CreateBlog = () => {
 
@@ -22,19 +22,40 @@ const CreateBlog = () => {
     const [content, setContent] = useState(undefined)
     // const [categories, setCategories] = useState(undefined)
     const [selectedOptions, setSelectedOptions] = useState([])
+    const [selectedAuthors, setSelectedAuthors] = useState([])
     const options = []
+    const authorOptions = []
+
+    
+  getAuthorOptions().then(res => {
+    console.log("L here => ",res)
+    authorOptions.push(...res)
+})
 
 
+    
     categories.map(category => {
         options.push({ label: category.name, value: category._id })
     })
     
+    
+    
+    const authors = []
+   
+    
+
 
     const handler = {
         select: (e) => {
             const categories = []
             e.map(cat =>{categories.push(cat.value)})
             setSelectedOptions(categories)
+            // console.log(categories)
+        },
+        author: (e) => {
+            const authors = []
+            e.map(a =>{authors.push(a.value)})
+            setSelectedAuthors(authors)
             // console.log(categories)
         },
 
@@ -60,6 +81,7 @@ const CreateBlog = () => {
             formData.append('thumbnail', image)
             formData.append('title', title)
             formData.append('categories', selectedOptions)
+            formData.append('author', selectedAuthors)
             formData.append('content', content)
             try{
               const {data} = await axios.post(`/post/create/${auth.user._id}`, formData, {headers: {'Content-Type': 'multipart/form-data'}})
@@ -90,6 +112,16 @@ const CreateBlog = () => {
                 <QuillEditor setContent={setContent}/>
      
 
+    <span>Autor:</span>
+            <Select
+                closeMenuOnSelect={true}
+                isClearable={true}
+                isSearchable={true}
+                options={authorOptions}
+                onChange={handler.author}
+                isMulti={true}
+                name="category-select"
+                />
     <span>Categorii:</span>
             <Select
                 closeMenuOnSelect={true}

@@ -5,7 +5,7 @@ import React from 'react'
 
 const CreateUser = () => {
   return (
-      <AdminLayout> <AddUsers /></AdminLayout>
+      <AdminLayout><AddUsers /> </AdminLayout>
   )
 }
 
