@@ -93,11 +93,11 @@ const AdminLayout = ({ children }) => {
 
                 <Admintopnav />
                 <div className={tw('flex flex-row ')}>
-                    <div className={tw(' flex-1 flex-col justify-between w-3/12')}>
+                    <div className={tw(' grid flex-col items-start justify-center  w-3/12')}>
                         <AdminSidebar />
                     </div>
 
-                    <main className={tw('flex flex-col p-4 w-full')}>
+                    <main className={tw('grid flex-col p-4 w-full')}>
                         {children}
                     </main>
 

@@ -2,7 +2,11 @@ import axios from "axios"
 
 
 export const uploadImage = async (formdata)=>{
-    const server = 'http://89.37.212.226:8000/'; 
+    const server = 'http://89.37.212.226:8000/';
+    
+    
+
+    
 
     const url = '/uploadeditorimages';
 

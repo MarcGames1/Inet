@@ -41,6 +41,7 @@ const CreateBlog = () => {
         titlu: (e) => {
             e.preventDefault()
             setTitle(e.target.value)
+            
         },
 
         image: (e) => {
@@ -59,6 +60,7 @@ const CreateBlog = () => {
             formData.append('thumbnail', image)
             formData.append('title', title)
             formData.append('categories', selectedOptions)
+            formData.append('content', content)
             try{
               const {data} = await axios.post(`/post/create/${auth.user._id}`, formData, {headers: {'Content-Type': 'multipart/form-data'}})
                 if(data?.error){
@@ -85,9 +87,7 @@ const CreateBlog = () => {
                 <input type="file" onChange={handler.image}
                     id="thumbnail" name="thumbnail"
                     accept="image/png, image/*"/>
-                <Button type='submit' onClick={handler.submit}>Creaza Postare</Button>
-                <QuillEditor />
-            </form>
+                <QuillEditor setContent={setContent}/>
      
 
     <span>Categorii:</span>
@@ -99,7 +99,9 @@ const CreateBlog = () => {
                 onChange={handler.select}
                 isMulti={true}
                 name="category-select"
-            />
+                />
+                <Button type='submit' onClick={handler.submit}>Creaza Postare</Button>
+                </form>
     </>
   )
 }
