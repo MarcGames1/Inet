@@ -12,10 +12,7 @@ module.exports = {
         disallow: '/termeni-si-conditii',
         disallow: '/admin/*',
       },
-      {
-        userAgent: 'google-bot',
-        allow: ['/path', '/path-2'],
-      },
+  
       {
         userAgent: 'DotBot',
         disallow: ['/', '/*'],
