@@ -14,7 +14,7 @@ const Admin = () => {
 
   return (
     <AdminLayout>
-      <pre>{JSON.stringify(auth, null, 4)}</pre>
+      {/* <pre>{JSON.stringify(auth, null, 4)}</pre> */}
     </AdminLayout>
   );
 };
