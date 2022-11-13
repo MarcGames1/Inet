@@ -1,8 +1,9 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: 'https://iwebagency.ro',
+  generateRobotsTxt: true,
   sitemapSize: 5000,
-  exclude: ['/termeni-si-conditii', '/admin/*', '/admin/'],
+  exclude: ['/termeni-si-conditii', '/admin/*', '/admin'],
   robotsTxtOptions: {
     policies: [
       {
@@ -114,7 +115,6 @@ module.exports = {
         disallow: '/termeni-si-conditii',
         disallow: '/admin/*',
       },
-     
     ],
   },
 };
