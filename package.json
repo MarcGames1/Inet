@@ -37,6 +37,7 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "2.4.0",
     "react-quill": "2.0.0",
+    "react-select": "5.6.0",
     "twind": "0.16.17"
   },
   "devDependencies": {
