@@ -20,6 +20,7 @@ const CreateBlog = () => {
     const [title, setTitle] = useState(undefined)
     const [image, setImage] = useState(undefined)
     const [content, setContent] = useState(undefined)
+    const [excerpt, setExcerpt] = useState(undefined)
     // const [categories, setCategories] = useState(undefined)
     const [selectedOptions, setSelectedOptions] = useState([])
     const [selectedAuthors, setSelectedAuthors] = useState([])
@@ -75,6 +76,11 @@ const CreateBlog = () => {
             console.log(e)
             handler.submitForm()
         },
+        excerpt: (e) => {
+            e.preventDefault()
+            setExcerpt(e.target.value)
+            console.log(excerpt)
+        },
         submitForm: async () => {
             console.log('submit form called')
             const formData = new FormData()
@@ -83,6 +89,7 @@ const CreateBlog = () => {
             formData.append('categories', selectedOptions)
             formData.append('author', selectedAuthors)
             formData.append('content', content)
+            formData.append('excerpt', excerpt)
             try{
               const {data} = await axios.post(`/post/create/${auth.user._id}`, formData, {headers: {'Content-Type': 'multipart/form-data'}})
                 if(data?.error){
@@ -109,6 +116,11 @@ const CreateBlog = () => {
                 <input type="file" onChange={handler.image}
                     id="thumbnail" name="thumbnail"
                     accept="image/png, image/*"/>
+
+                <textarea onChange={handler.excerpt} maxlength="160">
+                    Rezumat max 160 caractere
+                </textarea>
+                <span>chars: 10</span>
                 <QuillEditor setContent={setContent}/>
      
 
