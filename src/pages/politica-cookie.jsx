@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo'
 const nume_site = 'https://iwebagency.ro/'
 const nume_firma = 'MARK ELITE TECHNOLOGIES L.L.C'
 
