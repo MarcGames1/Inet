@@ -26,18 +26,19 @@ const Membru = (props) => {
         canonical={`https://iwebagency.ro/${{slug}}`} />
         <main className={tw('grid')}>
 
-          <section className={tw('grid h-screen ')}>
+          <section className={tw('grid ')}>
               <div className={tw('relative bg-purple-200 rounded-full grid w-64 h-64 justify-self-center')} >
               <div className={tw('relative bg-purple-200 rounded-full grid w-64 h-64 justify-self-center')}>
                   <Image className={tw('bg-amber-200 rounded-full')} src={`${SERVER}${imagePath}`}  objectFit={'cover'} layout={'fill'} />
               </div> 
+
+            </div>
+            {/* ADD SOCIAL MEDIA ICONS  */}
                   <div className={tw('flex flex-col')}>
                       <span className={tw('m-3 text-2xl text-blue-900 font-bold text-center leading-5 text-base capitalize')}>{props.nume} {props.prenume}</span>
                       <span className={tw('m-1 text-blue-500 font-bold text-center leading-5 text-base capitalize')}>{props.functie}</span>
                       {/* <div className={tw('m-1 text-blue-500 font-bold text-center leading-5 text-base capitalize')}>{props.functie}</div> */}
                   </div>
-
-            </div>
         </section>
             
           <section className={tw('grid md:w-4/6 lg:w-3/6 w-5/6 mx-auto h-auto ')}>
