@@ -40,7 +40,7 @@ const Membru = (props) => {
             </div>
         </section>
             
-          <section className={tw('grid w-3/6 mx-auto h-auto ')}>
+          <section className={tw('grid md:w-4/6 lg:w-3/6 w-5/6 mx-auto h-auto ')}>
                   <div className={tw('h-auto')} dangerouslySetInnerHTML={{__html: props.bio}}></div>
             </section>
 
