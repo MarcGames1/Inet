@@ -2,9 +2,12 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { tw } from 'twind'
+import { NextSeo } from 'next-seo'
 
-const API = process.env.NEXT_PUBLIC_API
-const SERVER = 'http://89.37.212.226:8000'
+
+
+const API = 'http://89.37.212.226:8000/api/'
+const SERVER = 'http://89.37.212.226:8000/'
 
 
 import Page from '@/components/page'
@@ -18,12 +21,15 @@ const Membru = (props) => {
 // 
   return (
       <Page>
+      <NextSeo title={`${props.nume} ${props.prenume} ${props.functie} • IwebAgency.ro`}
+        description={`${props.nume} ${props.prenume} ${props.functie} • IwebAgency.ro`}
+        canonical={`https://iwebagency.ro/${{slug}}`} />
         <main className={tw('grid')}>
 
           <section className={tw('grid h-screen ')}>
               <div className={tw('relative bg-purple-200 rounded-full grid w-64 h-64 justify-self-center')} >
               <div className={tw('relative bg-purple-200 rounded-full grid w-64 h-64 justify-self-center')}>
-                  <Image className={tw('bg-amber-200 rounded-full')} src={`${SERVER}/${imagePath}`}  objectFit={'cover'} layout={'fill'} />
+                  <Image className={tw('bg-amber-200 rounded-full')} src={`${SERVER}${imagePath}`}  objectFit={'cover'} layout={'fill'} />
               </div> 
                   <div className={tw('flex flex-col')}>
                       <span className={tw('m-3 text-2xl text-blue-900 font-bold text-center leading-5 text-base capitalize')}>{props.nume} {props.prenume}</span>
@@ -57,7 +63,7 @@ export async function getServerSideProps({ params }) {
     console.log(params.slug)
     const slug = params.slug
     // Call external API from here directly
-    const response = await fetch(`${API}/${slug}`)
+  const response = await fetch(`${API}${slug}`)
     const data = await response.json()
 
     return {
