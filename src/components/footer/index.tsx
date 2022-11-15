@@ -23,7 +23,11 @@ const linkuriUtile = [{
   href: '/echipa/alexandru-marcu'
 }
 ];
-const dispozitiiLegale = [{ text: 'Termeni si Conditii', href: 'termeni-conditii' }];
+const dispozitiiLegale = [
+  { text: 'Termeni si Conditii', href: 'termeni-conditii' },
+  { text: 'Politica Cookie', href: 'politica-cookie' }
+
+];
 
 const Footer = () => (
   <>
