@@ -12,18 +12,29 @@ import Button from '@/components/button';
 import QuillEditor from '../QuillEditor';
 import { getAuthorOptions } from "../../../../js/helper"
 
-const CreateBlog = () => {
+import {styles} from '../../../../js/utils'
 
+
+const CreateBlog = (props) => {
     const [auth, setAuth] = useContext(AuthContext);
-
+    
     const [categories, setCategories, getCategories] = useContext(CategoryContext);
-    const [title, setTitle] = useState(undefined)
-    const [image, setImage] = useState(undefined)
-    const [content, setContent] = useState(undefined)
-    const [excerpt, setExcerpt] = useState(undefined)
+    const [title, setTitle] = useState(props.title || undefined)
+    const [image, setImage] = useState(props.image || undefined)
+    const [content, setContent] = useState(props.content || undefined)
+    const [excerpt, setExcerpt] = useState(props.excerpt || undefined)
+    const [excerptLength, setExcerptLength] = useState(NaN)
     // const [categories, setCategories] = useState(undefined)
-    const [selectedOptions, setSelectedOptions] = useState([])
-    const [selectedAuthors, setSelectedAuthors] = useState([])
+    const [selectedOptions, setSelectedOptions] = useState(props.selectedCategories || [])
+    const [selectedAuthors, setSelectedAuthors] = useState(props.selectedAuthors || [])
+    
+    const maxexcerptLength = 160
+    const [isTextAreaValid, setIsTextAreaValid] = useState(true)
+
+
+  
+    
+    
     const options = []
     const authorOptions = []
 
@@ -40,8 +51,7 @@ const CreateBlog = () => {
     })
     
     
-    
-    const authors = []
+
    
     
 
@@ -79,7 +89,10 @@ const CreateBlog = () => {
         excerpt: (e) => {
             e.preventDefault()
             setExcerpt(e.target.value)
-            console.log(excerpt)
+            setExcerptLength(e.target.value.length)
+            console.log(typeof excerpt)
+            console.log( 'length = ',excerpt.length)
+
         },
         submitForm: async () => {
             console.log('submit form called')
@@ -107,47 +120,60 @@ const CreateBlog = () => {
         }
     }
 
+    useEffect (() =>{
+        if(maxexcerptLength <= excerptLength){
+            setIsTextAreaValid(false)
+        }
+    }, [excerptLength])
 
     return (
-    <>CreateBlog
-    <h2>Titlu Blog</h2>
-            <form onSubmit={handler.submit} method='post' encType='multipart/form-data'>
-                <input onChange={handler.titlu} className={tw('w-full text-large text-color-gray-500 text-center color-white')} required name='titlu' type="text" placeholder='Titlu Blog' />
-                <input type="file" onChange={handler.image}
-                    id="thumbnail" name="thumbnail"
-                    accept="image/png, image/*"/>
+      <>
+        <h2 className={styles.title}>Adauga o postare noua in Blog</h2>
+        <form className={styles.form} onSubmit={handler.submit} method="post" encType="multipart/form-data">
+          <input
+            value={title}
+            onChange={handler.titlu}
+            className={styles.textInput}
+            required
+            name="titlu"
+            type="text"
+            placeholder="Titlu Postare"
+          />
+            <label className={styles.label} htmlFor="thumbnail">Adauga Poza</label>
+            <input className={styles.customFileUpload} type="file" onChange={handler.image} id="thumbnail" name="thumbnail" accept="image/png, image/*" />
+                <label className={styles.label} Htmlfor="message">Rezumat articol de blog max {maxexcerptLength} caractere</label>
+                <textarea className={`${styles.textarea} ${isTextAreaValid ? styles.defaultBorder : styles.borderinValid} `} value={excerpt} onChange={handler.excerpt} maxlength={maxexcerptLength} />
+          <span>caractere: {excerptLength} / {maxexcerptLength}</span>
+          <QuillEditor content={content} setContent={setContent} />
 
-                <textarea onChange={handler.excerpt} maxlength="160">
-                    Rezumat max 160 caractere
-                </textarea>
-                <span>chars: 10</span>
-                <QuillEditor setContent={setContent}/>
-     
-
-    <span>Autor:</span>
-            <Select
-                closeMenuOnSelect={true}
-                isClearable={true}
-                isSearchable={true}
-                options={authorOptions}
-                onChange={handler.author}
-                isMulti={true}
-                name="category-select"
-                />
-    <span>Categorii:</span>
-            <Select
-                closeMenuOnSelect={true}
-                isClearable={true}
-                isSearchable={true}
-                options={options}
-                onChange={handler.select}
-                isMulti={true}
-                name="category-select"
-                />
-                <Button type='submit' onClick={handler.submit}>Creaza Postare</Button>
-                </form>
-    </>
-  )
+          <span>Autor:</span>
+          <Select
+            closeMenuOnSelect={true}
+            isClearable={true}
+            isSearchable={true}
+            options={authorOptions}
+            onChange={handler.author}
+            isMulti={true}
+            value={selectedAuthors}
+            name="category-select"
+          />
+          <span>Categorii:</span>
+          <Select
+            closeMenuOnSelect={true}
+            isClearable={true}
+            isSearchable={true}
+            options={options}
+            onChange={handler.select}
+            isMulti={true}
+            value={selectedOptions}
+            name="category-select"
+          />
+          <Button type="submit" onClick={handler.submit}>
+            Creaza Postare
+          </Button>
+        </form>
+      </>
+    );
 }
 
 export default CreateBlog
