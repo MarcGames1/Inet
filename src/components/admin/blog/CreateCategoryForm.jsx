@@ -72,23 +72,25 @@ const CreateCategoryForm = () => {
 
     //FUNCTIONS END
     return (
-        <form onSubmit={handleChange.submit_form} className={form.form}>
-              <div className={tw('bg-indigo-50 w-4/6')}>
+        <div className={tw('w-full')}>
+        <form onSubmit={handleChange.submit_form} className={`${tw('flex flex-col gap-5 items-center')} ${form.form}`}>
         <h1 className={form.title}>Creeaza Categorie</h1>
-        <div className={form.group}>
-            <div className={form.group}>
+
+<div className={form.group}>
               <label className={form.label} htmlFor="Categorie">
                 Nume Categorie
               </label>
               <input className={form.textInput} onChange={handleChange.name} type="text" name="Categorie" required={true} />
-            </div>
+          
             <button className={form.button} type="submit">
               {' '}
               Creaza Categorie Noua
             </button>
-        </div>
-      </div>
+    </div>    
+        
+      
           </form>
+        </div>
     );
 };
 

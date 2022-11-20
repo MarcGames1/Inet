@@ -23,7 +23,7 @@ const CreateBlog = (props) => {
     const [image, setImage] = useState(props.image || undefined)
     const [content, setContent] = useState(props.content || undefined)
     const [excerpt, setExcerpt] = useState(props.excerpt || undefined)
-    const [excerptLength, setExcerptLength] = useState(NaN)
+    const [excerptLength, setExcerptLength] = useState(0)
     const [selectedOptions, setSelectedOptions] = useState(props.selectedCategories || [])
     const [selectedAuthors, setSelectedAuthors] = useState(props.selectedAuthors || [])
     
@@ -128,7 +128,12 @@ const CreateBlog = (props) => {
     return (
       <>
         <h2 className={form.title}>Adauga o postare noua in Blog</h2>
-        <form className={form.form} onSubmit={handler.submit} method="post" encType="multipart/form-data">
+        <form
+          className={`${tw('flex-col m-5')} ${form.form}`}
+          onSubmit={handler.submit}
+          method="post"
+          encType="multipart/form-data"
+        >
           <input
             value={title}
             onChange={handler.titlu}
@@ -138,14 +143,32 @@ const CreateBlog = (props) => {
             type="text"
             placeholder="Titlu Postare"
           />
-            <label className={form.label} htmlFor="thumbnail">Adauga Poza</label>
-            <input className={form.customFileUpload} type="file" onChange={handler.image} id="thumbnail" name="thumbnail" accept="image/png, image/*" />
-                <label className={form.label} Htmlfor="message">Rezumat articol de blog max {maxexcerptLength} caractere</label>
-                <textarea className={`${form.textarea} ${isTextAreaValid ? form.defaultBorder : form.borderinValid} `} value={excerpt} onChange={handler.excerpt} maxlength={maxexcerptLength} />
-          <span>caractere: {excerptLength} / {maxexcerptLength}</span>
+          <label className={form.label} htmlFor="thumbnail">
+            Adauga Poza
+          </label>
+          <input
+            className={form.customFileUpload}
+            type="file"
+            onChange={handler.image}
+            id="thumbnail"
+            name="thumbnail"
+            accept="image/png, image/*"
+          />
+          <label className={form.label} Htmlfor="message">
+            Rezumat articol de blog max {maxexcerptLength} caractere
+          </label>
+          <textarea
+            className={`${form.textarea} ${isTextAreaValid ? form.defaultBorder : form.borderinValid} `}
+            value={excerpt}
+            onChange={handler.excerpt}
+            maxlength={maxexcerptLength}
+          />
+          <span className={form.title}>
+            caractere: {excerptLength} / {maxexcerptLength}
+          </span>
           <QuillEditor content={content} setContent={setContent} />
 
-          <span>Autor:</span>
+          <span className={form.title}>Autor:</span>
           <Select
             closeMenuOnSelect={true}
             isClearable={true}
@@ -156,7 +179,7 @@ const CreateBlog = (props) => {
             value={selectedAuthors}
             name="category-select"
           />
-          <span>Categorii:</span>
+          <span className={form.title}>Categorii:</span>
           <Select
             closeMenuOnSelect={true}
             isClearable={true}
@@ -167,9 +190,9 @@ const CreateBlog = (props) => {
             value={selectedOptions}
             name="category-select"
           />
-          <Button type="submit" onClick={handler.submit}>
+          <button className={form.button} type="submit" onClick={handler.submit}>
             Creaza Postare
-          </Button>
+          </button>
         </form>
       </>
     );
