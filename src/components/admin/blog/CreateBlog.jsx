@@ -12,7 +12,7 @@ import Button from '@/components/button';
 import QuillEditor from '../QuillEditor';
 import { getAuthorOptions } from "../../../../js/helper"
 
-import {styles} from '../../../../js/utils'
+import {form} from '../../../../js/utils'
 
 
 const CreateBlog = (props) => {
@@ -24,7 +24,6 @@ const CreateBlog = (props) => {
     const [content, setContent] = useState(props.content || undefined)
     const [excerpt, setExcerpt] = useState(props.excerpt || undefined)
     const [excerptLength, setExcerptLength] = useState(NaN)
-    // const [categories, setCategories] = useState(undefined)
     const [selectedOptions, setSelectedOptions] = useState(props.selectedCategories || [])
     const [selectedAuthors, setSelectedAuthors] = useState(props.selectedAuthors || [])
     
@@ -128,21 +127,21 @@ const CreateBlog = (props) => {
 
     return (
       <>
-        <h2 className={styles.title}>Adauga o postare noua in Blog</h2>
-        <form className={styles.form} onSubmit={handler.submit} method="post" encType="multipart/form-data">
+        <h2 className={form.title}>Adauga o postare noua in Blog</h2>
+        <form className={form.form} onSubmit={handler.submit} method="post" encType="multipart/form-data">
           <input
             value={title}
             onChange={handler.titlu}
-            className={styles.textInput}
+            className={form.textInput}
             required
             name="titlu"
             type="text"
             placeholder="Titlu Postare"
           />
-            <label className={styles.label} htmlFor="thumbnail">Adauga Poza</label>
-            <input className={styles.customFileUpload} type="file" onChange={handler.image} id="thumbnail" name="thumbnail" accept="image/png, image/*" />
-                <label className={styles.label} Htmlfor="message">Rezumat articol de blog max {maxexcerptLength} caractere</label>
-                <textarea className={`${styles.textarea} ${isTextAreaValid ? styles.defaultBorder : styles.borderinValid} `} value={excerpt} onChange={handler.excerpt} maxlength={maxexcerptLength} />
+            <label className={form.label} htmlFor="thumbnail">Adauga Poza</label>
+            <input className={form.customFileUpload} type="file" onChange={handler.image} id="thumbnail" name="thumbnail" accept="image/png, image/*" />
+                <label className={form.label} Htmlfor="message">Rezumat articol de blog max {maxexcerptLength} caractere</label>
+                <textarea className={`${form.textarea} ${isTextAreaValid ? form.defaultBorder : form.borderinValid} `} value={excerpt} onChange={handler.excerpt} maxlength={maxexcerptLength} />
           <span>caractere: {excerptLength} / {maxexcerptLength}</span>
           <QuillEditor content={content} setContent={setContent} />
 

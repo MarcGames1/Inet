@@ -11,7 +11,7 @@ const Posts = () => {
     <AdminLayout>
 
     <div>All Posts</div>
-    <CreateBlog />
+   
     <div>Vezi / Modifica / Sterge  Postare</div>
     <CategoryList />
     <CreateCategoryForm />

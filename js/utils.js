@@ -1,7 +1,7 @@
 import { tw } from 'twind';
 
-export const styles = {
-  form: tw('bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4'),
+export const form = {
+  form: tw('bg-indigo-50 flex shadow-md m-8 w-full justify-center rounded px-8 pt-6 pb-8 mb-4'),
   textInput: tw(
     'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline',
   ),
@@ -14,6 +14,10 @@ export const styles = {
   ),
   label: tw('block my-2 text-sm font-medium text-indigo-600 dark:text-white'),
 
+  group:tw('flex flex-col mb-4 space-between gap-5 items-center lg:w-4/6'),
+
+  button: tw('bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'),
+  buttonRed: tw('bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'),
   defaultBorder: tw(' border-gray-300'),
   borderValid: tw(' border-green-300'),
   borderinValid: tw(' border-red-300'),
