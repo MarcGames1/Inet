@@ -40,8 +40,9 @@ const Signin = () => {
 
         submit_form: (e) => {
             e.preventDefault();
-
             onFinish(inputData);
+            
+
         },
     };
 
@@ -57,11 +58,11 @@ const Signin = () => {
             } else {
                 // save user and token to context
                 setAuth(data);
-                router.push('/admin')
                 // save user and token to local storage
                 localStorage.setItem('auth', JSON.stringify(data));
-
+                
                 toast.success('Successfully signed in');
+                router.push('/admin');
                 setLoading(false);
 
             }
