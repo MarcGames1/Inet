@@ -45,19 +45,16 @@ const Footer = () => (
       <div>
         <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Dispozitii Legale</h4>
         <ul>
-          {dispozitiiLegale.map((link, index) => {
-            console.log(Math.random() + index );
-            return <FooterLink link={link} key={`dispozitiiLegale ${Math.random() * 10 * (index+1 * 15)}`} />;
-          })}
+          {dispozitiiLegale.map((link, index) => <FooterLink link={link} key={`dispozitiiLegale ${Math.random() * 10 * (index+1 * 15)}`} />
+          )}
         </ul>
       </div>
 
       <div>
         <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Linkuri Utile</h4>
         <ul>
-          {linkuriUtile.map((link, index) => (
-            <FooterLink link={link} key={`linkuriUtile${Math.random() * 10 * (index+1 * 15)}`} />
-          ))}
+          {linkuriUtile.map((link, index) => <FooterLink link={link} key={`linkuriUtile${Math.random() * 10 * (index+1 * 15)}`} />
+          )}
         </ul>
       </div>
       {/* <span className={tw('flex  justify-center')}>
