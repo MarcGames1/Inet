@@ -1,12 +1,6 @@
-import dynamic from 'next/dynamic';
-const FontAwesomeIcon = dynamic(async () => (await import('@fortawesome/react-fontawesome')).FontAwesomeIcon);
-import { useContext, useState, useEffect } from 'react';
-import { AuthContext } from '@/context/auth';
+import { useContext } from 'react';
 import { CategoryContext } from '@/context/category';
 import CategoryModifyer from './CategoryModifyer';
-import Select from 'react-select';
-import makeAnimated from 'react-select/animated';
-import {tw} from 'twind'
 
 const CategoryList = () => {
   const [categories, setCategories, getCategories] = useContext(CategoryContext);

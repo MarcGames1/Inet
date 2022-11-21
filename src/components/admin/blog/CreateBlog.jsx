@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
 import { tw } from 'twind';
 import dynamic from 'next/dynamic'
 import toast from 'react-hot-toast'
@@ -14,6 +15,8 @@ import { getAuthorOptions } from "../../../../js/helper"
 
 import {form} from '../../../../js/utils'
 
+const animatedComponents = makeAnimated();
+
 
 const CreateBlog = (props) => {
     const [auth, setAuth] = useContext(AuthContext);
@@ -24,8 +27,8 @@ const CreateBlog = (props) => {
     const [content, setContent] = useState(props.content || undefined)
     const [excerpt, setExcerpt] = useState(props.excerpt || undefined)
     const [excerptLength, setExcerptLength] = useState(0)
-    const [selectedOptions, setSelectedOptions] = useState(props.selectedCategories || [])
-    const [selectedAuthors, setSelectedAuthors] = useState(props.selectedAuthors || [])
+    const [selectedOptions, setSelectedOptions] = useState(props.categories || [])
+    const [selectedAuthors, setSelectedAuthors] = useState(props.author || [])
     
     const maxexcerptLength = 160
     const [isTextAreaValid, setIsTextAreaValid] = useState(true)
@@ -89,8 +92,8 @@ const CreateBlog = (props) => {
             e.preventDefault()
             setExcerpt(e.target.value)
             setExcerptLength(e.target.value.length)
-            console.log(typeof excerpt)
-            console.log( 'length = ',excerpt.length)
+            
+            
 
         },
         submitForm: async () => {
@@ -171,23 +174,25 @@ const CreateBlog = (props) => {
           <span className={form.title}>Autor:</span>
           <Select
             closeMenuOnSelect={true}
+            components={animatedComponents}
             isClearable={true}
             isSearchable={true}
             options={authorOptions}
             onChange={handler.author}
             isMulti={true}
-            value={selectedAuthors}
-            name="category-select"
+            defaultValue={selectedAuthors}
+            name="author-select"
           />
           <span className={form.title}>Categorii:</span>
           <Select
             closeMenuOnSelect={true}
             isClearable={true}
             isSearchable={true}
+            components={animatedComponents}
             options={options}
             onChange={handler.select}
             isMulti={true}
-            value={selectedOptions}
+            defaultValue={selectedOptions}
             name="category-select"
           />
           <button className={form.button} type="submit" onClick={handler.submit}>
