@@ -33,7 +33,7 @@ const Membru = (props) => {
               </div> 
 
             </div>
-            {/* ADD SOCIAL MEDIA ICONS  */}
+           
                   <div className={tw('flex flex-col')}>
                       <span className={tw('m-3 text-2xl text-blue-900 font-bold text-center leading-5 text-base capitalize')}>{props.nume} {props.prenume}</span>
                       <span className={tw('m-1 text-blue-500 font-bold text-center leading-5 text-base capitalize')}>{props.functie}</span>

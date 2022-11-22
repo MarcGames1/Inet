@@ -83,29 +83,25 @@ const AdminLayout = ({ children }) => {
     }
 
     return (
-        <>
+      <>
         <NextSeo robotsProps={'noindex, follow'} />
-            <CategoryProvider>
+        <CategoryProvider>
+          <Head>
+            <meta name="robots" content="noindex" />
+          </Head>
 
-                <Head>
-                    <meta name="robots" content="noindex" />
-                </Head>
+          <Admintopnav />
+          <div className={tw('grid gap-2 grid-cols-5 grid-flow-col w-screen ')}>
+            <div className={tw(' col-span-1 grid items-start')}>
+              <AdminSidebar />
+            </div>
 
-                <Admintopnav />
-                <div className={tw('flex flex-row ')}>
-                    <div className={tw(' grid flex-col items-start justify-center  w-3/12')}>
-                        <AdminSidebar />
-                    </div>
-
-                    <main className={tw('grid flex-col p-4 w-full')}>
-                        {children}
-                    </main>
-
-                </div>
-
-
-            </CategoryProvider>
-        </>
+            <main className={tw('grid col-start-2 col-end-6 w-full shadow-lg p-4 relative')}>
+              {children}
+            </main>
+          </div>
+        </CategoryProvider>
+      </>
     );
 }
 

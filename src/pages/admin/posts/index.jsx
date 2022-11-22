@@ -1,6 +1,6 @@
 import React from 'react'
 import AdminLayout from '@/layout/AdminLayout';
-import { CreateCategoryForm, CategoryList, CreateBlog } from '@/components/admin/index';
+import { CreateCategoryForm, CategoryList, BlogList, CreateBlog } from '@/components/admin/index';
 
 
 const Posts = () => {
@@ -11,8 +11,9 @@ const Posts = () => {
     <AdminLayout>
 
     <div>All Posts</div>
-    <CreateBlog />
+   
     <div>Vezi / Modifica / Sterge  Postare</div>
+    <BlogList  />
     <CategoryList />
     <CreateCategoryForm />
     
@@ -20,5 +21,7 @@ const Posts = () => {
     
   )
 }
+
+
 
 export default Posts

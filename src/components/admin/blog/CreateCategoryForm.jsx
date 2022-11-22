@@ -5,7 +5,7 @@ import { AuthContext } from '@/context/auth';
 import styles from './CreateCategoryForm.module.css'
 import { tw } from 'twind';
 import { CategoryContext } from '@/context/category';
-
+import {form} from '../../../../js/utils'
 
 
 const CreateCategoryForm = () => {
@@ -72,19 +72,25 @@ const CreateCategoryForm = () => {
 
     //FUNCTIONS END
     return (
-        <>
-            <h1 className={tw('font-sans font-bold text-4xl md:text-3xl lg:text-5xl text-center leading-snug text-gray-800')}>Creeaza Categorie</h1>
-            <div className={styles.container}>
-                <form onSubmit={handleChange.submit_form} className={styles.form}>
+        <div className={tw('w-full')}>
+        <form onSubmit={handleChange.submit_form} className={`${tw('flex flex-col gap-5 items-center')} ${form.form}`}>
+        <h1 className={form.title}>Creeaza Categorie</h1>
 
-                    <div className={styles.group}>
-                        <label htmlFor="Categorie">Nume Categorie</label>
-                        <input onChange={handleChange.name} type="text" name="Categorie" required={true} />
-                    </div>
-                    <button className={styles.button} type="submit" > Creaza Categorie Noua</button>
-                </form>
-            </div>
-        </>
+<div className={form.group}>
+              <label className={form.label} htmlFor="Categorie">
+                Nume Categorie
+              </label>
+              <input className={form.textInput} onChange={handleChange.name} type="text" name="Categorie" required={true} />
+          
+            <button className={form.button} type="submit">
+              {' '}
+              Creaza Categorie Noua
+            </button>
+    </div>    
+        
+      
+          </form>
+        </div>
     );
 };
 

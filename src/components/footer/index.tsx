@@ -36,7 +36,7 @@ const Footer = () => (
       <div>
         <Link href={'/'}>
           <a>
-            <Image  src="/logo.svg" alt="logo" width={150} height={150} />
+            <Image src="/logo.svg" alt="logo" width={150} height={150} />
           </a>
         </Link>
         {/* <p className={tw(`text-4xl text-indigo-500 font-bold`)}>STARTD</p> */}
@@ -45,18 +45,16 @@ const Footer = () => (
       <div>
         <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Dispozitii Legale</h4>
         <ul>
-          {dispozitiiLegale.map((link, idx) => (
-            <FooterLink link={link} idx={idx} />
-          ))}
+          {dispozitiiLegale.map((link, index) => <FooterLink link={link} key={`dispozitiiLegale ${Math.random() * 10 * (index+1 * 15)}`} />
+          )}
         </ul>
       </div>
 
       <div>
         <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Linkuri Utile</h4>
         <ul>
-          {linkuriUtile.map((link, idx) => (
-            <FooterLink link={link} idx={idx} />
-          ))}
+          {linkuriUtile.map((link, index) => <FooterLink link={link} key={`linkuriUtile${Math.random() * 10 * (index+1 * 15)}`} />
+          )}
         </ul>
       </div>
       {/* <span className={tw('flex  justify-center')}>
@@ -73,17 +71,17 @@ const Footer = () => (
 
 const FooterLink = ({
   link,
-  idx,
+  
 }: {
   link: {
     text: string;
     href: string;
   };
-  idx: number;
+  
 }) => {
   return (
     <>
-      <li className={tw(`text-gray-800 text-sm font-medium leading-6`)} key={idx}>
+      <li className={tw(`text-gray-800 text-sm font-medium leading-6`)} >
         <Link href={link.href}>
           <a href={link.href}>{link.text}</a>
         </Link>

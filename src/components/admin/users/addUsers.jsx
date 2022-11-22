@@ -5,14 +5,10 @@ import toast from 'react-hot-toast';
 import { AuthContext } from '@/context/auth';
 import styles from './users.module.css'
 import { tw } from 'twind';
-import { CategoryContext } from '@/context/category';
-import dynamic from 'next/dynamic'
-import { faPray } from '@fortawesome/free-solid-svg-icons';
 
 
 import QuillEditor from '../QuillEditor';
 // import{ ConfiguredQuill as Editor }from '@/components/ConfiguredQuill/ConfiguredQuil'
-import Select from 'react-select';
 
 
 const AddUsers = () => {
