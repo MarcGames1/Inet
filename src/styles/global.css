@@ -3,8 +3,11 @@
 @import "@fontsource/inter/700.css";
 
 :root{
-   --primary-color: rgb(79,70,229);
-   --primary-color-hover: rgb(99,102,241);
+    /* Indigo 600  */
+   --primary-color: #4f46e5; 
+    /* Indigo 500  */
+   --primary-color-hover: #6366f1; 
+   
 }
 html{
     scroll-behavior: smooth;

@@ -16,6 +16,7 @@ export default {
         emerald: colors.emerald,
         indigo: colors.indigo,
         yellow: colors.yellow,
+        orange: colors.orange,
         fuchsia: colors.fuchsia,
         teal: colors.teal,
         cyan: colors.cyan,

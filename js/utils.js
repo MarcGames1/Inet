@@ -14,11 +14,34 @@ export const form = {
   ),
   label: tw('block my-2 text-sm font-medium text-indigo-600 dark:text-white'),
 
-  group:tw('flex flex-col mb-4 space-between items-center'),
+  group: tw('flex flex-col mb-4 space-between items-center'),
 
-  button: tw('bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'),
+  button: tw('bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded'),
   buttonRed: tw('bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'),
   defaultBorder: tw(' border-gray-300'),
   borderValid: tw(' border-green-300'),
   borderinValid: tw(' border-red-300'),
+};
+
+
+
+export const section = {
+  header: tw('text-center text-indigo-600 font-semibold tracking-wide uppercase'),
+};
+
+
+export const colors = {
+  primary: {
+    default: 'indigo-600',
+    hover: 'indigo-500',
+  },
+
+  secondary:'white',
+
+  accent: {
+    default: 'orange-600',
+    hover: 'orange-500',
+  },
+
+  ctaSection: 'gradient-to-r from-pink-100 via-indigo-300 to-pink-100',
 };

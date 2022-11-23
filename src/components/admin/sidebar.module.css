@@ -22,7 +22,7 @@
 .item:hover{
     background-color:var(--primary-color-hover);
     color:white;
-    transitioN:0.5s;
+    transition:0.5s;
 }
 
 .button{

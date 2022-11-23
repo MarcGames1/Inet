@@ -32,7 +32,8 @@ const dispozitiiLegale = [
 const Footer = () => (
   <>
     <ScroolToTop />
-    <footer className={tw(`grid grid-cols-3 gap-1 justify-items-center bg-gray-400 items-center`)}>
+    <hr /> 
+    <footer className={tw(`grid grid-cols-3 gap-1 justify-items-center bg-indigo-50 items-center`)}>
       <div>
         <Link href={'/'}>
           <a>

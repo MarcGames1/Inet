@@ -1,27 +1,28 @@
 import React, { ComponentType, Suspense } from 'react';
 import dynamic from 'next/dynamic';
 import { NextSeo } from 'next-seo';
-import { homepage } from '../../js/content';
 
 // '../components/CTA'
 // Importuri dinamice pentru FCP
 
-const DcNoi = dynamic(() => import('@/components/DcNoi/index'));
-
 const Page = dynamic(() => import('../components/page'));
-const CalendlySection: React.ComponentType<
-  JSX.IntrinsicAttributes & {
-    wa?: boolean | undefined;
-    titlu: string;
-    text: string;
-    btntxt?: string | undefined;
-  }
-> = dynamic(() => import('../components/CTA').then((c) => c.CalendlySection));
+const DcNoi = dynamic(() => import('@/components/DcNoi/index'));
 const Header = dynamic(() => import('../components/header'));
 const ListWithPic = dynamic(() => import('../components/list-pictures-section'));
+const SecondSection = dynamic(() => import('@/components/s2Section'));
 
+const CalendlySection: React.ComponentType<
+JSX.IntrinsicAttributes & {
+  wa?: boolean | undefined;
+  titlu: string;
+  text: string;
+  btntxt?: string | undefined;
+}
+> = dynamic(() => import('../components/CTA').then((c) => c.CalendlySection));
+
+import { homepage } from '../../js/content';
 // import { CalendlySection } from '../components/CTA';
-import SecondSection from '@/components/s2Section';
+// import SecondSection from '@/components/s2Section';
 
 export default function Home() {
   return (
