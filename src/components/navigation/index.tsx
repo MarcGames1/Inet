@@ -127,8 +127,7 @@ const Navigation = () => {
                 text={'Programeaza-te la o sedinta gratuita!'}
                 primary
                 modifier={undefined}
-                pulse={undefined}
-              />
+                pulse={undefined} color={undefined}              />
 
               {/* <Button primary>Analiza Gratuita</Button> */}
             </div>
