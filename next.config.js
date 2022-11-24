@@ -8,14 +8,7 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['www.avocatdorubotea.ro', '89.37.212.226:8000/'],
-    remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: '89.37.212.226',
-        port: '8000',
-        pathname: '/**',
-      },
-    ],
+    domains: ['www.avocatdorubotea.ro', 'iwebagency.ro', 'api.iwebagency.ro'],
+
   },
 };

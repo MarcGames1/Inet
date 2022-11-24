@@ -6,8 +6,8 @@ import { NextSeo } from 'next-seo'
 
 
 
-const API = 'http://89.37.212.226:8000/api/'
-const SERVER = 'http://89.37.212.226:8000/'
+const API = process.env.NEXT_PUBLIC_API
+const SERVER = process.env.NEXT_PUBLIC_API;
 
 
 import Page from '@/components/page'
@@ -60,7 +60,7 @@ export default Membru
 
 
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
     console.log(params.slug)
     const slug = params.slug
     // Call external API from here directly
@@ -70,4 +70,12 @@ export async function getServerSideProps({ params }) {
     return {
         props: { ... data }
     }
+}
+
+
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { slug: 'alexandru-marcu' } }],
+    fallback: false, // can also be true or 'blocking'
+  };
 }
