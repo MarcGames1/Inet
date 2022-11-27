@@ -45,3 +45,13 @@ export const colors = {
 
   ctaSection: 'gradient-to-r from-pink-100 via-indigo-300 to-pink-100',
 };
+
+  
+export const typography = {
+  heading: {
+    default: tw('  m-auto center mt-2 pb-4 text-2xl lg:text-3xl font-bold tracking-tight text-gray-900'),
+  },
+  p: {
+    default: tw(' tracking-wide text-justify indent-1.5 text-gray-700 sm:leading-relaxed md:leading-9'),
+  },
+};

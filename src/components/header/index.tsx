@@ -83,13 +83,13 @@ const Header = ({
     <div className={tw(`lg:max-w-4xl mx-auto py-16 px-8 sm:px-6`)}>
       <div className={tw('flex lg:gap-8 flex-col lg:flex-row items-center')}>
         <div className={tw('flex-1 flex flex-col')}>
-          <h1 className={tw(`text-center text-indigo-600 font-semibold tracking-wide uppercase`)}>{h1}</h1>
-          <p className={tw(`font-sans font-italic text-2xl text-center leading-snug mt-10 text-gray-700 leading-8`)}>
+          <h1 className={tw(` text-center text-indigo-600 font-semibold tracking-wide uppercase`)}>{h1}</h1>
+          <p className={tw(`font-sans font-italic text-2xl text-center leading-relaxed mt-10 text-gray-600 leading-8`)}>
             {subtitlu}
           </p>
 {indemn ? 
           <div className={tw(`max-w-xl mx-auto`)}>
-            <p className={tw(`mt-10 text-gray-800 text-center  text-xl text-gray-700 leading-6`)}>{indemn}</p>
+            <p className={tw(`mt-10 text-center  text-xl text-black leading-relaxed`)}>{indemn}</p>
           </div> : null}
           {Cta(variant)}
         </div>
