@@ -54,4 +54,7 @@ export const typography = {
   p: {
     default: tw(' tracking-wide text-justify indent-1.5 text-gray-700 sm:leading-relaxed md:leading-9'),
   },
+  link: {
+    default: tw(' underline hover:text-indigo-600'),
+  },
 };
