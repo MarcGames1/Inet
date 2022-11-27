@@ -15,8 +15,8 @@ const pic2 = '/studiiDeCaz/StudiuCaz1.2-1068x407.jpg';
 const pic3 = '/studiiDeCaz/StudiuCaz1.3-927x385.png';
 const pic4 = '/studiiDeCaz/seo tehnic-1600x1183.jpeg';
 
- const important = tw('font-semibold text-indigo-500');
- const important2 = tw('font-semibold text-emerald-300');
+ const important = tw('font-semibold');
+ const important2 = tw('font-semibold');
  
 
 export const homepage = {
@@ -46,7 +46,7 @@ export const homepage = {
         ta?
       </>,
       <>
-        Dacă nu ești vizibil în online ,vei pierde în continuare timp și bani, în timp ce{' '}
+        Dacă nu ești vizibil în online, vei pierde în continuare timp și bani, în timp ce{' '}
         <span className={important2}>concurența ta va continua să aibă rezultate</span>. Prin agenția noastră de
         marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care
         au nevoie de produsul sau serviciul tău!

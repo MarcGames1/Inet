@@ -82,18 +82,29 @@ const Header = ({
   <header className={tw(headerStyle, `w-full h-auto`)}>
     <div className={tw(`lg:max-w-4xl mx-auto py-16 px-8 sm:px-6`)}>
       <div className={tw('flex lg:gap-8 flex-col lg:flex-row items-center')}>
-        <div className={tw('flex-1  w-full h-full')}>
+        <div className={tw('flex-1 flex flex-col')}>
           <h1 className={tw(`text-center text-indigo-600 font-semibold tracking-wide uppercase`)}>{h1}</h1>
-          <p className={tw(`font-sans font-bold text-2xl text-center leading-snug `)}>{subtitlu}</p>
+          <p className={tw(`font-sans font-italic text-2xl text-center leading-snug mt-10 text-gray-700 leading-8`)}>
+            {subtitlu}
+          </p>
+{indemn ? 
           <div className={tw(`max-w-xl mx-auto`)}>
-            <p className={tw(`mt-10 text-gray-800 text-center text-xl`)}>{indemn}</p>
-          </div>
+            <p className={tw(`mt-10 text-gray-800 text-center  text-xl text-gray-700 leading-6`)}>{indemn}</p>
+          </div> : null}
+          {Cta(variant)}
         </div>
-        <div id="heroimg" className={tw(picContainer, 'h-80 w-80 relative  md:h-72 md:w-4/12')}>
-          <Image loading='eager' src={meImg.url} alt={meImg.alt} width={30} height={10} layout="fill" objectFit="contain" />
+        <div id="heroimg" className={tw(picContainer, 'h-80 w-80 relative md:mt-0 mt-10  md:h-72 md:w-4/12')}>
+          <Image
+            loading="eager"
+            src={meImg.url}
+            alt={meImg.alt}
+            width={30}
+            height={10}
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
       </div>
-      {Cta(variant)}
     </div>
   </header>
 );

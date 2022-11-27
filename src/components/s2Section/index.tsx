@@ -15,15 +15,18 @@ const SecondSection = ({
   children?: JSX.Element | null;
 }) => {
   return (
-    <section className={styles.bg + ' ' + tw('w-full items-center py-8 min-h-screen flex flex-col')}>
-      <SectionHeader titlu={titlu} style={'text-gray-50'} subtitlu={subtitlu} />
+    <section className={ + ' ' + tw('w-full items-center py-8 min-h-screen flex flex-col')}>
+      <SectionHeader titlu={titlu} style={'text-gray-800'} subtitlu={subtitlu} />
+
+      <div className={tw(`flex flex-col items-center gap-16`)}>
       {paragrafe?.map((p, idx) => {
         return (
-          <div key={idx} className={`${styles.glass} ${tw('container h-full block w-11/12 lg:w-9/12 m-8 p-8')}`}>
-            <p className={tw('font-extrabold text-justify indent-1.5 text-white')}>{p}</p>
+          <div key={idx} className={`${tw('container w-11/12 lg:w-6/12')}`}>
+            <p className={tw(' tracking-wide text-justify indent-1.5 text-gray-700 leading-9')}>{p}</p>
           </div>
         );
       })}
+      </div>
       {children ? <>{children}</> : null}
     </section>
   );
