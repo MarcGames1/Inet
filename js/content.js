@@ -16,7 +16,7 @@ const pic3 = '/studiiDeCaz/StudiuCaz1.3-927x385.png';
 const pic4 = '/studiiDeCaz/seo tehnic-1600x1183.jpeg';
 
  const important = tw('font-semibold');
- const important2 = tw('font-semibold');
+
  
 
 export const homepage = {
@@ -41,15 +41,15 @@ export const homepage = {
     paragrafe: [
       <>
         Când potențiatul tău client intră pe Google, a decis deja că are nevoie de{' '}
-        <span className={important2}>serviciile pe care tu le oferi</span> . Nu mai trebuie să-l convingi de nimic.
-        Întrebarea este, <span className={important2}>cine va apărea în rezultatele căutărilor</span>? Tu sau concurența
+        <span className={important}>serviciile pe care tu le oferi</span> . Nu mai trebuie să-l convingi de nimic.
+        Întrebarea este, <span className={important}>cine va apărea în rezultatele căutărilor</span>? Tu sau concurența
         ta?
       </>,
       <>
-        Dacă nu ești vizibil în online, vei pierde în continuare timp și bani, în timp ce{' '}
-        <span className={important2}>concurența ta va continua să aibă rezultate</span>. Prin agenția noastră de
-        marketing online te putem ajuta să te diferențiezi de concurență și să devii destinația preferată a celor care
-        au nevoie de produsul sau serviciul tău!
+        <span className={important}>Dacă nu ești vizibil în online, vei pierde în continuare timp și bani</span>, în
+        timp ce concurența ta va continua să aibă rezultate . Prin agenția noastră de marketing online te putem ajuta să
+        te diferențiezi de concurență și să devii destinația preferată a celor care au nevoie de produsul sau serviciul
+        tău!
       </>,
       <>Nu este suficient să fii doar listat în online atâta timp cât nimeni nu știe că exiști!</>,
     ],

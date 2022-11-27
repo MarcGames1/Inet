@@ -14,7 +14,7 @@ export const SectionHeader = ({
     <div className={tw(`mb-16 text-center`)}>
       {titlu ? <p className={tw(`mt-2 pb-4 text-5xl lg:text-5xl font-bold tracking-tight ${style}`)}>{titlu}</p> : null}
       {subtitlu ? (
-        <p className={tw(`text-base text-indigo-50 font-semibold tracking-wide uppercase`)}>{subtitlu}</p>
+        <p className={ tw(`text-base text-indigo-50 font-semibold tracking-wide uppercase`)}>{subtitlu}</p>
       ) : null}
     </div>
   ) : (
