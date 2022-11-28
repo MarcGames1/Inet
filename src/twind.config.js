@@ -1,6 +1,5 @@
 const colors = require('tailwindcss/colors');
 export default {
-  plugins: [require('@tailwindcss/typography')],
   theme: {
     extend: {
       fontFamily: {
