@@ -17,23 +17,31 @@ const SERVER = process.env.NEXT_PUBLIC_API;
 
 
 export async function getStaticPaths() {
-    const {data} = await axios.get(`${process.env.API}posts`);
-    
-
-    
-  
- 
-    return {
-      paths: data.map((blog) => {
-        console.log(blog.slug)
-        return { params: { slug: blog.slug } };
-      }),
-      fallback: 'blocking', // can also be true or 'blocking'
-    };
+    try{
+      const { data } = await axios.get(`${process.env.API}posts`);
+      
+      
+      
+      
+      
+      return {
+        paths: data.map((blog) => {
+          console.log(blog.slug)
+          return { params: { slug: blog.slug } };
+        }),
+        fallback: 'blocking', // can also be true or 'blocking'
+      };
+    } catch{
+      return {
+        paths: [],
+        fallback: 'blocking',
+      };
+    }
 }
 
 export async function getStaticProps(context) {
-    const {slug} = context.params 
+   try {
+  const {slug} = context.params 
     const {data} = await axios.get(`${process.env.API}single-post/${slug}`);
     
 
@@ -43,6 +51,10 @@ export async function getStaticProps(context) {
         revalidate: 86400,
       }
     : { notFound: true };
+}   catch (e) {
+    console.log(e);
+    return { notFound: true };
+  }
 }
 
 
