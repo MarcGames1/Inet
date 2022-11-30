@@ -22,7 +22,7 @@ const Blog = ({articles}) => {
           <SectionHeader titlu={'BLOG IwebAgency'} />
           <div className={tw('container m-10')}>
             <div className={tw('grid gap-10 grid-cols-3')}>
-              {articles.map((article, idx) => {
+              {articles?.map((article, idx) => {
                 return (
                   <article className={tw('bg-indigo-50 flex justify-evenly items-center	flex-col gap-4 p-5')} key={idx}>
                     <Link href={`/blog/${article.slug}`}>
