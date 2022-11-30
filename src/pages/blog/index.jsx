@@ -17,7 +17,7 @@ const Blog = ({articles}) => {
   
   return (
     <>
-      {articles ? (
+      {Array.isArray(articles) ? (
         <>
           <Page>
             <section>
