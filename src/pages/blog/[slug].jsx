@@ -37,11 +37,12 @@ export async function getStaticProps(context) {
     const {data} = await axios.get(`${process.env.API}single-post/${slug}`);
     
 
-  return {
-    props: { ...data }, // will be passed to the page component as props
-    revalidate: 86400,
-    
-  };
+  return data
+    ? {
+        props: { ...data }, // will be passed to the page component as props
+        revalidate: 86400,
+      }
+    : { notFound: true };
 }
 
 

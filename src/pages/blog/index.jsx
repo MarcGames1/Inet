@@ -20,7 +20,7 @@ const Blog = ({articles}) => {
       <Page>
         <section>
           <SectionHeader titlu={'BLOG IwebAgency'} />
-          <div className={tw('conteiner m-10')}>
+          <div className={tw('container m-10')}>
             <div className={tw('grid gap-10 grid-cols-3')}>
               {articles.map((article, idx) => {
                 return (

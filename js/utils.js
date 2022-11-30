@@ -14,7 +14,7 @@ export const form = {
   ),
   label: tw('block my-2 text-sm font-medium text-indigo-600 dark:text-white'),
 
-  group: tw('flex flex-col mb-4 space-between items-center'),
+  group: tw('flex flex-col mb-4 justify-between items-center'),
 
   button: tw('bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded'),
   buttonRed: tw('bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'),

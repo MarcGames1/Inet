@@ -3,10 +3,11 @@ import axios from 'axios';
 import Image from 'next/image'
 import { tw } from 'twind';
 import Link from 'next/link'
+import { useContext } from 'react';
+import { AuthContext } from '@/context/auth';
+import toast from 'react-hot-toast';
 
-
-
-const server = 'http://89.37.212.226:8000';
+const server = process.env.NEXT_PUBLIC_API;
 const cardStyles = {
   container: tw('text-center grid gap-2'),
   title: tw('text-center text-indigo-600 font-semibold tracking-wide uppercase'),
@@ -15,6 +16,11 @@ const cardStyles = {
 import {form} from '../../../../js/utils'
 
 const BlogCard = ({title, categories, author, image, excerpt, _id}) => {
+
+   const [auth, setAuth] = useContext(AuthContext);
+
+
+
 const handler ={
     stergePostarea: (e)=>{
         e.preventDefault()
@@ -27,7 +33,9 @@ const handler ={
 
 
 const stergePostarea = async (_id) =>{
-
+  const {data} = await axios.delete(`/post/${_id}/${auth.user._id}`)
+   toast.success('Postare Stearsa');
+console.log(_id)
 }
 const editeazaPostarea = async (_id) => {};
 

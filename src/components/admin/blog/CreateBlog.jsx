@@ -29,7 +29,7 @@ const CreateBlog = (props) => {
     const [excerptLength, setExcerptLength] = useState(0)
     const [selectedOptions, setSelectedOptions] = useState(props.categories || [])
     const [selectedAuthors, setSelectedAuthors] = useState(props.author || [])
-    
+    const [quillImages, setQuillImages] = useState([]);
     const maxexcerptLength = 160
     const [isTextAreaValid, setIsTextAreaValid] = useState(true)
 
@@ -42,8 +42,8 @@ const CreateBlog = (props) => {
 
     
   getAuthorOptions().then(res => {
-    console.log("L here => ",res)
     authorOptions.push(...res)
+    console.log(content)
 })
 
 
@@ -169,7 +169,9 @@ const CreateBlog = (props) => {
           <span className={form.title}>
             caractere: {excerptLength} / {maxexcerptLength}
           </span>
-          <QuillEditor content={content} setContent={setContent} />
+          <QuillEditor 
+          content={content}  
+          setContent={setContent} />
 
           <span className={form.title}>Autor:</span>
           <Select

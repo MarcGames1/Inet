@@ -1,8 +1,8 @@
 import axios from "axios"
+const server = process.env.NEXT_PUBLIC_API;
 
 
 export const uploadImage = async (formdata)=>{
-    const server = 'http://89.37.212.226:8000/';
     
     
 

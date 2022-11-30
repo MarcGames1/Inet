@@ -36,7 +36,7 @@ const AdminBlogList = () => {
    
     useEffect(() => {
       getBlogList();
-    }, []);
+    }, [blogList]);
 
     if(blogList === undefined){
         return <>NO BLOG DATA</>;
