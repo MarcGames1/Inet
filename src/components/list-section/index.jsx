@@ -6,12 +6,6 @@ const ListSection = ({
   titlu,
   listItems,
   FeatureSvg,
-}: {
-  reverse: boolean;
-  indemn: string;
-  titlu: string;
-  listItems: any;
-  FeatureSvg: any;
 }) => (
   <section id="list" className={tw(`lg:py-28 pt-28 overflow-hidden`)}>
     <div className={tw(`max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 bg-white`)}>
@@ -22,7 +16,7 @@ const ListSection = ({
       <div className={tw(`flex flex-wrap -mx-8 items-center`)}>
         <div className={tw(`${reverse ? 'order-2' : ''} w-full lg:w-1/2 px-8`)}>
           <ul className={tw(`space-y-12`)}>
-            {listItems.map((item: any, index: number) => (
+            {listItems.map((item, index) => (
               <li className={tw(`flex -mx-4`)} key={item.title}>
                 <div className={tw(`px-4`)}>
                   <span

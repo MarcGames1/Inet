@@ -8,7 +8,6 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['www.avocatdorubotea.ro', 'iwebagency.ro', 'api.iwebagency.ro'],
-
+    domains: ['www.avocatdorubotea.ro', 'iwebagency.ro', 'api.iwebagency.ro', '89.37.212.226'],
   },
 };

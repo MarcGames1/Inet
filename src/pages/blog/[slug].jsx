@@ -10,7 +10,8 @@ import React from 'react';
 import { tw, css } from 'twind';
 import Page from '@/components/page';
 import { NextSeo } from "next-seo";
-
+import client from 'client';
+import { gql } from '@apollo/client';
 
 
 const SERVER = process.env.NEXT_PUBLIC_API;
