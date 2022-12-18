@@ -8,28 +8,28 @@ import Head from 'next/head';
 
 // Importuri dinamice pentru FCP
 
-const Calendly = dynamic(() => import('../components/calendly/InlineCalendly'), {
+const CalendlySection = dynamic(() => import('../components/CTA').then((c) => c.CalendlySection), {
   loading: () => <div>Loading...</div>,
 });
 
-const Page = dynamic(() => import('../components/page/'), {
+const Page = dynamic(() => import('../components/page'), {
   loading: () => <div>Loading...</div>,
 });
 
-const Header = dynamic(() => import('../components/header/'), {
+const Header = dynamic(() => import('../components/header'), {
   loading: () => <div>Loading...</div>,
 });
 const ListSection = dynamic(() => import('../components/list-section'), {
   loading: () => <div>Loading...</div>,
 });
-const ListWithPic = dynamic(() => import('../components/list-pictures-section/'), {
+const ListWithPic = dynamic(() => import('../components/list-pictures-section'), {
   loading: () => <div>Loading...</div>,
 });
-const FeatureSection = dynamic(() => import('../components/feature-section/'), {
+const FeatureSection = dynamic(() => import('../components/feature-section'), {
   loading: () => <div>Loading...</div>,
 });
 import SecondSection from '@/components/s2Section';
-import { CalendlyNoPic, CalendlySection } from '@/components/CTA';
+import { CalendlyNoPic } from '@/components/CTA';
 import DcNoi from '@/components/DcNoi';
 import Section2 from '@/components/servicii-seo/section2';
 import ListaCuBife from '@/components/servicii-seo/listaCuBife';
@@ -57,9 +57,8 @@ const ServiciiSeo = () => {
             lead={serviciiSeo.s2.primaParte}
             heading={serviciiSeo.s2.a2aParte.title}
             paragrafe={serviciiSeo.s2.a2aParte.paragrafe}
-          >
-            <CalendlySection titlu={'Dacă ți-aș spune că se poate și altfel?'} text={''} />
-          </Section2>
+            children={<CalendlySection titlu={'Dacă ți-aș spune că se poate și altfel?'} text={''} />}
+          ></Section2>
 
           <ListaCuBife {...serviciiSeo.listaCuBife} />
 
