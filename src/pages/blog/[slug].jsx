@@ -1,11 +1,22 @@
-import { PostWrapper } from "../../context/postContext"
+// import { PostWrapper } from "../../context/postContext"
 
-const BlogPage = (porps)=>{
+// const BlogPage = (porps)=>{
+//     return(
+//         <PostWrapper value={{featuredImage: porps.featuredImage}}>
+
+//         </PostWrapper>
+//     )
+// }
+
+// export default BlogPage
+
+
+
+const BlogPage = () =>{
     return(
-        <PostWrapper value={{featuredImage: props.featuredImage}}>
-
-        </PostWrapper>
+    <div>test</div>
     )
 }
 
-export default BlogPage
+
+export default BlogPage;
