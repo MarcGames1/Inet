@@ -86,26 +86,26 @@ const Blog = (props) => {
 
 export default Blog;
 
-export const getStaticProps = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query PageQuery {
-        nodeByUri(uri: "/") {
-          ... on Page {
-            id
-            blocksJSON
-            title
-          }
-        }
-      }
-    `,
-  });
+// export const getStaticProps = async () => {
+//   const { data } = await client.query({
+//     query: gql`
+//       query PageQuery {
+//         nodeByUri(uri: "/") {
+//           ... on Page {
+//             id
+//             blocksJSON
+//             title
+//           }
+//         }
+//       }
+//     `,
+//   });
 
-  // console.log(data.acfOptionsMainMenu.mainMenu.menuItems.menuItems);
-  // const blocks = cleanAndTransformBlocks(data.nodeByUri.blocksJSON);
-  return {
-    props: {
-      blocks: data
-    },
-  };
-};
+//   // console.log(data.acfOptionsMainMenu.mainMenu.menuItems.menuItems);
+//   // const blocks = cleanAndTransformBlocks(data.nodeByUri.blocksJSON);
+//   return {
+//     props: {
+//       blocks: data
+//     },
+//   };
+// };
