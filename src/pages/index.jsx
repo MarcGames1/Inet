@@ -21,9 +21,9 @@ export default function Home() {
     <Suspense fallback={`Loading...`}>
       <Page>
         <NextSeo
-          title="Agentie Marketing Online cu rezultate • IwebAgency.ro"
-          description="Agentie Marketing Online care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ IwebAgency.ro."
-          canonical="https://iwebagency.ro/"
+          title="Agentie Marketing Online cu rezultate • MarWeb.ro"
+          description="Agentie Marketing Online care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ MarWeb.ro."
+          canonical="https://marweb.ro/"
         />
         <Header
           h1={homepage.s1.h1}
@@ -33,7 +33,6 @@ export default function Home() {
         />
 
         <main>
-       
           <SecondSection titlu={homepage.S2.titlu} paragrafe={homepage.S2.paragrafe} />
           <ListWithPic indemn={homepage.s3.indemn} titlu={homepage.s3.titlu} listItems={homepage.s3.lista} />
           <DcNoi title={homepage.dcNoi.titlu} items={homepage.dcNoi.items} />
@@ -46,7 +45,6 @@ export default function Home() {
             btntxt={undefined}
             wa
           />
-
         </main>
       </Page>
     </Suspense>

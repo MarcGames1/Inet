@@ -3,7 +3,7 @@ import React from 'react'
 import { tw } from 'twind'
 
 
-const nume_site = 'https://iwebagency.ro/'
+const nume_site = 'https://marweb.ro/'
 const nume_firma ='MARK ELITE TECHNOLOGIES L.L.C'
 
 
@@ -11,9 +11,9 @@ const Legal = () => {
   return (
   <>
     <NextSeo
-      title="Termeni Si Conditii • IwebAgency.ro"
+      title="Termeni Si Conditii • MarWeb.ro"
       description="termeni si conditii"
-      canonical="https://iwebagency.ro/termeni-conditii/"
+      canonical="https://marweb.ro/termeni-conditii/"
       robotsProps={'noindex, follow'}
     />
 

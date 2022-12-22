@@ -40,9 +40,9 @@ const ServiciiSeo = () => {
       <Page>
         <NextSeo
           title="Servicii SEO •
-          Care aduc rezultate ⭐ IwebAgency.ro"
-          description="Servicii Seo care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ IwebAgency.ro."
-          canonical="https://iwebagency.ro/servicii-seo"
+          Care aduc rezultate ⭐ MarWeb.ro"
+          description="Servicii Seo care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ MarWeb.ro."
+          canonical="https://marweb.ro/servicii-seo/"
         />
 
         <main>

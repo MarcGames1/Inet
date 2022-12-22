@@ -91,9 +91,12 @@ const Header = ({
           <div className={tw(`max-w-xl mx-auto`)}>
             <p className={tw(`mt-10 text-center  text-xl text-black leading-relaxed`)}>{indemn}</p>
           </div> : null}
+          <div className={tw('m-4')}>
+
           {Cta(variant)}
+          </div>
         </div>
-        <div id="heroimg" className={tw(picContainer, 'h-80 w-80 relative md:mt-0 mt-10  md:h-72 md:w-4/12')}>
+        <div id="heroimg" className={tw(picContainer, ' h-80 w-80 relative md:mt-0 mt-10  md:h-72 md:w-4/12')}>
           <Image
             loading="eager"
             src={meImg.url}

@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo'
-const nume_site = 'https://iwebagency.ro/'
+const nume_site = 'https://marweb.ro/'
 const nume_firma = 'MARK ELITE TECHNOLOGIES L.L.C'
 
 
@@ -10,9 +10,9 @@ const Cookie = () => {
   return (
     <>
           <NextSeo
-              title="Politica Cookie • IwebAgency.ro"
+              title="Politica Cookie • MarWeb.ro"
               description="Politica Cookie"
-              canonical="https://iwebagency.ro/politica-cookie/"
+              canonical="https://marweb.ro/politica-cookie/"
               robotsProps={'noindex, follow'}
           />
 

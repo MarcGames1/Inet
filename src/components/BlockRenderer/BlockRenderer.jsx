@@ -1,9 +1,25 @@
-import {Paragraph, Cover, Heading} from '../WP'
+import { Paragraph, Cover, Heading, AuthorAndSmLarge } from '../WP';
 import { SocialIcon } from 'react-social-icons';
 import { tw } from 'twind';
 import { theme } from '../../theme';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
- const BlockRenderer = ({ blocks }) => {
+ const BlockRenderer = ({ blocks, color }) => {
+
+  const [currentcolor, setCurrentColor] = useState(color)
+
+  
+  const changeColor = ( newColor) =>{
+    if (newColor != currentcolor){
+      setCurrentColor(newColor);
+    }
+  }
+  useEffect(()=>{
+    
+  },[currentcolor])
+
+
   return blocks.map((block) => {
     switch (block.name) {
       case 'core/paragraph': {
@@ -36,26 +52,28 @@ import { theme } from '../../theme';
         );
       }
       case 'core/social-links' :{
+         changeColor(block.attributes.iconColorValue);
+      
         return (
           <div key={block.id} className={tw(`${block.attributes.layout.type} gap-5 p-5 justify-${block.attributes?.layout.justifyContent}`)}>
-            <BlockRenderer blocks={block.innerBlocks} />
+            <BlockRenderer color={currentcolor} blocks={block.innerBlocks} />
           </div>
         );
       }
       case'core/post-author-biography': {
-        return(
-            null
-        )
+        console.log(block)
+        return null;
       }
       case 'core/social-link' :{
+        
         return (
           <div className={tw('transition-transform	 hover:-translate-y-2')} key={block.id}>
-            <SocialIcon url={block.attributes.url} />
+            <SocialIcon bgColor={currentcolor} url={block.attributes.url} />
           </div>
         );
       }
       default:
-        return <>unsupported block</>;
+        return <>unsupported block</>
     }
   });
 };
