@@ -31,14 +31,7 @@ const Blog = ({ posts, pageCount, currentPage }) => {
           <div className={tw('grid-cols-1 lg:grid-cols-3 gap-4	grid  items-strech')}>
             {posts.map((post) => (
               <div className={tw('max-h-min grid-rows-6 grid')}>
-                <h2
-                  className={tw(
-                    'row-span-1 self-start	justify-self-center	 antialiased text-center m-3 text-lg text-gray-900 font-semibold',
-                  )}
-                >
-                  {post.node.title}
-                </h2>
-                <div className={tw('justify-self-start row-span-3 p-3 self-start')}>
+                <div className={tw('justify-self-start row-span-2 p-3 self-start')}>
                   <Image
                     layout="intrinsic"
                     width={1200}
@@ -48,6 +41,13 @@ const Blog = ({ posts, pageCount, currentPage }) => {
                     alt={post.node.title || post.node?.featuredImage?.node?.alt}
                   />
                 </div>
+                <h2
+                  className={tw(
+                    'row-span-1 self-start	justify-self-center	 antialiased text-center  text-lg text-gray-900 font-semibold',
+                  )}
+                >
+                  {post.node.title}
+                </h2>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: post.node.excerpt || '<p class="text-center">Citeste mai multe aici</p>',
