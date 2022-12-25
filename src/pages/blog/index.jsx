@@ -16,10 +16,10 @@ import { handleError } from '@apollo/client/link/http/parseAndCheckHttpResponse'
 const Page = dynamic(() => import('@/components/page'));
 const Button = dynamic(() => import('@/components/button'));
 
-const GET_POSTS = gql(PostsQuery());
+const GET_POSTS = gql(PostsQuery(1));
 
 const Blog = ({ posts, pageCount, currentPage }) => {
-  
+
 
   
   return (
@@ -45,7 +45,7 @@ const Blog = ({ posts, pageCount, currentPage }) => {
                     height={600}
                     objectFit="cover"
                     src={post.node?.featuredImage?.node?.sourceUrl}
-                    alt={post.node?.featuredImage?.node?.alt || post.node.title}
+                    alt={post.node.title || post.node?.featuredImage?.node?.alt}
                   />
                 </div>
                 <div
@@ -81,41 +81,14 @@ export const getStaticProps = async () => {
   });
 
 
-<<<<<<< Updated upstream
-export const getStaticProps = async () => {
-  const { data } = await client.query({
-    query: gql`
-      query PageQuery {
-        nodeByUri(uri: "/") {
-          ... on Page {
-            id
-            blocksJSON
-            title
-          }
-        }
-      }
-    `,
-  });
+  const pageCount = Math.ceil(data.posts.edges.length / 10);
 
-  // console.log(data.acfOptionsMainMenu.mainMenu.menuItems.menuItems);
-  // const blocks = cleanAndTransformBlocks(data.nodeByUri.blocksJSON);
-  return {
-    props: {
-      blocks: data
-    },
-  };
-};
-=======
-  //  const pageCount = Math.ceil(data.posts.edges.length / 10);
-
-//  console.log(pageCount," Pages");
   return {
     props: {
       posts: data.posts.edges,
-      // pageCount,
+      pageCount
     },
   };
 };
 
 export default Blog;
->>>>>>> Stashed changes
