@@ -26,3 +26,69 @@ export const AuthorPageQ = `query AuthorPage($uri: String = "alexandru-marcu") {
     }
   }
 }`;
+
+
+
+export const PostsQuery = () => `query PostsQuery {
+  posts(first: 10000) {
+    edges {
+      node {
+        id
+        title
+        excerpt
+        uri
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}`;
+
+export const AllPostsData = (number = 99999) => `AllPostsData {
+  posts(first: ${number}) {
+    edges {
+      node {
+        id
+        title
+        excerpt
+        uri
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}`;
+
+export const AllPostsUri = () => `{
+  posts {
+    edges {
+      node {
+        uri
+      }
+    }
+  }
+}`;
+
+export const PostDataByUri = (uri) => `query getPostByURI($uri: String="${uri}") {
+  postBy(uri: $uri) {
+    id
+    title
+    content
+    date
+    blocksJSON
+    featuredImage{
+      node{
+        sourceUrl
+      }
+    }
+  }
+}
+`;
