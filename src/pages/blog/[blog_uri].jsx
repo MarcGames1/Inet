@@ -33,23 +33,6 @@ const BlogPage = ({ featuredImage, author, blocks }) => {
 export default BlogPage;
 
 
-export async function getStaticPaths() {
-  const { data } = await client.query({
-    query: gql(AllPostsUri()),
-  });
-
-  const posts = data.posts.edges;
-
-  const paths = posts.map((post) => ({
-    params: { blog_uri: post.node.uri },
-  }));
-  
-
-  return {
-    paths,
-    fallback: true,
-  };
-}
 
 
 export async function getStaticProps(context) {
@@ -73,3 +56,19 @@ console.log(data)
 
 
 
+export async function getStaticPaths() {
+  const { data } = await client.query({
+    query: gql(AllPostsUri()),
+  });
+
+  const posts = data.posts.edges;
+
+  const paths = posts.map((post) => ({
+    params: { blog_uri: post.node.uri },
+  }));
+
+  return {
+    paths,
+    fallback: true,
+  };
+}
