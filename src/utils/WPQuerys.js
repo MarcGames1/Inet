@@ -29,25 +29,38 @@ export const AuthorPageQ = `query AuthorPage($uri: String = "alexandru-marcu") {
 
 
 
-export const PostsQuery = () => `query PostsQuery {
-  posts(first: 10000) {
-    edges {
-      node {
-        id
-        title
-        excerpt
-        uri
-        featuredImage {
+export const PostsQuery = (page = 1) => {
+  return `
+    query Posts    {
+      posts (first: 10000) {
+        edges {
           node {
-            altText
-            sourceUrl
+            id
+            title
+            excerpt
+            uri
+            featuredImage {
+              node {
+                sourceUrl
+                altText
+              }
+            }
+          }
+          cursor
+        }
+        pageInfo {
+          hasNextPage
+          hasPreviousPage
+          offsetPagination {
+            hasMore
+            hasPrevious
+            total
           }
         }
       }
     }
-  }
-}`;
-
+  `;
+};
 export const AllPostsData = (number = 99999) => `AllPostsData {
   posts(first: ${number}) {
     edges {
