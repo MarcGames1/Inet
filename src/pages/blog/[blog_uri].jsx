@@ -5,24 +5,28 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import { NextSeo } from 'next-seo';
+import { cleanAndTransformBlocks } from '../../utils/cleanAndTransformBlocks';
 
-
-import { PostWrapper } from "../../context/postContext"
+// import { PostWrapper } from "../../context/postContext"
 
 import client from '../../utils/client';
 import { AllPostsUri, AllPostsUrls, PostsQuery, PostDataByUri } from '../../utils/WPQuerys';
+import BlockRenderer from '../../components/BlockRenderer/BlockRenderer';
 
 
 const Page = dynamic(() => import('@/components/page'));
 
 
 
-const BlogPage = ({ featuredImage, author, blocks }) => {
-  console.log('BlogPage p=> ', blocks);
+const BlogPage = ({ content, blocks, featuredImage }) => {
+ 
   return (
-    <PostWrapper value={{ featuredImage: featuredImage }}>
-      <pre>{JSON.stringify(blocks)}</pre>
-    </PostWrapper>
+    <>
+      {blocks ? <BlockRenderer blocks={blocks} /> : <>test</>}
+      {/* <BlockRenderer blocks={blocks} /> */}
+      {/* <div dangerouslySetInnerHTML={{__html: props.content}}></div> */}
+      {/* <pre>{JSON.stringify(props.blocks, null, 3)}</pre> */}
+    </>
   );
 };
 
@@ -38,16 +42,24 @@ export default BlogPage;
 export async function getStaticProps(context) {
   const currentUri = context.params.blog_uri;
 console.log(PostDataByUri(currentUri))
-  console.log(context.params)
+  
   const { data } = await client.query({
     query: gql(PostDataByUri(currentUri)),
   });
-console.log(data)
-  return {
-    props: {
-      featuredImage: data.nodeByUri?.featuredImage?.node?.sourceUrl || null,
-      // author: data.nodeByUri.author,
-      blocks: data.nodeByUri.blocksJSON,
+
+const blocks = cleanAndTransformBlocks(data.postBy.blocksJSON);
+const content = data.postBy.content
+return {
+  props: {
+      blocks,
+      content,
+      featuredImage:
+        (data &&
+          data.postBy &&
+          data.postBy.featuredImage &&
+          data.postBy.featuredImage.node &&
+          data.postBy.featuredImage.node.sourceUrl) ||
+        null,
     },
   };
 }

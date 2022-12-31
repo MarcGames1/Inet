@@ -12,7 +12,12 @@ export const cleanAndTransformBlocks = (blocksJson) => {
     });
   };
 
+  
+
   assignId(blocks);
 
   return blocks;
 };
+
+
+

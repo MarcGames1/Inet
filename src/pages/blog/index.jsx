@@ -117,7 +117,9 @@ console.log(currentPage)
                   ></div>
                   <div className={tw('m-1 self-end span-1 justify-self-center')}>
                     {' '}
-                    <Button>citeste mai mult</Button>
+                    <Link href={`/blog/${post.node.uri}`}>
+                      <Button>citeste mai mult</Button>
+                    </Link>
                   </div>
                 </div>
               ))}
