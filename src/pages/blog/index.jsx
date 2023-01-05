@@ -103,7 +103,7 @@ console.log(currentPage)
               {currentPosts?.map((post) => (
                 <div className={tw('max-h-min grid-rows-6 grid')}>
                   <div className={tw('justify-self-start row-span-2 p-3 self-start')}>
-                    <Link href={`/blog/${post.node.uri}`}>
+                    <Link href={`/blog${post.node.uri}`}>
                       <a>
                         <Image
                           layout="intrinsic"
@@ -131,7 +131,7 @@ console.log(currentPage)
                   ></div>
                   <div className={tw('m-1 self-end span-1 justify-self-center')}>
                     {' '}
-                    <Link href={`/blog/${post.node.uri}`}>
+                    <Link href={`/blog${post.node.uri}`}>
                       <Button>citeste mai mult</Button>
                     </Link>
                   </div>

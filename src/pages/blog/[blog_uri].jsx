@@ -39,7 +39,7 @@ export default BlogPage;
 
 
 
-export async function getStaticProps(context) {
+export async function ServerSideProps(context) {
   const currentUri = context.params.blog_uri;
 console.log(PostDataByUri(currentUri))
   
@@ -68,19 +68,19 @@ return {
 
 
 
-export async function getStaticPaths() {
-  const { data } = await client.query({
-    query: gql(AllPostsUri()),
-  });
+// export async function getStaticPaths() {
+//   const { data } = await client.query({
+//     query: gql(AllPostsUri()),
+//   });
 
-  const posts = data.posts.edges;
+//   const posts = data.posts.edges;
 
-  const paths = posts.map((post) => ({
-    params: { blog_uri: post.node.uri },
-  }));
+//   const paths = posts.map((post) => ({
+//     params: { blog_uri: post.node.uri },
+//   }));
 
-  return {
-    paths,
-    fallback: true,
-  };
-}
+//   return {
+//     paths,
+//     fallback: true,
+//   };
+// }
