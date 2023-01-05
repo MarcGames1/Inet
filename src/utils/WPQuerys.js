@@ -32,7 +32,7 @@ export const AuthorPageQ = `query AuthorPage($uri: String = "alexandru-marcu") {
 export const PostsQuery = (page = 1) => {
   return `
     query Posts    {
-      posts (first: 10000) {
+      posts (first: ${page * 10}) {
         edges {
           node {
             id
@@ -80,8 +80,8 @@ export const AllPostsData = (number = 99999) => `AllPostsData {
   }
 }`;
 
-export const AllPostsUri = () => `{
-  posts {
+export const AllPostsUri = (number = 10) => `{
+  posts (first: ${number}) {
     edges {
       node {
         uri

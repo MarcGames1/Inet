@@ -16,7 +16,9 @@ import Image from 'next/image';
 const Page = dynamic(() => import('@/components/page'));
 const Button = dynamic(() => import('@/components/button'));
 
-const GET_POSTS = gql(PostsQuery());
+const GET_POSTS = gql(PostsQuery(1));
+
+
 
 
 const Blog = ({ posts, pageCount }) => {
@@ -26,14 +28,26 @@ const Blog = ({ posts, pageCount }) => {
   const currentPageRender = page ? parseInt(page, 10) : 1;
   const [currentPage, setCurrentPage] = useState(page ? parseInt(page, 10) : 1);
   const [currentPosts, setCurrentPosts] = useState((posts && posts.slice(0, 10)) || []);
+  
+  const query_posts = async (page) =>{
+    try {
+      const { data } = await client.query({
+       query: gql(PostsQuery(page)),
+     });
 
+     setCurrentPosts(data.posts.edges)
+      
+    } catch (error) {
+      console.log(error)
+    }
+  }
 console.log("CURRENT POSTS => ",currentPosts)
 console.log(currentPosts)
 
 console.log(currentPage)
      useEffect(() => {
-       setCurrentPosts(posts.slice(0, 10));
-     }, [posts]);
+       query_posts(currentPage)
+     }, [currentPage]);
 
   const handlePrevClick = () => {
     if (currentPage > 1) {
@@ -149,7 +163,7 @@ console.log(currentPage)
 };
 export default Blog;
 
-export const getServerSideProps = async (context) => {
+export const getStaticProps = async (context) => {
   const { data } = await client.query({
     query: GET_POSTS,
   });
