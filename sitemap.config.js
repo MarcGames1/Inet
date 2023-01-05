@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://iwebagency.ro',
+  siteUrl: 'https://marweb.ro',
   generateRobotsTxt: true,
   sitemapSize: 5000,
   exclude: ['/termeni-conditii', '/politica-cookie', '/admin/*', '/admin'],
