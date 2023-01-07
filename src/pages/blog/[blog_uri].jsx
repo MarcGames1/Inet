@@ -12,21 +12,28 @@ import { cleanAndTransformBlocks } from '../../utils/cleanAndTransformBlocks';
 import client from '../../utils/client';
 import { AllPostsUri, AllPostsUrls, PostsQuery, PostDataByUri } from '../../utils/WPQuerys';
 import BlockRenderer from '../../components/BlockRenderer/BlockRenderer';
+import { PostWrapper } from '../../context/blogPost';
 
 
 const Page = dynamic(() => import('@/components/page'));
 
 
 
-const BlogPage = ({ content, blocks, featuredImage }) => {
+const BlogPage = ({ content, blocks, featuredImage, title, author }) => {
  
   return (
+    <PostWrapper  value={{
+      title,
+      featuredImage,
+      author
+      }}>
     <>
       {blocks ? <BlockRenderer blocks={blocks} /> : <>test</>}
       {/* <BlockRenderer blocks={blocks} /> */}
       {/* <div dangerouslySetInnerHTML={{__html: props.content}}></div> */}
       {/* <pre>{JSON.stringify(props.blocks, null, 3)}</pre> */}
     </>
+    </PostWrapper>
   );
 };
 
@@ -39,7 +46,7 @@ export default BlogPage;
 
 
 
-export async function ServerSideProps(context) {
+export async function getStaticProps(context) {
   const currentUri = context.params.blog_uri;
 console.log(PostDataByUri(currentUri))
   
@@ -48,18 +55,20 @@ console.log(PostDataByUri(currentUri))
   });
 
 const blocks = cleanAndTransformBlocks(data.postBy.blocksJSON);
-const content = data.postBy.content
+console.log(data)
+
+const { author, title, content, featuredImage } = data.postBy;
+
+console.log(featuredImage, author)
 return {
+
   props: {
       blocks,
-      content,
-      featuredImage:
-        (data &&
-          data.postBy &&
-          data.postBy.featuredImage &&
-          data.postBy.featuredImage.node &&
-          data.postBy.featuredImage.node.sourceUrl) ||
-        null,
+      content: content || null,
+      title,
+      author,
+      featuredImage,
+      
     },
   };
 }
@@ -68,19 +77,19 @@ return {
 
 
 
-// export async function getStaticPaths() {
-//   const { data } = await client.query({
-//     query: gql(AllPostsUri()),
-//   });
+export async function getStaticPaths() {
+  const { data } = await client.query({
+    query: gql(AllPostsUri()),
+  });
 
-//   const posts = data.posts.edges;
+  const posts = data.posts.edges;
 
-//   const paths = posts.map((post) => ({
-//     params: { blog_uri: post.node.uri },
-//   }));
+  const paths = posts.map((post) => ({
+    params: { blog_uri: post.node.uri },
+  }));
 
-//   return {
-//     paths,
-//     fallback: true,
-//   };
-// }
+  return {
+    paths,
+    fallback: true,
+  };
+}

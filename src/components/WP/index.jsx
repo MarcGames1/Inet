@@ -7,3 +7,5 @@ export {UniversalBlock} from './UniversalBlock/UniversalBlock'
 export {EmbedBlock} from './Emed/Embed'
 export { Columns } from './Columns/Columns';
 export {Column} from './Column/Column'
+export { PostTitle } from './PostTitle/PostTitle'
+export {html} from './html/html'

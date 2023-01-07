@@ -37,7 +37,7 @@ export default {
         small: '1rem',
         medium: '1.125rem',
         large: '1.75rem',
-        xlage: '2rem',
+        xlarge: '2rem',
       },
     },
   },

@@ -1,4 +1,4 @@
-import {Paragraph, Cover, Heading, UniversalBlock, EmbedBlock, Columns, Column} from '../WP'
+import { Paragraph, Cover, Heading, UniversalBlock, EmbedBlock, HTML, Columns, Column, PostTitle } from '../WP';
 // import UniversalBlock from '../WP/UniversalBlock/UniversalBlock';
 import { SocialIcon } from 'react-social-icons';
 import { tw } from 'twind';
@@ -33,6 +33,7 @@ import Image from 'next/image';
         );
       }
       case 'core/cover': {
+        console.log('COVER BLOCK', block);
         return (
           <Cover key={block.id} background={block.attributes.url}>
             <BlockRenderer blocks={block.innerBlocks} />
@@ -75,7 +76,7 @@ import Image from 'next/image';
       }
 
       case 'core/column': {
-        console.log("BLOCK ATTRIBUTES +>",block.attributes)
+        console.log('BLOCK ATTRIBUTES +>', block.attributes);
         return (
           <Column
             key={block.id}
@@ -87,25 +88,32 @@ import Image from 'next/image';
           </Column>
         );
       }
+      case 'core/group':
+      case 'core/block': {
+        console.log('BLOCK ATTRIBUTES +>', block.attributes);
+        return <BlockRenderer key={block.id} blocks={block.innerBlocks} />;
+      }
 
-      case 'core/image' :{
-
+      case 'core/image': {
         return (
           <Image
             key={block.id}
             src={block.attributes.url}
             width={block.attributes.width}
             height={block.attributes.height}
-            alt={block.attributes.alt || ""} 
+            alt={block.attributes.alt || ''}
           />
         );
       }
-      case 'core/list-item' :{
-        console.log(block)
-        return(<li key={block.id}>{block.attributes.content}</li>)
+      case 'core/post-title': {
+        return <PostTitle key={block.id} level={block.attributes.level} textAlign={block.attributes.textAlign} />;
       }
-      case 'core/list' :{
-        console.log('LIST ', block)
+      case 'core/list-item': {
+        console.log(block);
+        return <li key={block.id}>{block.attributes.content}</li>;
+      }
+      case 'core/list': {
+        console.log('LIST ', block);
         return block.attributes.ordered ? (
           <ol className={tw('list-decimal')} key={block.id}>
             <BlockRenderer blocks={block.innerBlocks} />
@@ -116,8 +124,12 @@ import Image from 'next/image';
           </ul>
         );
       }
+       case 'core/html': {
+        console.log("html => ",block.attributes.content);
+        return <div key={block.id} dangerouslySetInnerHTML={{__html:block.attributes.content}}></div>
+       }
       default:
-        console.log('UNKNOWN BLOCK', block.name)
+        console.log('UNKNOWN BLOCK', block.name);
         return (
           <div key={block.id}>
             Unsupported block type Call Alexandru for more information <strong> {block.name}</strong>
