@@ -29,10 +29,10 @@ export const PostWrapper = ({ value, children }) => {
       <Navigation />
       <>
         <div className={tw('grid grid-cols-12 gap3	')}>
-          <aside className={tw('col-span-2')}>test </aside>
+          <aside className={tw('col-span-1')}>test </aside>
           <main className={tw('col-span-8')}>{children}</main>
 
-          <aside className={tw('container col-span-2')}>
+          <aside className={tw('container col-span-3')}>
             <div className={tw('m-5')}>
               <Link href={urlAutor}>
               <a>
