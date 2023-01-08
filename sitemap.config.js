@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://marweb.ro/',
+  siteUrl: 'https://marweb.ro',
   generateRobotsTxt: true,
   sitemapSize: 5000,
   exclude: ['/termeni-conditii', '/politica-cookie', '/admin/*', '/admin'],
@@ -8,7 +8,7 @@ module.exports = {
     policies: [
       {
         userAgent: '*',
-        allow: '/',
+        disallow: '/',
         disallow: '/politica-cookie',
         disallow: '/termeni-conditii',
         disallow: '/admin/*',

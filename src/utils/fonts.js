@@ -20,12 +20,12 @@ export const getFontSizeForHeading = level =>{
    return `${fontSizeMap[level] || ""} `;
 }
 
-export const getCustomFontSize = (fontSize, callback)=>{
-    if (!fontSize){
-        callback
-    } else if (fontSize ==='x-large'){
-        return 'text-xlarge'
-    }
-    else return fontSize
-    
-}
+export const getCustomFontSize = (fontSize) => {
+  if (!fontSize) {
+    return 'text-xlarge';
+  } else if (fontSize === 'x-large') {
+    return 'text-xlarge';
+  } else {
+    return fontSize;
+  }
+};

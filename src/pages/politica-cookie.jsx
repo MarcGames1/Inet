@@ -18,7 +18,7 @@ const Cookie = () => {
 
           <h2>Introduction</h2>
           <p>This page sets out the cookie policy (the “Cookie Policy”) of {nume_firma} (“We”, “Us”, and “Our”) and how cookies are used on this website https://www.dubai-online.com/ (the “Website”) when you (“You” or “Your”) use it.</p><span id="ezoic-pub-ad-placeholder-126" class="ezoic-adpicker-ad"></span>
-          <p>This Cookie Policy forms part of our <Link href={`${nume_site}/termeni-conditii`}><a title="Website Terms and Conditions" href={`${nume_site}/termeni-conditii`}>Terms and Conditions</a></Link> (the “Terms”). By accessing the Website, for whatever purpose, You agree to accept this Cookie Policy and Our Terms.</p>
+          <p>This Cookie Policy forms part of our <Link href={`${nume_site}termeni-conditii`}><a title="Website Terms and Conditions" href={`${nume_site}termeni-conditii`}>Terms and Conditions</a></Link> (the “Terms”). By accessing the Website, for whatever purpose, You agree to accept this Cookie Policy and Our Terms.</p>
           <p>This Website, like most others, uses cookies. Cookies are small text files stored on your computer or mobile device by a browser when a website is accessed.<span id="ezoic-pub-ad-placeholder-199" class="ezoic-adpicker-ad"></span></p>
           <span id="ezoic-pub-ad-placeholder-127" class="ezoic-adpicker-ad"></span><p>Cookies help Us:</p>
           <ul>

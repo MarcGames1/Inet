@@ -1,3 +1,4 @@
+
 module.exports = {
   webpack(config) {
     config.module.rules.push({
@@ -10,4 +11,6 @@ module.exports = {
   images: {
     domains: ['www.avocatdorubotea.ro', 'iwebagency.ro', 'api.iwebagency.ro', '89.37.212.226'],
   },
+  trailingSlash: true,
+ 
 };

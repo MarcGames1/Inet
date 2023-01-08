@@ -137,7 +137,7 @@ export const homepage = {
 
   s4: {
     indemn: 'Noi suntem partenerii afacerii tale',
-    titlu: 'Cum va decurge colaborarea cu agentia de marketing online iwebagency',
+    titlu: 'Cum va decurge colaborarea cu agentia de marketing online MarWeb',
     lista: [
       {
         title: `FACEM CUNOȘTINȚĂ`,

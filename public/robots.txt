@@ -93,7 +93,7 @@ Allow: /
 Disallow: /admin/*
 
 # Host
-Host: https://iwebagency.ro
+Host: https://marweb.ro
 
 # Sitemaps
-Sitemap: https://iwebagency.ro/sitemap.xml
+Sitemap: https://marweb.ro/sitemap.xml

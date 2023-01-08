@@ -18,6 +18,10 @@ const links = [
     label: `Servicii SEO`,
     href: `/servicii-seo`,
   },
+  {
+    label: `Blog`,
+    href: `/blog`,
+  },
 ];
 
 const secondaryLinks = [

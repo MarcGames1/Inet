@@ -1,14 +1,25 @@
 import Image from "next/image"
-import { usePostContext } from "../../../context/postContext";
-
-export const Cover = ({children, background}) =>{
-    const {featuredImage} = usePostContext()
-    return (
-      <div className="h-screen text-white bg-slate-800 relative min-h-[400px] flex justify-center items-center">
-        {(!!background || featuredImage) && (
-          <Image alt="cover" src={background || featuredImage} layout="fill" objectFit="cover" className=" mix-blend-soft-light" />
-        )}
-        <div className="max-w-5xl z-10">{children}</div>
-      </div>
-    );
-}
+import { useBlogPostContext } from '../../../context/blogPost';
+import { tw } from "twind";
+export const Cover = ({ children, background }) => {
+ 
+    console.log(useBlogPostContext);
+    const { featuredImage } = useBlogPostContext();
+    
+  return (
+    <div
+      className={tw('z-0 max-h-screen text-white bg-slate-800 relative min-h-[400px] flex justify-center items-center')}
+    >
+      {(!!background || !!featuredImage) && (
+        <Image
+          alt={featuredImage.node.altText || 'Cover'}
+          src={background || featuredImage.node.sourceUrl}
+          layout="fill"
+          objectFit="cover"
+          className={tw('mix-blend-soft-light z-0')}
+        />
+      )}
+      <div className={tw('max-w-5xl')}>{children}</div>
+    </div>
+  );
+};
