@@ -16,23 +16,28 @@ import { PostWrapper } from '../../context/blogPost';
 
 
 const Page = dynamic(() => import('@/components/page'));
+const ErrorPage = dynamic(() => import('@/components/ErrorPage'));
 
 
 
-const BlogPage = ({ content, blocks, featuredImage, title, author }) => {
- 
+const BlogPage = ({ content , blocks , featuredImage , title , author }) => {
+   if (!content || !blocks || !featuredImage || !title || !author) {
+     return <ErrorPage />;
+   }
   return (
-    <PostWrapper  value={{
-      title,
-      featuredImage,
-      author
-      }}>
-    <>
-      {blocks ? <BlockRenderer blocks={blocks} /> : <>test</>}
-      {/* <BlockRenderer blocks={blocks} /> */}
-      {/* <div dangerouslySetInnerHTML={{__html: props.content}}></div> */}
-      {/* <pre>{JSON.stringify(props.blocks, null, 3)}</pre> */}
-    </>
+    <PostWrapper
+      value={{
+        title,
+        featuredImage,
+        author,
+      }}
+    >
+      <>
+        {blocks ? <BlockRenderer blocks={blocks} /> : <>test</>}
+        {/* <BlockRenderer blocks={blocks} /> */}
+        {/* <div dangerouslySetInnerHTML={{__html: props.content}}></div> */}
+        {/* <pre>{JSON.stringify(props.blocks, null, 3)}</pre> */}
+      </>
     </PostWrapper>
   );
 };
@@ -48,31 +53,41 @@ export default BlogPage;
 
 export async function getStaticProps(context) {
   const currentUri = context.params.blog_uri;
-console.log(PostDataByUri(currentUri))
-  
+  console.log(PostDataByUri(currentUri));
+
   const { data } = await client.query({
     query: gql(PostDataByUri(currentUri)),
   });
 
-const blocks = cleanAndTransformBlocks(data.postBy.blocksJSON);
-console.log(data)
+  let blocks, author, title, content, featuredImage;
+  if (data && data.postBy ) {
 
-const { author, title, content, featuredImage } = data.postBy;
+    blocks = cleanAndTransformBlocks(data.postBy.blocksJSON);
+    console.log(data);
 
-console.log(featuredImage, author)
-return {
+    author = data.postBy.author || '';
+    title = data.postBy.title || '';
+    content = data.postBy.content || '';
+    featuredImage = data.postBy.featuredImage || '';
+  }
 
-  props: {
+   if (!data || !data.postBy) {
+     return {
+       props: {},
+     };
+   }
+
+  console.log(featuredImage, author);
+  return {
+    props: {
       blocks,
-      content: content || null,
-      title,
+      content,
+      title ,
       author,
       featuredImage,
-      
     },
   };
 }
-
 
 
 

@@ -96,7 +96,7 @@ console.log(currentPage)
       <NextSeo canonical="http://localhost:3000/blog" robotsProps={'index, follow'} />
       <Page>
         <section className={tw('')}>
-          <aside>aside</aside>
+          {/* <aside>aside</aside> */}
           <main>
             <h1 className={tw('text-center m-3')}>Blog SEO Marweb {page}</h1>
             <div className={tw('grid-cols-1 lg:grid-cols-3 gap-4	grid  items-strech')}>

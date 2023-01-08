@@ -25,7 +25,12 @@ export const PostWrapper = ({ value, children }) => {
    altText: value.author?.node?.dateSuplimentareAutor?.authorpic?.altText,
    url: value.author?.node?.dateSuplimentareAutor?.authorpic?.mediaItemUrl,
  };
-  const { descriereAutor, functie, instagram, tikTok, youtube } = value.author?.node?.dateSuplimentareAutor;
+  const { descriereAutor, functie, instagram, tikTok, youtube } =
+    value.author &&
+    value.author.node &&
+    value.author.node.dateSuplimentareAutor &&
+    value.author.node.dateSuplimentareAutor.authorpic &&
+    value.author.node.dateSuplimentareAutor.authorpic.altText;
   const author = value.author || undefined;
   return (
     <>

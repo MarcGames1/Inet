@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://marweb.ro/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/echipa/alexandru-marcu/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/servicii-seo/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Fun-video-de-pe-youtube-pus-cu-embed%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Fpost-title-with-featured-image%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Fmollis-odio-adipiscing-tempor-netus-facilisi-elementum-lacus%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Fut-lobortis-ultrices-sed-integer-phasellus-sagittis%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Fpraesent-consequat-velit-aliquet-ut-mauris-eget%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Fsed-tristique-egestas-nullam-lacus-mi-a-eu-mattis%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Flobortis-nec-ut-ut-mattis-magnis%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Feros-sodales-ac-egestas-eget-maecenas-egestas%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Ftincidunt-tellus-mattis-consectetur-enim-mattis-diam-ut-tellus-nibh-pellentesque-enim%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://marweb.ro/blog/%2Feget-donec-aliquam-fermentum-integer-scelerisque-cursus-volutpat-id%2F/</loc><lastmod>2023-01-05T12:21:32.615Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marweb.ro/</loc><lastmod>2023-01-08T08:07:51.776Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marweb.ro/blog/</loc><lastmod>2023-01-08T08:07:51.776Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marweb.ro/echipa/alexandru-marcu/</loc><lastmod>2023-01-08T08:07:51.776Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://marweb.ro/servicii-seo/</loc><lastmod>2023-01-08T08:07:51.776Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
