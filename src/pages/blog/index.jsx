@@ -98,7 +98,9 @@ console.log(currentPage)
         <section className={tw('')}>
           {/* <aside>aside</aside> */}
           <main>
-            <h1 className={tw('text-center m-3')}>Blog SEO Marweb {page}</h1>
+            <h1 className={tw('text-center m-3 text-5xl lg:text-5xl font-bold tracking-tight')}>
+              Blog SEO Marweb {page}
+            </h1>
             <div className={tw('grid-cols-1 lg:grid-cols-3 gap-4	grid  items-strech')}>
               {currentPosts?.map((post) => (
                 <div className={tw('max-h-min grid-rows-6 grid')}>
