@@ -17,12 +17,13 @@ import  BlockRenderer  from '../../components/BlockRenderer/BlockRenderer';
 
 
 const Membru = ({ blocks, author, featuredImage, other }) => {
+  const router = useRouter();
   console.log(other)
   return (
     <>
       <Page>
         <NextSeo
-          canonical="https://marweb.ro/echipa/alexandru-marcu"
+          canonical={`${process.env.DOMAIN}${router.pathname}`}
           title="Alexandru - Fondatorul Agentiei Marweb.ro"
         />
 

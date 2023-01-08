@@ -6,6 +6,9 @@ import twindConfig from '../twind.config';
 import Script from 'next/script';
 const sheet = asyncVirtualSheet();
 
+
+
+
 setup({ ...twindConfig, sheet });
 
 class MyDocument extends Document {
@@ -36,7 +39,7 @@ class MyDocument extends Document {
     return (
       <Html lang="ro">
         <Head>
-          <Script
+          <Script defer
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 import { serviciiSeo } from '../../js/content';
 import { homepage } from '../../js/content';
 import React, { Suspense } from 'react';
@@ -42,7 +43,7 @@ const ServiciiSeo = () => {
           title="Servicii SEO •
           Care aduc rezultate ⭐ MarWeb.ro"
           description="Servicii Seo care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ MarWeb.ro."
-          canonical="https://marweb.ro/servicii-seo/"
+          canonical={`${process.env.DOMAIN}${router.pathname}`}
         />
 
         <main>

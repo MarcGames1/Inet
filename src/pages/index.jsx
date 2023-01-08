@@ -23,7 +23,7 @@ export default function Home() {
         <NextSeo
           title="Agentie Marketing Online cu rezultate • MarWeb.ro"
           description="Agentie Marketing Online care genereaza rezultate exceptionale •  aducem trafic organic si crestem profitul ✔️ Solicita acum o oferta  ⭐ MarWeb.ro."
-          canonical="https://marweb.ro/"
+          canonical={`${process.env.DOMAIN}/`}
         />
         <Header
           h1={homepage.s1.h1}
