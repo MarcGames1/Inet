@@ -36,6 +36,7 @@ import Section2 from '@/components/servicii-seo/section2';
 import ListaCuBife from '@/components/servicii-seo/listaCuBife';
 
 const ServiciiSeo = () => {
+ const router = useRouter();
   return (
     <Suspense fallback={`Loading...`}>
       <Page>
