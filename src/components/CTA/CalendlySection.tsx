@@ -15,10 +15,10 @@ const CalendlySection = (
 ) => {
   const { width, height } = useWindowDimensions();
   const [ismobile, setIsmobile] = useState(true);
-  console.log(typeof width);
+  
   useEffect(() => {
     if (typeof width !== 'number' && Number.isNaN(width)) {
-      console.log(ismobile, 'If Block');
+      
     } else if (Number(width) > 1024) {
       setIsmobile(false);
     }

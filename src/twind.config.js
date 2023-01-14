@@ -9,6 +9,8 @@ export default {
       },
       colors: {
         primary: 'rgb(79,70,229)',
+        maximumGYellow: '#DCE546',
+        secondary: '#BABBD0',
         current: 'currentColor',
         black: colors.black,
         white: colors.white,
