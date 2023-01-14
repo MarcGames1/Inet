@@ -38,15 +38,13 @@ const Button = ({ primary, click, modifier, children, color, pulse, ...rest }: I
 useEffect(() => {
   setBtnColor(set_Colors());
 }, [])
-  const primaryStyles = tw(`${pulse ? css.pulse : null} bg-${btnColor.default} hover:bg-${btnColor.hover} text-white font-bold`)
+  const primaryStyles =`${pulse ? css.pulse : null }" " ${tw(`bg-${btnColor.default} hover:bg-${btnColor.hover} text-white font-bold`)}` 
   
   const baseStyle =tw( `font-sans font-medium py-2 px-3 border rounded`);
   const styles = primary
     ? primaryStyles
     : tw(
-        `bg-orange-600 text-${colors.accent.default} border-${color?.default || colors.primary.default} hover:bg-${
-          color?.hover || colors.primary.hover
-        } hover:text-white hover:font-bold`,
+        `bg-orange-500 text-${colors.accent.default}  hover:bg-orange-700 text-white hover:font-bold`,
       );
 console.log(styles)
   return (

@@ -88,24 +88,21 @@ const Header = ({
           <p className={tw(`font-sans font-italic text-2xl text-center leading-relaxed mt-10 text-gray-600 leading-8`)}>
             {subtitlu}
           </p>
-{indemn ? 
-          <div className={tw(`max-w-xl mx-auto`)}>
-            <p className={tw(`mt-10 text-center  text-xl text-black leading-relaxed`)}>{indemn}</p>
-          </div> : null}
-          <div className={tw('m-4')}>
-
-          {Cta(variant)}
-          </div>
+          {indemn ? (
+            <div className={tw(`max-w-xl mx-auto`)}>
+              <p className={tw(`mt-10 text-center  text-xl text-black leading-relaxed`)}>{indemn}</p>
+            </div>
+          ) : null}
+          <div className={tw('m-4')}>{Cta(variant)}</div>
         </div>
         <div id="heroimg" className={tw(picContainer, ' h-80 w-80 relative md:mt-0 mt-10  md:h-72 md:w-4/12')}>
           <Image
             loading="eager"
             src={meImg.url}
             alt={meImg.alt}
-            width={30}
-            height={10}
             layout="fill"
             objectFit="contain"
+            priority
           />
         </div>
       </div>
