@@ -1,6 +1,7 @@
 import { tw, css } from 'twind/css';
 import { CalendlyButton } from '../calendly';
 import Image from 'next/image';
+
 import WhatsappCta from '../../ux/buttons/whatsappCta';
 import { ReactElement } from 'react';
 const headerStyle = css`

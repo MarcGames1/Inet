@@ -1,17 +1,10 @@
 import { tw } from 'twind';
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { CalendlyButton } from '../calendly';
+import Logo from '@/components/svg/logo';
 import Image from 'next/image';
 import Link from 'next/link';
-interface IMenuButton {
-  toggleMenu: React.MouseEventHandler<HTMLButtonElement>;
-  showMenu: boolean;
-}
-
-type Link = {
-  label: string;
-  href: string;
-};
+import { ScrollPosition } from '@/context/scroolPositionContext';
 
 const links = [
   {
@@ -26,12 +19,12 @@ const links = [
 
 const secondaryLinks = [
   {
-    label: `contact`,
+    label: `Contact`,
     href: `/contact`,
   },
 ];
 
-const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
+const MenuButton = ({ toggleMenu, showMenu }) => (
   <button
     type="button"
     aria-controls="mobile-menu"
@@ -73,7 +66,7 @@ const MenuButton = ({ toggleMenu, showMenu }: IMenuButton) => (
 const MobileMenu = () => (
   <div className={tw(`md:hidden`)}>
     <div className={tw(`px-2 pt-2 pb-3 space-y-1 sm:px-3`)}>
-      {links.map((link: Link) => (
+      {links.map((link) => (
         <a href={link.href} className={tw(`text-gray-500 block px-3 py-2 text-base font-medium`)} key={link.label}>
           {link.label}
         </a>
@@ -81,7 +74,7 @@ const MobileMenu = () => (
     </div>
     <div className={tw(`pt-4 pb-3 border-t border-gray-400`)}>
       <div className={tw(`px-2 space-y-1`)}>
-        {secondaryLinks.map((link: Link) => (
+        {secondaryLinks.map((link) => (
           <a
             key={`mobile-${link.label}`}
             href={link.href}
@@ -96,24 +89,46 @@ const MobileMenu = () => (
 );
 
 const Navigation = () => {
+
+  const [scroolPosition] = useContext(ScrollPosition);
+
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => setShowMenu(!showMenu);
+  const [sticky, setSticky] = useState('');
+
+ const addSticky = () => {
+   setSticky('sticky top-0');
+ };
+
+ const removeSticky = () => {
+   setSticky('');
+ };
+
+ useEffect(() => {
+   if (scroolPosition < 100) {
+     removeSticky();
+   } else {
+     addSticky();
+   }
+ }, [scroolPosition]);
+
 
   return (
-    <nav className={tw(`bg-white`)}>
+    <nav className={tw(`bg-white z-[100] ${sticky}`)}>
       <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
         <div className={tw(`flex items-center justify-between h-24`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
               <Link href={'/'}>
                 <a>
-                  <Image className={tw(`h-12 w-12`)} src="/logo.svg" alt="Inet-logo" width={150} height={150} />
+                  {/* <Image className={tw(`h-12 w-12`)} src="/logo.svg" alt="MarWeb-logo" width={150} height={150} /> */}
+                  <Logo />
                 </a>
               </Link>
             </div>
             <div className={tw(`hidden md:block`)}>
               <div className={tw(`ml-10 flex items-baseline space-x-4`)}>
-                {links.map((link: Link) => (
+                {links.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
@@ -131,7 +146,9 @@ const Navigation = () => {
                 text={'Programeaza-te la o sedinta gratuita!'}
                 primary
                 modifier={undefined}
-                pulse={undefined} color={undefined}              />
+                pulse={undefined}
+                color={undefined}
+              />
 
               {/* <Button primary>Analiza Gratuita</Button> */}
             </div>

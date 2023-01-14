@@ -1,0 +1,73 @@
+.urechi{
+
+}
+
+.web{
+
+}
+
+.MAR{
+     /* animation-name: moveR;
+    animation-duration: 2s;
+    animation-direction: forwards;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards; */
+}
+.MMW{
+   
+}
+
+
+.turnSmall.web{ opacity: 0;}
+
+.turnSmall.MMW{
+    
+}
+
+.turnSmall.MAR{
+    animation-name: moveR;
+    animation-duration: 2s;
+    animation-direction: forwards;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+}
+
+.turnBig.MAR{
+    animation-name: moveL;
+    animation-duration: 2s;
+    animation-direction: forwards;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+}
+
+.show{
+    opacity:1;
+    transition: opacity, 2s;
+    transition-delay: 2s;
+}
+
+.hide{
+    opacity: 0;
+    transition: opacity, 2s;
+    transition-delay: 2s;
+}
+
+@keyframes moveR{
+    1%{
+        transform:translateX(0px)
+    }
+   
+    99%{display: block;transform: translateX(230px)}
+    100%{display:none;transform: translateX(235px)}
+}
+
+
+@keyframes moveL{
+    1%{
+        transform:translateX(230px)
+    }
+   
+    99%{display: block;transform: translateX(0px)}
+    100%{display:none;transform: translateX(0px)}
+}
+

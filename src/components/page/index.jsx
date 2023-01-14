@@ -2,13 +2,25 @@ import Head from 'next/head';
 import Navigation from '@/components/navigation';
 import { tw } from 'twind';
 import Footer from '../footer';
+import { ScrollPositionProvider } from '../../context/scroolPositionContext';
 
-interface IProps {
-  children: React.ReactNode;
-}
 
-const Page = ({ children }: IProps) => (
-  <>
+const Page = ({ children }) => (
+  <ScrollPositionProvider>
+    <Contents>{children}</Contents>
+  </ScrollPositionProvider>
+);
+
+export default Page;
+
+
+
+
+
+
+
+const Contents = ({ children }) => {
+return  <>
     <Head>
       <link rel="favicon" href="favicon.svg" />
     </Head>
@@ -17,7 +29,5 @@ const Page = ({ children }: IProps) => (
       {children}
     </div>
     <Footer />
-  </>
-);
-
-export default Page;
+  </>;
+};
