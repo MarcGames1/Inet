@@ -105,7 +105,7 @@ const Navigation = () => {
  };
 
  useEffect(() => {
-   if (scroolPosition < 100) {
+   if (scroolPosition < 200) {
      removeSticky();
    } else {
      addSticky();
