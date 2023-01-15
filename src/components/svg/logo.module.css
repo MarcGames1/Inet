@@ -24,6 +24,19 @@
     
 }
 
+.scaledefault{
+    transform: scale(1);
+    transition: transform, 1s;
+    transition-delay: .3s;
+}
+.scale07{
+    transform: scale(.7);
+    transition: transform, 1s;
+    transition-delay: .3s;
+}
+
+
+
 .turnSmall.MAR{
     animation-name: moveR;
     animation-duration: 2s;

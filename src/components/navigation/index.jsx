@@ -116,7 +116,7 @@ const Navigation = () => {
   return (
     <nav className={tw(`bg-white z-[100] ${sticky}`)}>
       <div className={tw(`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8`)}>
-        <div className={tw(`flex items-center justify-between h-24`)}>
+        <div className={tw(`flex items-center justify-between`)}>
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
               <Link href={'/'}>

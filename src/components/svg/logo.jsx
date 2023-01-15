@@ -9,22 +9,32 @@ function Logo({width =150, height = 100, ...props}) {
     const [MAR, setMAR] = useState(styles.turnBig);
     const [showWeb, setShowWeb] = useState(styles.show);
     const [MMW, setMMW] = useState(styles.hide);
+    const [scale, setScale] = useState(styles.scaledefault)
+    const [currentWidth, setCurrentWidth] = useState(width)
+    const [currentHeight, setCurrentHeight] = useState(height)
 
 
          useEffect(() => {
            if (scroolPosition < 100) {
-            //  removeSticky();
+            //  aici e logo mare
             setIsBigLogo(true);
             console.log("isBigLogo")
             setMAR(styles.turnBig);
             setShowWeb(styles.show);
             setMMW(styles.hide);
+            setScale(styles.scaledefault);
+            setCurrentHeight(height);
+            setCurrentWidth(width);
            } else {
+            //aici e logo mic
             setIsBigLogo(false);
             console.log(isBigLogo);
             setMAR(styles.turnSmall);
             setShowWeb(styles.hide);
             setMMW(styles.show); 
+            setScale(styles.scale07);
+            setCurrentHeight(0.7*height)
+            setCurrentWidth(0.7*width)
             
            }
          }, [scroolPosition]);
@@ -34,8 +44,14 @@ function Logo({width =150, height = 100, ...props}) {
 
 
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 506 306">
-      <g id="Logo">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={currentWidth}
+      height={currentHeight}
+      fill="none"
+      viewBox="0 0 606 306"
+    >
+      <g className={scale} id="Logo">
         <g className={styles.MAR + ' ' + MAR} id="MAR">
           <path
             id="Vector"
