@@ -102,17 +102,19 @@ export const PostDataByUri = (uri) => `query getPostByURI($uri: String="${uri}")
     node {
       firstName
       lastName
-      dateSuplimentareAutor {
+           otherAuthorData {
         descriereAutor
         fieldGroupName
         functie
-        instagram
-        tikTok
-        youtube
-        authorpic {
+        pozaProfil {
           altText
-          mediaItemUrl
+          link
         }
+        tikTok
+        facebook
+        youtube
+        instagram
+        linkedin
       }
       description
     }

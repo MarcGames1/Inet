@@ -9,8 +9,7 @@ module.exports = {
     return config;
   },
   images: {
-    domains: ['www.avocatdorubotea.ro', 'marweb.ro', 'lh6.googleusercontent.com', 'api.iwebagency.ro', '89.37.212.226'],
+    domains: ['*'],
   },
   trailingSlash: true,
- 
 };

@@ -1,4 +1,16 @@
-import { Paragraph, Cover, Heading, UniversalBlock, EmbedBlock, HTML, Columns, Column, PostTitle } from '../WP';
+import React from 'react';
+import {
+  Paragraph,
+  Cover,
+  Heading,
+  UniversalBlock,
+  BlockImage,
+  EmbedBlock,
+  HTML,
+  Columns,
+  Column,
+  PostTitle,
+} from '../WP';
 // import UniversalBlock from '../WP/UniversalBlock/UniversalBlock';
 import { SocialIcon } from 'react-social-icons';
 import { tw } from 'twind';
@@ -7,11 +19,12 @@ import Image from 'next/image';
 
 
 
+
  const BlockRenderer = ({ blocks }) => {
   return blocks.map((block) => {
     switch (block.name) {
       case 'core/paragraph': {
-        console.log(block)
+        
         return (
           <Paragraph
             key={block.id}
@@ -34,7 +47,7 @@ import Image from 'next/image';
         );
       }
       case 'core/cover': {
-        console.log('COVER BLOCK: ', block);
+       
         return (
           <Cover key={block.id} background={block.attributes.url}>
             <BlockRenderer blocks={block.innerBlocks} />
@@ -77,7 +90,7 @@ import Image from 'next/image';
       }
 
       case 'core/column': {
-        console.log('BLOCK ATTRIBUTES +>', block.attributes);
+       
         return (
           <Column
             key={block.id}
@@ -91,20 +104,42 @@ import Image from 'next/image';
       }
       case 'core/group':
       case 'core/block': {
-        console.log('BLOCK ATTRIBUTES +>', block.attributes);
+        
         return <BlockRenderer key={block.id} blocks={block.innerBlocks} />;
       }
 
       case 'core/image': {
+     
+        const { url, alt, title, rel, style, height, width, anchor, linkTarget, linkClass } = block.attributes || null;
         return (
-          <Image
-            key={block.id}
-            src={block.attributes.url}
-            width={block?.attributes?.width || 100}
-            height={block?.attributes?.height || 300}
-            alt={block.attributes.alt || ''}
-            layout="responsive"
-          />
+          // <>
+          //   <div>
+          //     <Image
+          //       key={block.id}
+          //       src={block.attributes.url}
+          //       width={block?.attributes?.width || 1000}
+          //       height={block?.attributes?.height || 300}
+          //       alt={block.attributes.alt || ''}
+          //       layout="intrinsic"
+          //     />
+          //   </div>
+          //   {block.attributes?.caption ? (
+          //     <span className={tw('block text-center text-gray-300	')}>{block.attributes?.caption}</span>
+          //   ) : null}
+          // </>
+
+          <div key={block.id}>
+            <BlockImage
+            border= {block?.attributes?.style}
+              key={block.id}
+              height={height || 300}
+              width={width || 1000}
+              Imageurl={url}
+              alt={alt || ''}
+              caption={block.attributes.caption}
+              anchor={block.attributes?.anchor || null}
+            />
+          </div>
         );
       }
       case 'core/post-title': {
@@ -129,7 +164,7 @@ import Image from 'next/image';
       }
 
       default:
-        console.log('UNKNOWN BLOCK', block.name);
+        
         return (
           <div key={block.id}>
             Unsupported block type Call Alexandru for more information <strong> {block.name}</strong>

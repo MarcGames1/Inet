@@ -3,7 +3,7 @@ import { useBlogPostContext } from '../../../context/blogPost';
 import { tw } from "twind";
 export const Cover = ({ children, background }) => {
  
-    console.log(useBlogPostContext);
+  
     const { featuredImage } = useBlogPostContext();
     
   return (

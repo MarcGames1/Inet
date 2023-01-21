@@ -39,15 +39,18 @@ const BlogCardComponent = ({ url, title, alt, excerpt, imageUrl }) => {
       </h2>
       <div
         dangerouslySetInnerHTML={{
-          __html: `${excerpt.substring(0, 140)}...` || '<p class="text-center">Citeste mai multe aici</p>',
+          __html: `${excerpt.substring(0, 140)}${excerpt.length > 140 ? '...' : "" }` || '<p class="text-center">Citeste mai multe aici</p>',
         }}
         className={tw('row-span-2 m-2')}
       ></div>
       <div className={tw('m-1 self-end span-1 justify-self-center')}>
         {' '}
         <Link href={`/blog${url}`}>
+            <a>
           <Button primary>citeste mai mult</Button>
+            </a>
         </Link>
+
       </div>
     </div>
   );

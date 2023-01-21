@@ -31,7 +31,7 @@ const Membru = ({
 }) => {
   const router = useRouter();
   
-console.log(pozaProfil)
+
 
   return (
     <>
@@ -75,7 +75,7 @@ export async function getStaticProps() {
       `
     });
 
-    console.log(data)
+  
     const {
       firstName,
       lastName,

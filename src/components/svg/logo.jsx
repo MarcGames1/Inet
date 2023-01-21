@@ -14,28 +14,35 @@ function Logo({width =150, height = 100, ...props}) {
     const [currentHeight, setCurrentHeight] = useState(height)
 
 
+
          useEffect(() => {
            if (scroolPosition < 100) {
             //  aici e logo mare
-            setIsBigLogo(true);
-            console.log("isBigLogo")
-            setMAR(styles.turnBig);
-            setShowWeb(styles.show);
-            setMMW(styles.hide);
-            setScale(styles.scaledefault);
-            setCurrentHeight(height);
-            setCurrentWidth(width);
+            FaLogoMare();
+           
            } else {
             //aici e logo mic
-            setIsBigLogo(false);
-            console.log(isBigLogo);
-            setMAR(styles.turnSmall);
-            setShowWeb(styles.hide);
-            setMMW(styles.show); 
-            setScale(styles.scale07);
-            setCurrentHeight(0.7*height)
-            setCurrentWidth(0.7*width)
+            FaLogoMic();
             
+           }
+
+             function FaLogoMare() {
+               setIsBigLogo(true);
+               setMAR(styles.turnBig);
+               setShowWeb(styles.show);
+               setMMW(styles.hide);
+               setScale(styles.scaledefault);
+               setCurrentHeight(height);
+               setCurrentWidth(width);
+             }
+           function FaLogoMic() {
+             setIsBigLogo(false);
+             setMAR(styles.turnSmall);
+             setShowWeb(styles.hide);
+             setMMW(styles.show);
+             setScale(styles.scale07);
+             setCurrentHeight(0.7 * height);
+             setCurrentWidth(0.7 * width);
            }
          }, [scroolPosition]);
 

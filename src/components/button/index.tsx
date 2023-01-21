@@ -46,7 +46,7 @@ useEffect(() => {
     : tw(
         `bg-orange-500 text-${colors.accent.default}  hover:bg-orange-700 text-white hover:font-bold`,
       );
-console.log(styles)
+
   return (
     <button
       onClick={click}

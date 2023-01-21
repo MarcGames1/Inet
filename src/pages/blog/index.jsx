@@ -40,10 +40,10 @@ const Blog = ({ posts, pageCount }) => {
       console.log(error);
     }
   };
-  console.log('CURRENT POSTS => ', currentPosts);
-  console.log(currentPosts);
 
-  console.log(currentPage);
+ 
+
+  
   useEffect(() => {
     query_posts(currentPage);
   }, [currentPage]);
@@ -147,7 +147,7 @@ export const getStaticProps = async (context) => {
 
   const pageCount = Math.ceil(Number(data.posts.pageInfo.offsetPagination.total) / 10);
 
-  console.log(pageCount);
+
 
   return {
     props: {

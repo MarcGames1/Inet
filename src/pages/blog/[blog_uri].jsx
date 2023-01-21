@@ -29,7 +29,7 @@ const { content, title, author, featuredImage, blocks } = props;
   if (!content || !blocks || !featuredImage || !title || !author) {
     return <ErrorPage />;
   }
-  console.log(blocks)
+  
  
   return (
     <Page>
@@ -64,7 +64,7 @@ export default BlogPage;
 
 export async function getStaticProps(context) {
   const currentUri = context.params.blog_uri;
-  console.log("POSTDATABYURI- >>>>    ",PostDataByUri(currentUri));
+  
 
   const { data } = await client.query({
     query: gql(PostDataByUri(currentUri)),
@@ -113,7 +113,7 @@ export async function getStaticPaths() {
     params: { blog_uri: post.node.uri },
   }));
   
-  console.log(paths, 'Get Static paths');
+  
   return {
     paths,
     fallback: true,
