@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo'
 import client from '../../utils/client'
 import { cleanAndTransformBlocks } from '../../utils/cleanAndTransformBlocks';
 import AuthorAndSmLarge from '../../components/WP/AuthorAndSmLarge'
-
+import { SocialIcon } from 'react-social-icons';
 
 
 import Page from '@/components/page'
@@ -16,20 +16,45 @@ import { gql } from '@apollo/client'
 import  BlockRenderer  from '../../components/BlockRenderer/BlockRenderer';
 
 
-const Membru = ({ blocks, author, featuredImage, other }) => {
+const Membru = ({
+  firstName,
+  lastName,
+  email,
+  functie,
+  pozaProfil,
+  tikTok,
+  facebook,
+  youtube,
+  instagram,
+  linkedin,
+  descriereAutor,
+}) => {
   const router = useRouter();
-  console.log(other)
+  
+console.log(pozaProfil)
+
   return (
     <>
       <Page>
         <NextSeo
           canonical={`${process.env.DOMAIN}${router.pathname}`}
-          title="Alexandru - Fondatorul Agentiei Marweb.ro"
+          title={`${lastName} ${firstName} ${functie} MarWeb`}
+          description={`'Afla mai multe despre '${lastName} ${firstName} ${functie}`}
         />
 
         <section className={tw('min-h-screen block')}>
-          <AuthorAndSmLarge featuredImage={featuredImage} author={author} />
-          <BlockRenderer blocks={blocks} />;
+          <AuthorAndSmLarge pozaProfil={pozaProfil} firstName={firstName} lastName={lastName} />
+
+          <div className={tw('flex  justify-center m-3 gap-3 w-full')}>
+            <SocialIcon url={facebook} />
+            <SocialIcon url={instagram} />
+            <SocialIcon url={linkedin} />
+            <SocialIcon url={youtube} />
+            <SocialIcon url={tikTok} />
+          </div>
+          <div className={tw(`w-1/3 m-auto`)}>
+            <div className={tw('leading-9')} dangerouslySetInnerHTML={{ __html: descriereAutor }}></div>
+          </div>
         </section>
       </Page>
     </>
@@ -51,14 +76,38 @@ export async function getStaticProps() {
     });
 
     console.log(data)
-    const blocks = cleanAndTransformBlocks(data.nodeByUri.blocksJSON);
+    const {
+      firstName,
+      lastName,
+      email,
+     
+     
+      
+    } = data.nodeByUri;
+    const {
+      descriereAutor,
+      functie,
+      pozaProfil,
+      tikTok,
+      facebook,
+      youtube,
+      instagram,
+      linkedin,
+    } = data.nodeByUri.otherAuthorData;
 
     return {
       props: {
-        featuredImage: data.nodeByUri.featuredImage || null,
-        author:data.nodeByUri.author,
-       other:data,
-        blocks,
+        firstName,
+        lastName,
+        email,
+        functie,
+        pozaProfil,
+        tikTok,
+        facebook,
+        youtube,
+        instagram,
+        linkedin,
+        descriereAutor,
       },
     };
 }

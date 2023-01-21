@@ -11,6 +11,7 @@ import Image from 'next/image';
   return blocks.map((block) => {
     switch (block.name) {
       case 'core/paragraph': {
+        console.log(block)
         return (
           <Paragraph
             key={block.id}
@@ -33,7 +34,7 @@ import Image from 'next/image';
         );
       }
       case 'core/cover': {
-        console.log('COVER BLOCK', block);
+        console.log('COVER BLOCK: ', block);
         return (
           <Cover key={block.id} background={block.attributes.url}>
             <BlockRenderer blocks={block.innerBlocks} />
@@ -99,9 +100,10 @@ import Image from 'next/image';
           <Image
             key={block.id}
             src={block.attributes.url}
-            width={block.attributes.width}
-            height={block.attributes.height}
+            width={block?.attributes?.width || 100}
+            height={block?.attributes?.height || 300}
             alt={block.attributes.alt || ''}
+            layout="responsive"
           />
         );
       }
@@ -109,11 +111,9 @@ import Image from 'next/image';
         return <PostTitle key={block.id} level={block.attributes.level} textAlign={block.attributes.textAlign} />;
       }
       case 'core/list-item': {
-        console.log(block);
         return <li key={block.id}>{block.attributes.content}</li>;
       }
       case 'core/list': {
-        console.log('LIST ', block);
         return block.attributes.ordered ? (
           <ol className={tw('list-decimal')} key={block.id}>
             <BlockRenderer blocks={block.innerBlocks} />
@@ -124,10 +124,10 @@ import Image from 'next/image';
           </ul>
         );
       }
-       case 'core/html': {
-        console.log("html => ",block.attributes.content);
-        return <div key={block.id} dangerouslySetInnerHTML={{__html:block.attributes.content}}></div>
-       }
+      case 'core/html': {
+        return <div key={block.id} dangerouslySetInnerHTML={{ __html: block.attributes.content }}></div>;
+      }
+
       default:
         console.log('UNKNOWN BLOCK', block.name);
         return (

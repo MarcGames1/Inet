@@ -7,19 +7,17 @@ export const Cover = ({ children, background }) => {
     const { featuredImage } = useBlogPostContext();
     
   return (
-    <div
-      className={tw('z-0 max-h-screen text-white bg-slate-800 relative min-h-[400px] flex justify-center items-center')}
-    >
+       <div className="h-screen text-white bg-slate-800 relative min-h-[400px] flex justify-center items-center">
       {(!!background || !!featuredImage) && (
         <Image
-          alt={featuredImage.node.altText || 'Cover'}
-          src={background || featuredImage.node.sourceUrl}
+          alt="Cover"
+          src={background || featuredImage}
           layout="fill"
           objectFit="cover"
-          className={tw('mix-blend-soft-light z-0')}
+          className="mix-blend-soft-light"
         />
       )}
-      <div className={tw('max-w-5xl')}>{children}</div>
+      <div className="max-w-5xl z-10">{children}</div>
     </div>
   );
 };

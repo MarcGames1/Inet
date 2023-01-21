@@ -6,7 +6,7 @@ const ScrollPositionProvider = ({ children }) => {
   const [scroolPosition, setScroolPosition] = useState(0);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (window || typeof window !== 'undefined') {
       window.onscroll = () => {
         setScroolPosition(
           (window.pageYOffset || document.documentElement.scrollTop) - document.documentElement.clientTop,

@@ -1,27 +1,26 @@
 
-export const AuthorPageQ = `query AuthorPage($uri: String = "alexandru-marcu") {
+
+
+export const AuthorPageQ = `query AuthorPage($uri: String = "/author/alex") {
   nodeByUri(uri: $uri) {
-    ... on Page {
+    ... on User {
       id
-      blocksJSON
-      title
-      featuredImage {
-        node {
+      firstName
+      lastName
+      email
+      otherAuthorData {
+        descriereAutor
+        fieldGroupName
+        functie
+        pozaProfil {
           altText
-          caption
-          description
-          sourceUrl
+          link
         }
-      }
-      author {
-        node {
-          email
-          name
-          firstName
-          lastName
-          description
-          id
-        }
+        tikTok
+        facebook
+        youtube
+        instagram
+        linkedin
       }
     }
   }

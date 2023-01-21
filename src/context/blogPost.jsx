@@ -34,58 +34,56 @@ export const PostWrapper = ({ value, children }) => {
   const author = value.author || undefined;
   return (
     <>
-      <Navigation />
-    <BlogPostContext.Provider value={value}>
-      <div
-        className={tw(
-          'z-0 max-h-screen text-white bg-slate-800 relative min-h-[400px] flex justify-center items-center',
+      <BlogPostContext.Provider value={value}>
+        <div
+          className={tw(
+            'z-0 max-h-screen text-white bg-slate-800 relative min-h-[400px] flex justify-center items-center',
           )}
-          >
-        {
-          <Image
-          alt={featuredImage.node.altText || 'Cover'}
-          src={featuredImage.node.sourceUrl}
-          layout="fill"
-          objectFit="cover"
-          className={tw('mix-blend-soft-light z-0')}
-          />
-          
-          
-        }
-        <h1 className={tw('max-w-5xl')}>{title}</h1>
-      </div>
-      <>
-        <div className={tw(' md:grid md:grid-cols-12 gap-3	')}>
-          <aside className={tw('col-span-1')}>test </aside>
-          <main className={tw('col-span-8')}>{children}</main>
+        >
+          {
+            <Image
+              alt={featuredImage.node.altText || 'Cover'}
+              src={featuredImage.node.sourceUrl}
+              layout="responsive"
+              width={featuredImage.node.width || 1000}
+              height={featuredImage.node.width|| 300}
+              objectFit="cover"
+              className={tw('mix-blend-soft-light z-0')}
+            />
+          }
+          <h1 className={tw('max-w-5xl')}>{title}</h1>
+        </div>
+        <>
+          <div className={tw(' md:grid md:grid-cols-12 gap-3	')}>
+            <aside className={tw('col-span-1')}>test </aside>
+            <main className={tw('col-span-8')}>{children}</main>
 
-          <aside className={tw('flex flex-col justify-center  items-center container md:col-span-3')}>
-            <div className={tw('items-center  m-5')}>
-              <Link href={urlAutor}>
-                <a>
-                  <Image width={300} height={300} src={pozaAutor.url} alt={pozaAutor.altText} />
-                </a>
-              </Link>
-            </div>
-            <div className={tw('text-center m-5')}>
-              <h5>
-                Articol revizuit de{' '}
+            <aside className={tw('flex flex-col justify-center  items-center container md:col-span-3')}>
+              <div className={tw('items-center  m-5')}>
                 <Link href={urlAutor}>
                   <a>
-                    <span>
-                      {author?.node?.lastName} {author?.node?.firstName}
-                    </span>
+                    <Image width={300} height={300} src={pozaAutor.url} alt={pozaAutor.altText} />
                   </a>
-                </Link>{' '}
-                <span className={tw('text-bold')}>{functie}</span>
-              </h5>
-            </div>
-          </aside>
-        </div>
-      </>
-    </BlogPostContext.Provider>
-    <Footer />
+                </Link>
+              </div>
+              <div className={tw('text-center m-5')}>
+                <h5>
+                  Articol revizuit de{' '}
+                  <Link href={urlAutor}>
+                    <a>
+                      <span>
+                        {author?.node?.lastName} {author?.node?.firstName}
+                      </span>
+                    </a>
+                  </Link>{' '}
+                  <span className={tw('text-bold')}>{functie}</span>
+                </h5>
+              </div>
+            </aside>
+          </div>
         </>
+      </BlogPostContext.Provider>
+    </>
   );
 };
 

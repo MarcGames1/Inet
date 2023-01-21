@@ -20,25 +20,36 @@ const ErrorPage = dynamic(() => import('@/components/ErrorPage'));
 
 
 
-const BlogPage = ({ content , blocks , featuredImage , title , author }) => {
-   if (!content || !blocks || !featuredImage || !title || !author) {
-     return <ErrorPage />;
-   }
+const BlogPage = (props) => {
+ 
+const { content, title, author, featuredImage, blocks } = props;
+
+
+
+  if (!content || !blocks || !featuredImage || !title || !author) {
+    return <ErrorPage />;
+  }
+  console.log(blocks)
+ 
   return (
-    <PostWrapper
-      value={{
-        title,
-        featuredImage,
-        author,
-      }}
-    >
-      <>
-        {blocks ? <BlockRenderer blocks={blocks} /> : <>test</>}
-        {/* <BlockRenderer blocks={blocks} /> */}
-        {/* <div dangerouslySetInnerHTML={{__html: props.content}}></div> */}
-        {/* <pre>{JSON.stringify(props.blocks, null, 3)}</pre> */}
-      </>
-    </PostWrapper>
+    <Page>
+
+      <PostWrapper
+        value={{
+          title,
+          featuredImage,
+          author,
+        }}
+        >
+        <>
+          {blocks ? <BlockRenderer blocks={blocks} /> : <>test</>}
+          {/* <BlockRenderer blocks={blocks} /> */}
+          {/* <div dangerouslySetInnerHTML={{__html: props.content}}></div> */}
+          {/* <pre>{JSON.stringify(props.blocks, null, 3)}</pre> */}
+        </>
+      </PostWrapper>
+      </Page>
+    
   );
 };
 
@@ -53,7 +64,7 @@ export default BlogPage;
 
 export async function getStaticProps(context) {
   const currentUri = context.params.blog_uri;
-  console.log(PostDataByUri(currentUri));
+  console.log("POSTDATABYURI- >>>>    ",PostDataByUri(currentUri));
 
   const { data } = await client.query({
     query: gql(PostDataByUri(currentUri)),
@@ -61,10 +72,10 @@ export async function getStaticProps(context) {
 
   let blocks, author, title, content, featuredImage;
   if (data && data.postBy ) {
-
+  
     blocks = cleanAndTransformBlocks(data.postBy.blocksJSON);
-    console.log(data);
-
+    
+    
     author = data.postBy.author || '';
     title = data.postBy.title || '';
     content = data.postBy.content || '';
@@ -77,7 +88,7 @@ export async function getStaticProps(context) {
      };
    }
 
-  console.log(featuredImage, author);
+
   return {
     props: {
       blocks,
@@ -98,11 +109,11 @@ export async function getStaticPaths() {
   });
 
   const posts = data.posts.edges;
-
   const paths = posts.map((post) => ({
     params: { blog_uri: post.node.uri },
   }));
-
+  
+  console.log(paths, 'Get Static paths');
   return {
     paths,
     fallback: true,

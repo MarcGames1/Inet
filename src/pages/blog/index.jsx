@@ -14,6 +14,7 @@ import Image from 'next/image';
 
 
 const Page = dynamic(() => import('@/components/page'));
+const BlogCardComponent = dynamic(() => import ('@/components/BlogCardComponent/BlogCardComponent'))
 const Button = dynamic(() => import('@/components/button'));
 
 const GET_POSTS = gql(PostsQuery(1));
@@ -22,32 +23,30 @@ const GET_POSTS = gql(PostsQuery(1));
 
 
 const Blog = ({ posts, pageCount }) => {
-  
-  const router = useRouter()
+  const router = useRouter();
   const { page } = router.query;
   const currentPageRender = page ? parseInt(page, 10) : 1;
   const [currentPage, setCurrentPage] = useState(page ? parseInt(page, 10) : 1);
   const [currentPosts, setCurrentPosts] = useState((posts && posts.slice(0, 10)) || []);
-  
-  const query_posts = async (page) =>{
+
+  const query_posts = async (page) => {
     try {
       const { data } = await client.query({
-       query: gql(PostsQuery(page)),
-     });
+        query: gql(PostsQuery(page)),
+      });
 
-     setCurrentPosts(data.posts.edges)
-      
+      setCurrentPosts(data.posts.edges);
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
-console.log("CURRENT POSTS => ",currentPosts)
-console.log(currentPosts)
+  };
+  console.log('CURRENT POSTS => ', currentPosts);
+  console.log(currentPosts);
 
-console.log(currentPage)
-     useEffect(() => {
-       query_posts(currentPage)
-     }, [currentPage]);
+  console.log(currentPage);
+  useEffect(() => {
+    query_posts(currentPage);
+  }, [currentPage]);
 
   const handlePrevClick = () => {
     if (currentPage > 1) {
@@ -62,15 +61,12 @@ console.log(currentPage)
     }
   };
 
-
-  const handleNumClick = (page) => 
-    {
-      setCurrentPage(page);
-      router.push({
-        pathname: '/blog',
-        query: { page },
-      });
-    
+  const handleNumClick = (page) => {
+    setCurrentPage(page);
+    router.push({
+      pathname: '/blog',
+      query: { page },
+    });
   };
 
   const handleNextClick = () => {
@@ -85,6 +81,8 @@ console.log(currentPage)
       });
     }
   };
+
+  
   return (
     <>
       <Head>
@@ -101,61 +99,38 @@ console.log(currentPage)
             <h1 className={tw('text-center m-3 text-5xl lg:text-5xl font-bold tracking-tight')}>
               Blog SEO Marweb {page}
             </h1>
-            <div className={tw('grid-cols-1 lg:grid-cols-3 gap-4	grid  items-strech')}>
+            <div className={tw('grid-cols-1 lg:grid-cols-3 gap-4 m-8	grid  items-strech')}>
               {currentPosts?.map((post) => (
-                <div className={tw('max-h-min grid-rows-6 grid')}>
-                  <div className={tw('justify-self-start row-span-2 p-3 self-start')}>
-                    <Link href={`/blog${post.node.uri}`}>
-                      <a>
-                        <Image
-                          layout="intrinsic"
-                          width={1200}
-                          height={600}
-                          objectFit="cover"
-                          src={post.node?.featuredImage?.node?.sourceUrl}
-                          alt={post.node.title || post.node?.featuredImage?.node?.alt}
-                        />
-                      </a>
-                    </Link>
-                  </div>
-                  <h2
-                    className={tw(
-                      'row-span-1 self-start	justify-self-center	 antialiased text-center  text-lg text-gray-900 font-semibold',
-                    )}
-                  >
-                    {post.node.title}
-                  </h2>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: post.node.excerpt || '<p class="text-center">Citeste mai multe aici</p>',
-                    }}
-                    className={tw('row-span-2 m-2')}
-                  ></div>
-                  <div className={tw('m-1 self-end span-1 justify-self-center')}>
-                    {' '}
-                    <Link href={`/blog${post.node.uri}`}>
-                      <Button>citeste mai mult</Button>
-                    </Link>
-                  </div>
-                </div>
+                // /post.node.uri = url
+                // post.node.title = title
+                // post.node?.featuredImage?.node?.alt = alt
+                // post.node.excerpt = excerpt;
+                <BlogCardComponent
+                  url={post.node.uri}
+                  alt={post.node?.featuredImage?.node?.alt}
+                  title={post.node.title}
+                  excerpt={post.node.excerpt}
+                  imageUrl={post.node?.featuredImage?.node?.sourceUrl}
+                />
               ))}
             </div>
           </main>
 
           <div className={tw('flex gap-3 flex-row  border-4 ')}>
             {currentPage > 1 && <Button onClick={handlePrevClick}>Prev</Button>}
-            {Array.from({ length: pageCount }, (_, i) => i + 1)
-              .slice(0, 2)
-              .concat(pageCount > 4 ? ['...', pageCount - 1, pageCount] : [])
-              .map((page) => (
-                <Button
-                  onClick={() => {
-                    handleNumClick(page);
-                  }}
-                >
-                  {page}
-                </Button>
-              ))}
+            {currentPage > 1 &&
+              Array.from({ length: pageCount }, (_, i) => i + 1)
+                .slice(0, 2)
+                .concat(pageCount > 4 ? ['...', pageCount - 1, pageCount] : [])
+                .map((page) => (
+                  <Button
+                    onClick={() => {
+                      handleNumClick(page);
+                    }}
+                  >
+                    {page}
+                  </Button>
+                ))}
             {currentPage < pageCount && <Button onClick={handleNextClick}>Next</Button>}
           </div>
         </section>
