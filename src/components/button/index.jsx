@@ -4,21 +4,9 @@ import {colors} from '../../../js/utils'
 import { useEffect, useState } from 'react';
 
 
-interface IButton {
-  primary?: boolean;
-  pulse?: boolean | undefined;
-  color?: color | undefined;
-  children: React.ReactNode;
-  modifier?: string;
-  click?: any;
-}
 
-export interface color{
-  default: string;
-  hover: string;
-}
 
-const Button = ({ primary, click, modifier, children, color, pulse, ...rest }: IButton) => {
+const Button = ({ primary, click, modifier, children, color, pulse, ...rest }) => {
   
   const [btnColor, setBtnColor] =useState({
     default: '',

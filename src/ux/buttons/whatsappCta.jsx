@@ -3,14 +3,9 @@ import Button, {color} from '@/components/button';
 import { Whatsapp } from '../../components/svg';
 import { tw } from 'twind';
 
-interface IButton {
-  primary?: boolean;
-  children?: ReactNode;
-  modifier?: string;
-  color?: color;
-}
 
-const WhatsappCta = ({ children, primary, color, modifier }: IButton) => {
+
+const WhatsappCta = ({ children, primary, color, modifier }) => {
   return (
     <a className={tw('block w-full')} href="https://wa.me/+40750472447">
       <Button color={color} modifier={modifier + ' ' + 'm-auto flex items-center'} primary={primary}>
