@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { tw } from 'twind';
 
 const DefaultImage =({Imageurl, width, height, alt, caption, border}) =>{
-    if (border == undefined || none ){
+    if (border == undefined){
       border = {
         width:0,
         radius:0,
