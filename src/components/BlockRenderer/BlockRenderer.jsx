@@ -130,7 +130,7 @@ import Image from 'next/image';
 
           <div key={block.id}>
             <BlockImage
-            border= {block?.attributes?.style}
+            border= {block?.attributes?.style || null}
               key={block.id}
               height={height || 300}
               width={width || 1000}

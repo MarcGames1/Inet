@@ -3,10 +3,15 @@ import Image from 'next/image';
 import { tw } from 'twind';
 
 const DefaultImage =({Imageurl, width, height, alt, caption, border}) =>{
-    
+    if (border == undefined || none ){
+      border = {
+        width:0,
+        radius:0,
+      }
+    }
     return (
       <>
-        <div className={tw(`border-[${border.border.width}] rounded-[${border.border.radius}]`)}>
+        <div className={tw(`border-[${border.border?.width}] rounded-[${border?.border?.radius}]`)}>
           <Image src={Imageurl} width={width} height={height} alt={alt} layout="intrinsic" />
         </div>
         {caption ? <span className={tw('block text-center text-gray-300	')}>{caption}</span> : null}
