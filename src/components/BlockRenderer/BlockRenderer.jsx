@@ -128,9 +128,10 @@ import Image from 'next/image';
           //   ) : null}
           // </>
 
-          <div key={block.id}>
+          <div className={tw('flex flex-col items-center m-4')} key={block.id}>
+            {console.log(block.attributes?.style)}
             <BlockImage
-            border= {block?.attributes?.style || null}
+              border={block?.attributes?.style || null}
               key={block.id}
               height={height || 300}
               width={width || 1000}
