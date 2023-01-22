@@ -24,7 +24,7 @@ export const PostWrapper = ({ value, children }) => {
       <BlogPostContext.Provider value={value}>
         <div
           className={tw(
-            'bg-gray-800 z-0 max-h-screen text-white bg-slate-900 relative min-h-[400px] flex  justify-center items-center',
+            'bg-purple-900 z-1 max-h-screen text-white  relative min-h-[400px] flex  justify-center items-center',
           )}
         >
           <Image
@@ -33,11 +33,11 @@ export const PostWrapper = ({ value, children }) => {
             layout="fill"
             width={featuredImage.node.width || 2000}
             height={featuredImage.node.width || 1000}
-            objectFit="cover"
-            className={tw('bg-gray-800 mix-blend-soft-light z-0')}
+            objectFit="contain"
+            className={tw('mix-blend-overlay opacity-50 z-0 ')}
           />
 
-          <h1 className={tw('lg:text-4xl md:text-3xl sm:text-2xl z-1')}>{title}</h1>
+          <h1 className={tw('m-2 text-center lg:text-4xl text-4xl z-2')}>{title}</h1>
         </div>
         <>
           <div className={tw(' md:grid md:grid-cols-12 gap-3	')}>

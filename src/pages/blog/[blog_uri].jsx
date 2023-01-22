@@ -43,10 +43,8 @@ console.log(seo)
         >
         <>
         <NextSeo title={seo?.title}  description={seo?.description}/>
-          {blocks ? <BlockRenderer blocks={blocks} /> : <>test</>}
-          {/* <BlockRenderer blocks={blocks} /> */}
-          {/* <div dangerouslySetInnerHTML={{__html: props.content}}></div> */}
-          {/* <pre>{JSON.stringify(props.blocks, null, 3)}</pre> */}
+          {blocks ? <BlockRenderer blocks={blocks} /> : <>Loading...</>}
+        
         </>
       </PostWrapper>
       </Page>
