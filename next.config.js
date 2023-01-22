@@ -16,8 +16,8 @@ module.exports = {
       'lh4.googleusercontent.com',
       'lh5.googleusercontent.com',
       'lh6.googleusercontent.com',
-      'api.iwebagency.ro',
-      '89.37.212.226',
+      'api.marweb.ro',
+    
     ],
   },
   trailingSlash: true,
