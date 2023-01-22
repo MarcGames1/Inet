@@ -126,5 +126,9 @@ export const PostDataByUri = (uri) => `query getPostByURI($uri: String="${uri}")
       sourceUrl
     }
   }
+   seo {
+      metaDesc
+      title
+    }
   }
 }`;

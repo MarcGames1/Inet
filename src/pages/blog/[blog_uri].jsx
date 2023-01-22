@@ -22,9 +22,9 @@ const ErrorPage = dynamic(() => import('@/components/ErrorPage'));
 
 const BlogPage = (props) => {
  
-const { content, title, author, featuredImage, blocks } = props;
+const { content, title, author, featuredImage, blocks, seo } = props;
 
-
+console.log(seo)
 
   if (!content || !blocks || !featuredImage || !title || !author) {
     return <ErrorPage />;
@@ -42,6 +42,7 @@ const { content, title, author, featuredImage, blocks } = props;
         }}
         >
         <>
+        <NextSeo title={seo?.title}  description={seo?.description}/>
           {blocks ? <BlockRenderer blocks={blocks} /> : <>test</>}
           {/* <BlockRenderer blocks={blocks} /> */}
           {/* <div dangerouslySetInnerHTML={{__html: props.content}}></div> */}
@@ -70,7 +71,7 @@ export async function getStaticProps(context) {
     query: gql(PostDataByUri(currentUri)),
   });
 
-  let blocks, author, title, content, featuredImage;
+  let blocks, author, title, content, featuredImage, seo;
   if (data && data.postBy ) {
   
     blocks = cleanAndTransformBlocks(data.postBy.blocksJSON);
@@ -80,6 +81,7 @@ export async function getStaticProps(context) {
     title = data.postBy.title || '';
     content = data.postBy.content || '';
     featuredImage = data.postBy.featuredImage || '';
+    seo = data.postBy.seo || '';
   }
 
    if (!data || !data.postBy) {
@@ -96,6 +98,7 @@ export async function getStaticProps(context) {
       title ,
       author,
       featuredImage,
+      seo,
     },
   };
 }
