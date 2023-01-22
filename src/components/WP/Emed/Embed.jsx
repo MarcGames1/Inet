@@ -4,7 +4,7 @@ export const EmbedBlock = ({ url, w, h, }) => {
     if(typeof url !== 'string'){
         return null;
     }
-  const videoId = url.split('/').pop();
+  let videoId = url.split('/').pop();
   const ampersandPosition = videoId.indexOf('&');
   if (ampersandPosition !== -1) {
     videoId = videoId.substring(0, ampersandPosition);

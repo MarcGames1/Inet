@@ -1,6 +1,6 @@
 import React from 'react';
 import { tw } from 'twind';
-import Image from 'next/image';
+import Image from "next/image";
 import { CalendlyButton } from '../calendly';
 import WhatsappCta from '../../ux/buttons/whatsappCta';
 import { color } from '../button';
@@ -13,13 +13,6 @@ const CalendlyPicSection = ({
   btntxt,
   wa,
   pulse,
-  
-}: {
-  pulse?: boolean | undefined;
-  titlu: string;
-  text: string;
-  btntxt?: string | undefined;
-  wa?: undefined | boolean;
   
 }) => {
   return (
@@ -53,8 +46,6 @@ const CalendlyPicSection = ({
               alt="Alexandru Marcu Specialist Seo"
               width={3000}
               height={1000}
-              layout="fill"
-              objectFit="contain"
               //   objectPosition={'top'}
             />
           </div>
@@ -66,7 +57,7 @@ const CalendlyPicSection = ({
 
 export default CalendlyPicSection;
 
-const Wa = ({ btntxt, pulse, color }: {color:color | undefined;  btntxt: string | undefined; pulse?: boolean | undefined }) => {
+const Wa = ({ btntxt, pulse, color }) => {
   return (
     <>
       <p className={tw(`mt-10 text-${colors.secondary} text-center text-lg lg:text-2xl`)}> Hai să vorbim despre afacerea ta!</p>

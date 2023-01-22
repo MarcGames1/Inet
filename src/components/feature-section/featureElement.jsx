@@ -12,13 +12,15 @@ const FeatureElement = ({h3, p, href}) => {
           <p className={tw(`leading-loose text-gray-500`)}>
               {p}
           </p>
-          {href ? <Link href={href} >
-              <a className={tw(`h-6 w-6 text-indigo-500 hover:text-indigo-800`)}>
-                  <span className={tw(`leading-loose  `)}>Citeste mai mult </span> 
-              </a>
+          {href ? <Link
+              href={href}
+              className={tw(`h-6 w-6 text-indigo-500 hover:text-indigo-800`)}>
+
+              <span className={tw(`leading-loose  `)}>Citeste mai mult </span>
+
           </Link> : undefined}
       </div>
-  )
+  );
 }
 
 export default FeatureElement

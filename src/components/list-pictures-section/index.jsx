@@ -1,21 +1,14 @@
-import Image from 'next/image';
+import React from 'react';
+import Image from "next/image";
 import { tw } from 'twind';
 import Check from '@/constants/svg/check.svg';
 import Link from 'next/link';
-import { ReactElement } from 'react';
 
 const ListWithPic = ({
   indemn,
   titlu,
   listItems,
   numbered,
-}: {
-  indemn: string | ReactElement;
-  titlu: string | ReactElement;
-  listItems: any
-  image?: any | undefined;
-  numbered?: boolean | undefined;
-  href?: string | undefined;
 }) => (
   <section id="list" className={tw(`lg:py-28 pt-28 overflow-hidden`)}>
     <div className={tw(`max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 bg-white`)}>
@@ -25,7 +18,7 @@ const ListWithPic = ({
       </div>
       <div className={tw(`flex  flex-wrap -mx-8 items-center`)}>
         <ul>
-          {listItems.map((item: any, index: number) => (
+          {listItems.map((item,  index) => (
             <div key={item.title} className={tw(`flex flex-col ${index % 2 ? 'lg:flex-row-reverse' : 'lg:flex-row'}`)}>
               <li className={tw(`flex items-center w-full lg:w-1/2 px-8`)} key={item.title}>
                 <div className={tw(`flex px-4 content-around `)}>
@@ -41,8 +34,10 @@ const ListWithPic = ({
                   <h3 className={tw(`my-4 text-xl text-indigo-500 font-semibold`)}>{item.title}</h3>
                   <p className={tw(`text-gray-500 leading-loose`)}>{item.description}</p>
                   {item.href ? (
-                    <Link href={item.href}>
-                      <a className={tw(`h-6 w-6 text-indigo-500 hover:text-indigo-800`)}>{'Citeste Mai Mult'}</a>
+                    <Link
+                      href={item.href}
+                      className={tw(`h-6 w-6 text-indigo-500 hover:text-indigo-800`)}>
+                      {'Citeste Mai Mult'}
                     </Link>
                   ) : null}
                 </div>
@@ -52,7 +47,6 @@ const ListWithPic = ({
                   {item?.Icon ? <item.Icon width="100%" height="100%" /> : null}
                   {item?.Image ? (
                     <Image
-                      layout="intrinsic"
                       src={item.Image.location}
                       alt={`${item.title} iwebAgency`}
                       width={item.Image.width}

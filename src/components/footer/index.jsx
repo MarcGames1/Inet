@@ -1,6 +1,6 @@
 import { tw } from 'twind';
 import Button from '@/components/button';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import ScroolToTop from '../scrooltoTop/scrooltoTop';
 import Link from 'next/link';
 import { Newsletter } from '../CTA';
@@ -36,9 +36,9 @@ const Footer = () => (
     <footer className={tw(`grid grid-cols-3 gap-1 justify-items-center bg-indigo-50 items-center`)}>
       <div>
         <Link href={'/'}>
-          <a>
-            <Image src="/logo.svg" alt="logo" width={150} height={150} />
-          </a>
+
+          <Image src="/logo.svg" alt="logo" width={150} height={150} />
+
         </Link>
         {/* <p className={tw(`text-4xl text-indigo-500 font-bold`)}>STARTD</p> */}
       </div>
@@ -73,22 +73,14 @@ const Footer = () => (
 const FooterLink = ({
   link,
   
-}: {
-  link: {
-    text: string;
-    href: string;
-  };
-  
 }) => {
-  return (
-    <>
-      <li className={tw(`text-gray-800 text-sm font-medium leading-6`)} >
-        <Link href={link.href}>
-          <a href={link.href}>{link.text}</a>
-        </Link>
-      </li>
-    </>
-  );
+  return <>
+    <li className={tw(`text-gray-800 text-sm font-medium leading-6`)} >
+      <Link href={link.href}>
+        {link.text}
+      </Link>
+    </li>
+  </>;
 };
 
 export default Footer;

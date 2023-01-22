@@ -1,5 +1,5 @@
 import { tw } from 'twind';
-import Image from 'next/image';
+import Image from "next/image";
 
 
 
@@ -9,7 +9,7 @@ const AuthorAndSmLarge = ({ firstName,lastName, description =null, pozaProfil })
   return (
     <div className={tw('container relative h-3/6	')}>
       <div className={tw('w-full h-[300px] p-3 m-3 relative block')}>
-        <Image src={link} alt={altText} objectFit="contain" layout="fill" />
+        <Image src={link} alt={altText}layout="fill" />
       </div>
       <h1 className={tw('text-center text-large')}>
         {lastName} {firstName}

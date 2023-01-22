@@ -16,26 +16,21 @@ const rarrowBg = css`
   margin:5ch;
 `;
 
-const order = (idx : number) =>{
+const order = idx  =>{
   const first = tw(larrowBg, `order-last bg-indigo-50`);
   const second = tw(rarrowBg, `bg-indigo-50`);
   return idx % 2 ? first : second
 
 }
 
-const Section2 = (props: {
-  children: ReactNode;
-  lead: string[] | ReactNode[];
-  heading: string;
-  paragrafe: string[];
-}) => {
+const Section2 = (props) => {
   return (
     <>
       <section className={tw(``)}>
         <div className={tw('flex flex-col m-14')}>
           <div className={tw('bg-indigo-50 grid lg:grid-cols-2 gap-5 items-center')}>
             <div className={tw(' flex flex-col p-5 gap-10')}>
-              {props.lead.map((p: string | ReactNode) => {
+              {props.lead.map( p => {
                 return <p className={typography.p.default}>{p}</p>;
               })}
             </div>
@@ -46,7 +41,7 @@ const Section2 = (props: {
           <span className={typography.heading.default}>{props.heading}</span>
 
           <div>
-            {props.paragrafe.map((p: string, idx: number) => {
+            {props.paragrafe.map((p, idx) => {
               return (
                 <div className={tw('grid lg:grid-cols-2')}>
                   <div className={order(idx)}></div>

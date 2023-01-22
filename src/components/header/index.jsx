@@ -1,6 +1,6 @@
 import { tw, css } from 'twind/css';
 import { CalendlyButton } from '../calendly';
-import Image from 'next/image';
+import Image from "next/image";
 
 import WhatsappCta from '../../ux/buttons/whatsappCta';
 import { ReactElement } from 'react';
@@ -55,7 +55,7 @@ const variants = {
   },
 };
 
-let Cta = (param: string) => {
+let Cta = (param) => {
   switch (param) {
     default:
       return <variants.default />;
@@ -74,11 +74,6 @@ const Header = ({
   subtitlu,
   indemn,
   variant,
-}: {
-  h1: string | ReactElement;
-  subtitlu: string | ReactElement;
-  variant: string;
-  indemn: string | ReactElement | undefined;
 }) => (
   <header className={tw(headerStyle, `w-full h-auto`)}>
     <div className={tw(`lg:max-w-4xl mx-auto py-16 px-8 sm:px-6`)}>
@@ -97,13 +92,12 @@ const Header = ({
         </div>
         <div id="heroimg" className={tw(picContainer, ' h-80 w-80 relative md:mt-0 mt-10  md:h-72 md:w-4/12')}>
           <Image
-            loading="eager"
+           
             src={meImg.url}
             alt={meImg.alt}
-            layout="fill"
-            objectFit="contain"
-            priority
-          />
+            />
+            
+          
         </div>
       </div>
     </div>

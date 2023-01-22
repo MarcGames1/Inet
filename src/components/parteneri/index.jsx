@@ -1,17 +1,12 @@
 import React from 'react';
 import { tw } from 'twind';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 const Parteneri = ({
   titlu,
   indemn,
   logoParteneri,
   col,
-}: {
-  titlu: string;
-  indemn: string;
-  logoParteneri: any;
-  col?: number;
 }) => {
   let colsnum = NaN;
 
@@ -25,7 +20,7 @@ const Parteneri = ({
       </div>
       <div className={tw(`grid grid-cols-${colsnum} place-content-center place-items-center gap-4`)}>
         {/* <div className={tw('w-2/6 h-4/6')}><Image height={128} width={161} layout='responsive' src={'/logoClienti/avocatdorubotea.webp'} /></div> */}
-        {logoParteneri.map((logo: any) => (
+        {logoParteneri.map((logo) => (
           <div
             style={{ display: 'flex', justifyContent: 'center' }}
             key={logo.url}

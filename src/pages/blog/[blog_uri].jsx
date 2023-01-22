@@ -24,28 +24,31 @@ const BlogPage = (props) => {
  
 const { content, title, author, featuredImage, blocks, seo } = props;
 
-
+console.log(seo)
 
   if (!content || !blocks || !featuredImage || !title || !author) {
     return <ErrorPage />;
   }
   
- console.log('SEO YOAST DATA ===>>>> ', props.seo, seo)
+ 
   return (
     <Page>
+
       <PostWrapper
         value={{
           title,
           featuredImage,
           author,
         }}
-      >
+        >
         <>
-          <NextSeo title={seo?.title} description={seo?.metaDesc} />
+        <NextSeo title={seo?.title}  description={seo?.description}/>
           {blocks ? <BlockRenderer blocks={blocks} /> : <>Loading...</>}
+        
         </>
       </PostWrapper>
-    </Page>
+      </Page>
+    
   );
 };
 

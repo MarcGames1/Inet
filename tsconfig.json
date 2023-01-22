@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
@@ -12,12 +15,14 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "jsx": "preserve"
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/components/calendly/InlineCalendly.jsx", "src/components/logo.jsx", "src/components/list-section/index.jsx", "src/ux/buttons/whatsappCta.tsx", "src/components/DcNoi/index.jsx", "src/hooks/useWindowDimension.jsx", "src/context/auth.jsx", "src/components/admin/Admintopnav.jsx", "src/pages/admin/posts/index.jsx", "src/components/admin/index.jsx", "src/pages/blog/index.jsx", "src/components/CTA/Newsletter.jsx", "src/pages/index.jsx", "src/pages/servicii-seo.jsx", "src/components/page/index.jsx", "src/components/navigation/index.jsx"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

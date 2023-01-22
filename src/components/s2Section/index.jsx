@@ -8,11 +8,6 @@ const SecondSection = ({
   subtitlu,
   paragrafe,
   children,
-}: {
-  titlu?: ReactElement | string | undefined;
-  subtitlu?: any;
-  paragrafe: string[] | ReactElement[];
-  children?: JSX.Element | null;
 }) => {
   return (
     <section className={ + ' ' + tw('w-full items-center py-8 min-h-screen flex flex-col')}>

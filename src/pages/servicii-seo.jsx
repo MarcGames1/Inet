@@ -17,7 +17,7 @@ const Page = dynamic(() => import('../components/page'), {
   loading: () => <div>Loading...</div>,
 });
 
-const Header = dynamic(() => import('../components/header'), {
+const Header = dynamic(() => import('../components/header/index.jsx'), {
   loading: () => <div>Loading...</div>,
 });
 const ListSection = dynamic(() => import('../components/list-section'), {

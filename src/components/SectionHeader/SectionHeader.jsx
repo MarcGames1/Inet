@@ -5,10 +5,6 @@ export const SectionHeader = ({
   titlu,
   subtitlu,
   style,
-}: {
-  titlu?: string | ReactElement;
-  subtitlu?: string | ReactElement;
-  style?: string;
 }) => {
   return titlu || subtitlu ? (
     <div className={tw(`mb-16 text-center`)}>

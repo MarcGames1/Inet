@@ -1,16 +1,14 @@
-import React, { ComponentType, Suspense, useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import {  gql } from '@apollo/client';
 import { useRouter } from 'next/router';
 import { tw } from 'twind';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
-import { AllPostsUri, AllPostsUrls, PostsQuery } from '../../utils/WPQuerys';
+import { PostsQuery } from '../../utils/WPQuerys';
 
 import client from '../../utils/client';
 
-import Link from 'next/link';
-import Image from 'next/image';
 
 
 const Page = dynamic(() => import('@/components/page'));
@@ -100,19 +98,20 @@ const Blog = ({ posts, pageCount }) => {
               Blog SEO Marweb {page}
             </h1>
             <div className={tw('grid-cols-1 lg:grid-cols-3 gap-4 m-8	grid  items-strech')}>
-              {currentPosts?.map((post) => (
+              {Array.isArray(currentPosts)  ? 
+              currentPosts?.map((post) => (
                 // /post.node.uri = url
                 // post.node.title = title
                 // post.node?.featuredImage?.node?.alt = alt
                 // post.node.excerpt = excerpt;
                 <BlogCardComponent
                   url={post.node.uri}
-                  alt={post.node?.featuredImage?.node?.alt}
+                  alt={post.node?.featuredImage?.node?.alt || post.node.title}
                   title={post.node.title}
                   excerpt={post.node.excerpt}
                   imageUrl={post.node?.featuredImage?.node?.sourceUrl}
                 />
-              ))}
+              )) : null}
             </div>
           </main>
 

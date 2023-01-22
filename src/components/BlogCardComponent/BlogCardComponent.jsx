@@ -3,7 +3,7 @@ import { tw } from 'twind';
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/image";
 
 
 const Button = dynamic(() => import('@/components/button'));
@@ -17,18 +17,19 @@ const BlogCardComponent = ({ url, title, alt, excerpt, imageUrl }) => {
   return (
     <div className={tw('grid')}>
       <div className={tw('justify-self-start row-span-2 p-3 self-start')}>
-        <Link href={`/blog${url}`}>
-          <a>
-            <Image
-              layout="intrinsic"
-              width={1200}
-              height={600}
-              objectFit="cover"
-              src={imageUrl || null}
-              alt={title || alt}
-            />
-          </a>
-        </Link>
+        
+        {imageUrl ? <Link href={`/blog${url}`}>
+
+          <Image
+          
+            width={1200}
+            height={600}
+            
+            src={imageUrl}
+            alt={title || alt}
+          />
+
+        </Link> : null}
       </div>
       <h2
         className={tw(
@@ -46,9 +47,9 @@ const BlogCardComponent = ({ url, title, alt, excerpt, imageUrl }) => {
       <div className={tw('m-1 self-end span-1 justify-self-center')}>
         {' '}
         <Link href={`/blog${url}`}>
-            <a>
+
           <Button primary>citeste mai mult</Button>
-            </a>
+
         </Link>
 
       </div>

@@ -6,12 +6,7 @@ import CalendlyPic from './CalendlyPicSection';
 import useWindowDimensions from '@/hooks/useWindowDimension';
 
 const CalendlySection = (
-  props: JSX.IntrinsicAttributes & {
-    wa?: boolean | undefined;
-    titlu: string;
-    text: string;
-    btntxt?: string | undefined;
-  },
+  props
 ) => {
   const { width, height } = useWindowDimensions();
   const [ismobile, setIsmobile] = useState(true);

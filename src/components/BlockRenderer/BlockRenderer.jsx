@@ -15,7 +15,7 @@ import {
 import { SocialIcon } from 'react-social-icons';
 import { tw } from 'twind';
 import { theme } from '../../theme';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 
 
 

@@ -2,7 +2,7 @@ import { tw } from 'twind';
 import { useState, useContext, useEffect } from 'react';
 import { CalendlyButton } from '../calendly';
 import Logo from '@/components/svg/logo';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { ScrollPosition } from '@/context/scroolPositionContext';
 
@@ -120,10 +120,10 @@ const Navigation = () => {
           <div className={tw(`flex items-center`)}>
             <div className={tw(`flex-shrink-0`)}>
               <Link href={'/'}>
-                <a>
-                  {/* <Image className={tw(`h-12 w-12`)} src="/logo.svg" alt="MarWeb-logo" width={150} height={150} /> */}
-                  <Logo />
-                </a>
+
+                {/* <Image className={tw(`h-12 w-12`)} src="/logo.svg" alt="MarWeb-logo" width={150} height={150} /> */}
+                <Logo />
+
               </Link>
             </div>
             <div className={tw(`hidden md:block`)}>

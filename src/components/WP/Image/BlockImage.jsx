@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { tw } from 'twind';
 
 const DefaultImage =({Imageurl, width, height, alt, caption, border}) =>{

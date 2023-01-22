@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 import { useBlogPostContext } from '../../../context/blogPost';
 import { tw } from "twind";
 export const Cover = ({ children, background }) => {
@@ -11,9 +11,7 @@ export const Cover = ({ children, background }) => {
       {(!!background || !!featuredImage) && (
         <Image
           alt="Cover"
-          src={background || featuredImage}
-          layout="fill"
-          objectFit="cover"
+          src={background || featuredImage}          
           className="mix-blend-soft-light"
         />
       )}
