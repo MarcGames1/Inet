@@ -1,11 +1,8 @@
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import { serviciiSeo } from '../../js/content';
-import { homepage } from '../../js/content';
 import React, { Suspense } from 'react';
 import dynamic from 'next/dynamic';
-import Parteneri from '@/components/parteneri';
-import Head from 'next/head';
 
 // Importuri dinamice pentru FCP
 
@@ -20,21 +17,18 @@ const Page = dynamic(() => import('../components/page'), {
 const Header = dynamic(() => import('../components/header/index.jsx'), {
   loading: () => <div>Loading...</div>,
 });
-const ListSection = dynamic(() => import('../components/list-section'), {
-  loading: () => <div>Loading...</div>,
-});
 const ListWithPic = dynamic(() => import('../components/list-pictures-section'), {
   loading: () => <div>Loading...</div>,
 });
 const FeatureSection = dynamic(() => import('../components/feature-section'), {
   loading: () => <div>Loading...</div>,
 });
-import SecondSection from '@/components/s2Section';
-import { CalendlyNoPic } from '@/components/CTA';
-import DcNoi from '@/components/DcNoi';
-import Section2 from '@/components/servicii-seo/section2';
-import ListaCuBife from '@/components/servicii-seo/listaCuBife';
-
+ const Section2 = dynamic(() => import('../components/servicii-seo/section2'), {
+   loading: () => <div>Loading...</div>,
+ });
+const ListaCuBife = dynamic(() => import('../components/servicii-seo/listaCuBife'), {
+  loading: () => <div>Loading...</div>,
+});
 const ServiciiSeo = () => {
  const router = useRouter();
   return (
