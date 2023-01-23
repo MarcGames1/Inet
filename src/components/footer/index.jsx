@@ -1,9 +1,7 @@
 import { tw } from 'twind';
-import Button from '@/components/button';
 import Image from "next/legacy/image";
 import ScroolToTop from '../scrooltoTop/scrooltoTop';
 import Link from 'next/link';
-import { Newsletter } from '../CTA';
 
 const productLinks = [`Features`, `Customers`, `Platform`, `Pricing`, `Enterprise`, `What's new?`];
 const linkuriUtile = [{

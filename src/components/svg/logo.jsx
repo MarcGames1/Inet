@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
 import styles from './logo.module.css'
-import { ScrollPosition } from '@/context/scroolPositionContext';
+import { ScrollPosition } from '../../context/scroolPositionContext';
 
 function Logo({width =150, height = 100, ...props}) {
 

@@ -11,9 +11,9 @@ import client from '../../utils/client';
 
 
 
-const Page = dynamic(() => import('@/components/page'));
-const BlogCardComponent = dynamic(() => import ('@/components/BlogCardComponent/BlogCardComponent'))
-const Button = dynamic(() => import('@/components/button'));
+const Page = dynamic(() => import('../../components/page'));
+const BlogCardComponent = dynamic(() => import ('../../components/BlogCardComponent/BlogCardComponent'))
+const Button = dynamic(() => import('../../components/button'));
 
 const GET_POSTS = gql(PostsQuery(1));
 

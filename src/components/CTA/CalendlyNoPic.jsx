@@ -2,7 +2,7 @@ import React from 'react';
 import { tw } from 'twind';
 import { CalendlyButton } from '../calendly';
 import WhatsappCta from '../../ux/buttons/whatsappCta';
-const meImg = '/images/alexandru-marcu-specialist-seo.png';
+
 import {colors} from '../../../js/utils'
 
 

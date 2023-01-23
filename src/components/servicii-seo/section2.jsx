@@ -1,8 +1,7 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { tw, css } from 'twind/css';
-import Check from '@/constants/svg/check.svg';
-import { typography } from '@/../js/utils';
-import SEOsvg from '@/constants/svg/SEOsvg2.svg';
+import { typography } from '../../../js/utils';
+import SEOsvg from '../../constants/svg/SEOsvg2.svg';
 
 const larrowBg = css`
   max-height: 90vh;

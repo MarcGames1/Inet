@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react';
 import { tw } from 'twind';
 import Image from "next/image";
-import AutorWidget from '@/components/Autor';
+import AutorWidget from '../components/Autor';
 
 
 const BlogPostContext = createContext();

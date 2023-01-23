@@ -9,7 +9,7 @@ import AuthorAndSmLarge from '../../components/WP/AuthorAndSmLarge'
 import { SocialIcon } from 'react-social-icons';
 
 
-import Page from '@/components/page'
+import Page from '../../components/page'
 
 import { AuthorPageQ } from '../../utils/WPQuerys'
 import { gql } from '@apollo/client'

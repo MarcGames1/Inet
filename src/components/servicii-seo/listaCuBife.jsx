@@ -1,7 +1,7 @@
 import React from 'react';
 import { tw } from 'twind';
 import styles from './style.module.css';
-import Check from '@/constants/svg/check.svg';
+import Check from '../../constants/svg/check.svg';
 
 const ListaCuBife = ({ title, paragrafe }) => {
   return (

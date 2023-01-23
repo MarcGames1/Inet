@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import Button, {color} from '@/components/button';
+import Button from '../../components/button';
 import { Whatsapp } from '../../components/svg';
 import { tw } from 'twind';
 

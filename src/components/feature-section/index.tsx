@@ -1,5 +1,4 @@
 import { tw } from 'twind';
-import Check from '@/constants/svg/check.svg';
 import FeaturesElement from './featureElement';
 
 interface checklist {

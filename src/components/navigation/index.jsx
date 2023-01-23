@@ -1,10 +1,9 @@
 import { tw } from 'twind';
 import { useState, useContext, useEffect } from 'react';
 import { CalendlyButton } from '../calendly';
-import Logo from '@/components/svg/logo';
-import Image from "next/legacy/image";
+import Logo from '../../components/svg/logo';
 import Link from 'next/link';
-import { ScrollPosition } from '@/context/scroolPositionContext';
+import { ScrollPosition } from '../../context/scroolPositionContext';
 
 const links = [
   {

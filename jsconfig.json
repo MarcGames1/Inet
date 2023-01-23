@@ -15,13 +15,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+      "baseUrl": "."
+    
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "src/pages/_app.jsx"  ],
+    "**/*.js",
+    "**/*.jsx"
+, "src/components/button/index.jsx", "src/ux/buttons/whatsappCta.jsx"  ],
   "exclude": [
     "node_modules"
   ]

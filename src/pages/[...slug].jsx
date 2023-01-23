@@ -1,7 +1,7 @@
-import Page from '@/components/page';
+import Page from '../components/page';
 import Head from 'next/head';
 import React, { Suspense } from 'react';
-import ErrorPage from '@/components/ErrorPage'
+import ErrorPage from '../components/ErrorPage'
 export default function Home() {
   return (
     <Suspense fallback={`Loading...`}>

@@ -41,11 +41,11 @@ const CalendlyPicSection = ({
             )}
           </div>
           <div className={tw(' relative flex  ')}>
-            <Image
+            <Image className={tw('')}
               src={meImg}
               alt="Alexandru Marcu Specialist Seo"
-              width={3000}
-              height={1000}
+              width={300}
+              height={50}
               //   objectPosition={'top'}
             />
           </div>

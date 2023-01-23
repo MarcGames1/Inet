@@ -69,12 +69,7 @@ let Cta = (param) => {
   }
 };
 
-const Header = ({
-  h1,
-  subtitlu,
-  indemn,
-  variant,
-}) => (
+const Header = ({ h1, subtitlu, indemn, variant }) => (
   <header className={tw(headerStyle, `w-full h-auto`)}>
     <div className={tw(`lg:max-w-4xl mx-auto py-16 px-8 sm:px-6`)}>
       <div className={tw('flex lg:gap-8 flex-col lg:flex-row items-center')}>
@@ -90,15 +85,15 @@ const Header = ({
           ) : null}
           <div className={tw('m-4')}>{Cta(variant)}</div>
         </div>
-        <div id="heroimg" className={tw(picContainer, ' h-80 w-80 relative md:mt-0 mt-10  md:h-72 md:w-4/12')}>
+        
           <Image
-           
+            className={tw(picContainer, ' h-80 w-80 relative md:mt-0 mt-10  md:h-72 md:w-4/12')}
+            width={300}
+            height={900}
             src={meImg.url}
             alt={meImg.alt}
-            />
-            
-          
-        </div>
+          />
+        
       </div>
     </div>
   </header>

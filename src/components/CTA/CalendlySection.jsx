@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import CalendlyNoPic from './CalendlyNoPic';
 import CalendlyPic from './CalendlyPicSection';
 
-import useWindowDimensions from '@/hooks/useWindowDimension';
+import useWindowDimensions from '../../hooks/useWindowDimension';
 
 const CalendlySection = (
   props

@@ -1,14 +1,14 @@
 import { tw } from 'twind';
-import FeatureSvg from '@/constants/svg/features.svg';
-import TeamworkSvg from '@/constants/svg/teamwork.svg';
-import SuccessfulTaskCompletionSvg from '@/constants/svg/successfulTaskCompletion.svg';
-import StatisticsSvg from '@/constants/svg/statistics.svg';
-import HelloSvg from '@/constants/svg/hello.svg';
+import FeatureSvg from '../src/constants/svg/features.svg';
+import TeamworkSvg from '../src/constants/svg/teamwork.svg';
+import SuccessfulTaskCompletionSvg from '../src/constants/svg/successfulTaskCompletion.svg';
+import StatisticsSvg from '../src/constants/svg/statistics.svg';
+import HelloSvg from '../src/constants/svg/hello.svg';
 
-import WebDevSvg from '@/constants/svg/webdev.svg';
-import SeoSvg from '@/constants/svg/seo.svg';
-import AdsSvg from '@/constants/svg/ads.svg';
-import ContentSvg from '@/constants/svg/content.svg';
+import WebDevSvg from '../src/constants/svg/webdev.svg';
+import SeoSvg from '../src/constants/svg/seo.svg';
+import AdsSvg from '../src/constants/svg/ads.svg';
+import ContentSvg from '../src/constants/svg/content.svg';
 
 const pic1 = '/studiiDeCaz/StudiuCaz1-1006x392.jpg';
 const pic2 = '/studiiDeCaz/StudiuCaz1.2-1068x407.jpg';

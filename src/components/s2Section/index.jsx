@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import styles from './style.module.css';
 import { tw } from 'twind';
 import { SectionHeader } from '../SectionHeader/SectionHeader';
-import { typography } from '@/../js/utils';
+import { typography } from '../../../js/utils';
 const SecondSection = ({
   titlu,
   subtitlu,

@@ -15,8 +15,8 @@ import BlockRenderer from '../../components/BlockRenderer/BlockRenderer';
 import { PostWrapper } from '../../context/blogPost';
 
 
-const Page = dynamic(() => import('@/components/page'));
-const ErrorPage = dynamic(() => import('@/components/ErrorPage'));
+const Page = dynamic(() => import('../../components/page'));
+const ErrorPage = dynamic(() => import('../../components/ErrorPage'));
 
 
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { tw } from 'twind';
-import Check from '@/constants/svg/check.svg';
+import Check from '../../constants/svg/check.svg';
 import Link from 'next/link';
 const FeatureElement = ({h3, p, href}) => {
   return (

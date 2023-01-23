@@ -1,5 +1,5 @@
 import { tw } from 'twind';
-import Arrow from '@/constants/svg/arrow.svg';
+import Arrow from '../../constants/svg/arrow.svg';
 
 const articles = [
   {

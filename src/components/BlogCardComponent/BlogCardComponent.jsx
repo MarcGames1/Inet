@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from "next/image";
 
 
-const Button = dynamic(() => import('@/components/button'));
+const Button = dynamic(() => import('../../components/button'));
 
 // /post.node.uri = url
 // post.node.title = title

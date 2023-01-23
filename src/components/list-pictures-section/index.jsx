@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 import { tw } from 'twind';
-import Check from '@/constants/svg/check.svg';
+import Check from '../../constants/svg/check.svg';
 import Link from 'next/link';
 
 const ListWithPic = ({

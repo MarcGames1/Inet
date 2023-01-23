@@ -1,10 +1,10 @@
 import React from 'react'
 import { tw } from 'twind';
 import styles from './style.module.css'
-import Check from '@/constants/svg/check.svg';
+import Check from '../../constants/svg/check.svg';
 import { SectionHeader } from '../SectionHeader/SectionHeader';
 
-import { section, typography } from '@/../js/utils';
+import { section, typography } from '../../../js/utils';
 
 const DcNoi = ({title, items}) => {
   return (

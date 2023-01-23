@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Navigation from '@/components/navigation';
 import { tw } from 'twind';
 import Footer from '../footer';
 import { ScrollPositionProvider } from '../../context/scroolPositionContext';
+import Navigation from '../../components/navigation';
 
 
 const Page = ({ children }) => (

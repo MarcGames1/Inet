@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 const PopupModal = dynamic(() => import('react-calendly').then(c => c.PopupModal), {
     loading: () => <div>Loading...</div>,
 })
-import Button, {color,} from '@/components/button';
+import Button from '../../components/button';
 const CalendlyButton = ({primary, text, modifier, pulse, color} ) => {
 
     
