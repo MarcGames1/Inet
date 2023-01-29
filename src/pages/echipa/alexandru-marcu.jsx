@@ -52,7 +52,7 @@ const Membru = ({
             <SocialIcon url={youtube} />
             <SocialIcon url={tikTok} />
           </div>
-          <div className={tw(`w-1/3 m-auto`)}>
+          <div className={tw(`m-auto px-5 w-2/3 `)}>
             <div className={tw('leading-9')} dangerouslySetInnerHTML={{ __html: descriereAutor }}></div>
           </div>
         </section>

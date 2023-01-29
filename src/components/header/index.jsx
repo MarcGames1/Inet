@@ -85,15 +85,14 @@ const Header = ({ h1, subtitlu, indemn, variant }) => (
           ) : null}
           <div className={tw('m-4')}>{Cta(variant)}</div>
         </div>
-        
-          <Image
-            className={tw(picContainer, ' h-80 w-80 relative md:mt-0 mt-10  md:h-72 md:w-4/12')}
-            width={300}
-            height={900}
-            src={meImg.url}
-            alt={meImg.alt}
-          />
-        
+
+        <Image
+          className={tw(picContainer, ' md:mt-0 mt-10  md:h-72 w-10/12 lg:w-4/12 md:w-4/12')}
+          width={200}
+          height={300}
+          src={meImg.url}
+          alt={meImg.alt}
+        />
       </div>
     </div>
   </header>
