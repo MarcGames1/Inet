@@ -12,7 +12,7 @@ const sheet = asyncVirtualSheet();
 setup({ ...twindConfig, sheet });
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
+  static async getInitialProps(ctx) {
     sheet.reset();
     const initialProps = await Document.getInitialProps(ctx);
     const { id, textContent } = getStyleTagProperties(sheet);
