@@ -142,7 +142,7 @@ const Navigation = () => {
           <div className={tw(`hidden md:block`)}>
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
               <CalendlyButton
-                text={'Programeaza-te la o sedinta gratuita!'}
+                text={'Vreau Consultanta SEO!'}
                 primary
                 modifier={undefined}
                 pulse={undefined}

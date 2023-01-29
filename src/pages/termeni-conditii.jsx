@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { tw } from 'twind'
 
 
-const nume_site = 'https://marweb.ro/'
+const nume_site = 'https://marweb.ro'
 const nume_firma ='MARK ELITE TECHNOLOGIES L.L.C'
 
 
@@ -158,7 +158,7 @@ const Legal = () => {
           You also acknowledge that once You submit Your User Content to the Website, you cannot remove or edit it. If
           you wish to remove or amend Your User Content, We will consider any such request on a case-by-case basis. If
           you wish to remove or amend Your User Content, please contact us using this{' '}
-          <a title="Contact Us" href="https://www.dubai-online.com/contact/">
+          <a title="Contact Us" href={`${nume_site}/contact`}>
             form
           </a>
           .
