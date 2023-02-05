@@ -10,7 +10,7 @@ import { PostsQuery } from '../../utils/WPQuerys';
 import client from '../../utils/client';
 
 
-
+const DOMAIN = process.env.DOMAIN
 const Page = dynamic(() => import('../../components/page'));
 const BlogCardComponent = dynamic(() => import ('../../components/BlogCardComponent/BlogCardComponent'))
 const Button = dynamic(() => import('../../components/button'));
@@ -85,11 +85,11 @@ const Blog = ({ posts, pageCount }) => {
     <>
       <Head>
         {currentPage < pageCount ? (
-          <link rel="next" href={`http://localhost:3000/blog?page=${currentPage + 1}`} />
+          <link rel="next" href={`${DOMAIN}/blog?page=${currentPage + 1}`} />
         ) : null}
-        {currentPage > 1 ? <link rel="prev" href={`http://localhost:3000/blog?page=${currentPage - 1}`} /> : null}
+        {currentPage > 1 ? <link rel="prev" href={`${DOMAIN}/blog?page=${currentPage - 1}`} /> : null}
       </Head>
-      <NextSeo canonical="http://localhost:3000/blog" robotsProps={'index, follow'} />
+      <NextSeo canonical={`${DOMAIN}/blog`} robotsProps={'index, follow'} />
       <Page>
         <section className={tw('')}>
           {/* <aside>aside</aside> */}
