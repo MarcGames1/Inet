@@ -43,6 +43,7 @@ const Footer = () => (
         </Link>
         {/* <p className={tw(`text-4xl text-indigo-500 font-bold`)}>STARTD</p> */}
       </div>
+          
 
       <div>
         <h4 className={tw(`text-gray-900 text-base font-bold mb-1`)}>Dispozitii Legale</h4>
@@ -59,11 +60,9 @@ const Footer = () => (
           {linkuriUtile.map((link, index) => (
             <FooterLink link={link} key={`linkuriUtile${Math.random() * 10 * (index + 1 * 15)}`} />
           ))}
-          <SocialIcon url={'https://www.facebook.com/people/MarWeb-Marketing-Agency/100089791593864/'} />
         </ul>
       </div>
-      <div>
-      </div>
+      
     </footer>
   </>
 );
