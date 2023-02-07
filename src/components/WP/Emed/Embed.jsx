@@ -14,8 +14,8 @@ export const EmbedBlock = ({ url, w, h, }) => {
   return (
     <iframe
       title="Video embed"
-      width={w || '100%'}
-      height={h || '100%'}
+      width={w || '800'}
+      height={h || '490'}
       src={embedUrl}
       
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
