@@ -78,6 +78,7 @@ import Image from "next/legacy/image";
       }
 
       case 'core/embed': {
+        console.log(block)
         return <EmbedBlock key={block.id} url={block.attributes.url} />;
       }
 
@@ -129,7 +130,7 @@ import Image from "next/legacy/image";
           // </>
 
           <div className={tw('flex flex-col items-center m-4')} key={block.id}>
-            {console.log(block.attributes?.style)}
+          
             <BlockImage
               border={block?.attributes?.style || null}
               key={block.id}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import styles from './Embed.module.css'
 export const EmbedBlock = ({ url, w, h, }) => {
     if(typeof url !== 'string'){
         return null;
@@ -12,15 +12,17 @@ export const EmbedBlock = ({ url, w, h, }) => {
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
 
   return (
+    <div className={styles.container}>
+
     <iframe
       title="Video embed"
-      width={w || '800'}
-      height={h || '490'}
-      src={embedUrl}
       
+      src={embedUrl}
+      className={styles.iframe}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
-    ></iframe>
+      ></iframe>
+      </div>
   );
 };
 

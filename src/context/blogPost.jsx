@@ -23,9 +23,7 @@ export const PostWrapper = ({ value, children }) => {
     <>
       <BlogPostContext.Provider value={value}>
         <div
-          className={tw(
-            'bg-purple-900 z-1 max-h-screen text-white  min-h-[200px] flex  justify-center items-center',
-          )}
+          className={tw('bg-purple-900 z-1 max-h-screen text-white  min-h-[200px] flex  justify-center items-center')}
         >
           <Image
             alt={featuredImage.node.altText || 'Cover'}
@@ -41,7 +39,7 @@ export const PostWrapper = ({ value, children }) => {
           <div className={tw(' md:grid md:grid-cols-12 gap-3	')}>
             <main className={tw('col-span-8 m-5')}>{children}</main>
             <aside className={tw('flex flex-col justify-top m-4 border-3 items-center container md:col-span-3')}>
-              <div>
+              <div className={tw('lg:sticky lg:right-0 lg:top-10 ')}>
                 <AutorWidget author={author} />
               </div>
             </aside>

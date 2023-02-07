@@ -11,7 +11,7 @@ const pozaAutor = {
   url: author?.node?.otherAuthorData?.pozaProfil?.link,
 };
 const functie = author?.node?.otherAuthorData?.functie
-  console.log('Author, ', author);
+
   return (
     <div className={tw('')}>
        <div className={tw('items-center flex justify-center m-5')}>
