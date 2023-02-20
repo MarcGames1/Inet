@@ -38,7 +38,7 @@ useEffect(()=>{
                 {!text ? 'Programeaza o Intalnire' : text}
             </Button>
             <PopupModal
-                url="https://calendly.com/alexandru-marcu/consultanta-gratuita-seo?primary_color=4f46e5"
+                url="https://calendly.com/alexandru-marcu/consultanta-seo?primary_color=4f46e5"
                 pageSettings={pageSettings}
                 onModalClose={() => setIsOpen(false)}
                 open={isOpen}

@@ -23,7 +23,7 @@ useEffect(() =>{
       {
 
        !mobile ? <InlineWidget 
-         url="https://calendly.com/alexandru-marcu/consultanta-gratuita-seo?primary_color=4f46e5"
+         url="https://calendly.com/alexandru-marcu/consultanta-seo?primary_color=4f46e5"
          rootElement={document.getElementById("__next")}
          text="Click here to schedule!"
          textColor="#ffffff"
@@ -36,7 +36,7 @@ useEffect(() =>{
           textColor: '1f2927',
           hideGdprBanner: true,
         }}
-       /> : <CustomButton text={"Programeaza o Intalnire Gratuita!"} />
+       /> : <CustomButton text={"Programeaza o sedinta de consultanta !"} />
 
       }
      
