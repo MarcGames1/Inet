@@ -9,7 +9,7 @@ const ErrorPage = () => {
 
       <div className={tw('p-5 h-2/6 flex flex-col m-2 m-auto h-2/6')}>
         <h1 className={tw('text-center m-3 font-semibol text-3xl')}>Ooops ... avem o mica problema tehnica</h1>
-        <Image layout="intrinsic" width={700} height={400} src="/loading.gif" />
+        <Image width={700} height={400} src="/loading.gif" />
       </div>
     </div>
   );
