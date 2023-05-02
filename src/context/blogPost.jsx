@@ -39,8 +39,14 @@ export const PostWrapper = ({ value, children }) => {
           <div className={tw(' md:grid md:grid-cols-12 gap-3	')}>
             <main className={tw('col-span-8 m-5')}>{children}</main>
             <aside className={tw('flex flex-col justify-top m-4 border-3 items-center container md:col-span-3')}>
-              <div className={tw('lg:sticky lg:right-0 lg:top-10 ')}>
+              <div className={tw('')}>
                 <AutorWidget author={author} />
+              </div>
+              <div className={tw('md:block sm:block lg:hidden')}>
+                <MobileBanner />
+              </div>
+              <div className={tw('lg:block hidden md:hidden sm:hidden')}>
+                <AsideBanner />
               </div>
             </aside>
           </div>
@@ -52,4 +58,37 @@ export const PostWrapper = ({ value, children }) => {
 
 export const useBlogPostContext = () => {
   return useContext(BlogPostContext);
+}
+
+
+
+const MobileBanner = () =>{
+  return (
+    <>
+      <a href="https://seranking.com/website-audit.html?ga=2096471&source=banner">
+        <Image
+          loading="lazy"
+          src="https://promo.seranking.com/promo-banners/27078db0544a1ab8122a16cda3bc1266.png"
+          width="728"
+          height="90"
+        />
+      </a>
+    </>
+  );
+}
+
+const AsideBanner = () => {
+  return (
+    <>
+      <a href="https://seranking.com/website-audit.html?ga=2096471&source=banner">
+        <Image
+          src="https://promo.seranking.com/promo-banners/c4dcf6da7293841fb8b049c011f1d7b5.png"
+          width="300"
+          height="600"
+          loading='lazy'
+        />
+      </a>
+    </>
+  );
 };
+

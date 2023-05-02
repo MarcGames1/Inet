@@ -43,6 +43,13 @@ console.log("SEO =>  ",seo)
         <>
           <NextSeo title={seo?.title} description={seo?.metaDesc} />
           {blocks ? <BlockRenderer blocks={blocks} /> : <>Loading...</>}
+
+          <iframe
+            src="https://online.seranking.com/affiliatewidget.html?id=2096471&lang=en&full=1&small=0"
+            frameborder="0"
+            width="100%"
+            height="188px"
+          ></iframe>
         </>
       </PostWrapper>
     </Page>

@@ -17,7 +17,7 @@ module.exports = {
       'lh5.googleusercontent.com',
       'lh6.googleusercontent.com',
       'api.marweb.ro',
-    
+      'promo.seranking.com',
     ],
   },
   trailingSlash: true,
